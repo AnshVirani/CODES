@@ -1,0 +1,102 @@
+\documentclass{article}
+\newcounter{rownumbers}
+\newcommand\rownumber{\stepcounter{rownumbers}\arabic{rownumbers}}
+%\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{amsmath,amsfonts,mathtools}
+
+\graphicspath{ {C:\Users\harsh\OneDrive\Documents} }
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=-2mm,
+ bottom=2mm,
+ }
+ 
+%\usepackage[margin=0.5in]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{ifpdf}
+%\usepackage{cite}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{pdfpages}
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+\usepackage{parskip}
+%\onecolumn
+%\input{psfig}
+\usepackage{color}
+\usepackage{graphicx}
+\setlength{\textheight}{23.5cm} \setlength{\topmargin}{-1.05cm}
+\setlength{\textwidth}{6.5in} \setlength{\oddsidemargin}{-0.5cm}
+\renewcommand{\baselinestretch}{1}
+\pagenumbering{arabic}
+\linespread{1.15}
+\begin{document}
+\textbf{
+\begin{center}
+{
+\large{School of Engineering and Applied Science (SEAS), Ahmedabad University}\vspace{5mm}
+}
+\end{center}
+%
+\begin{center}
+\large{Probability and Stochastic Processes (MAT277)\\ \vspace{4mm}
+Homework Assignment-1\\\vspace{2mm}
+Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
+\end{center}}
+\vspace{2mm}
+
+
+\vspace{2mm}
+
+\begin{enumerate}
+\item \textbf{While tossing a biased die, calculate the probability that
+face 3 has turned up, Given Alex tells either face 3 or face 6 has turned up.}
+
+\begin{enumerate}
+  \item\textit{We are given that,}
+        \begin{center}
+        \begin{tabular}{ | m{5em} | m{1cm}| m{1cm} | m{1cm} | m{1cm} | m{1cm} | m{1cm} | }
+        \hline
+        Face & 1 & 2 & 3 & 4 & 5 & 6\\
+        \hline
+        Probability & 0.2 & 0.22 & 0.11 & 0.25 & 0.15 & 0.07\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \textit{Let A be the event that face 3 has turned up and B be the event that face 6 has turned up.}\\\\
+        $\therefore $ $P(A) = 0.11\ \ \ \&\ \ $ $P(B) = 0.07$\\\\
+        \textit{We know that these two are mutually exclusive events, hence:}\\\\
+        $\begin{aligned}
+        \therefore P(A \cup B) & = P(A) + P(B)\\
+        & = 0.11 + 0.32 \\
+        & = 0.43
+        \end{aligned}$\\\\
+        \textit{Clearly, here we have to find the conditional probability, $P(A \ |\ A \cup B)$}
+
+        \begin{align*}
+        P(A \ |\ A \cup B) & = \frac{P(A \cap (A \cup B))}{P(A \cup B)}\\\\
+        & = \frac{P(A)}{P(A \cup B)}\\\\
+        & = \frac{0.11}{0.43}\\\\
+        & = 0.2558139535.
+        \end{align*}
+
+        \[
+          \boxed{\therefore\ P(A \ |\ A \cup B)\ \ \approx \ \ 0.2559}
+        \]
+        
+        \textit{Hence, the probability that face 3 has turned up, given either face 3 or face 6 has turned up is approx 25.59\%}
+\end{enumerate}
+\item \large
+
+
+\end{enumerate}
+\end{document}
