@@ -95,8 +95,38 @@ face 3 has turned up, Given Alex tells either face 3 or face 6 has turned up.}
         
         \textit{Hence, the probability that face 3 has turned up, given either face 3 or face 6 has turned up is approx 25.59\%}
 \end{enumerate}
-\item \large
-
+\newpage
+\item \textbf{There exists two events E1 \& E2 such that $P(E1 \ |\ E2) = 0.45$, $P(E2 \ |\ E1) = 0.5$ and $P(E1 \cup E2) = 0.4$}
+  \begin{enumerate}
+    \item\textit{Calculate $P(E1 \Cap E2)$:}\\\\
+    \textit{According to Conditional Probability theorem we can say,}\\\\
+    $\begin{aligned}
+      P(E1 \ |\ E2)P(E2) & = P(E2 \ |\ E1)P(E1)\\
+      0.45P(E2) & = 0.5P(E1) \\
+    \end{aligned}$\\\\
+    \textit{Applying Basic Probaility theorem:}\\\\
+    $\begin{aligned}
+      P(E1 \Cup E2) & = P(E1) + P(E2) + P(E1 \Cap E2)\\
+      0.4 & = 0.9P(E2) + P(E2) + P(E1 \Cap E2)\\\\
+      \therefore P(E1 \Cap E2) = 1.9P(E2) - 0.4\\\\
+    \end{aligned}$\\
+    \textit{Now, Substituting these values in equation:}\\\\
+    $\begin{aligned}
+      P(E1 \ |\ E2) & = \frac{P(E1 \Cap E2)}{P(E2)}\\\\
+      0.45 & = \frac{1.9P(E2) - 0.4}{P(E2)}\\
+      0.4 & = 1.45P(E2)\\\\
+      \therefore P(E2) = 0.275
+    \end{aligned}$\\\\
+    \textit{Substituting value of e2 in equation 1, we get}\\\\
+    $\therefore P(E1) = 0.2475$\\\\
+    \item \textit{ Comment on the dependency relation between event E1 and E2:}
+    
+    \textnormal{When event E2 occurs, there's a 45\% chance that event E1 will occur. On the other hand if event E1 occurs, there's a 50\% chance that event E2 will occur.}
+    \textnormal{This shows that the events are unsymmetrically related.}
+    
+    \textnormal{Also upon calculating it was found that, there's some shared occurance happening beteen two of the given events,}
+    \textnormal{as probability of them happening together was founf to be 12.25\%}
+  \end{enumerate}
 
 \end{enumerate}
 \end{document}
