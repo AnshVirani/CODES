@@ -10,31 +10,7 @@
  bottom=2mm,
  }
 %\usepackage[margin=0.5in]{geometry}
-\usepackage{listings}
-\usepackage{color}
 
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\lstset{frame=tb,
-  language=Python,
-  aboveskip=3mm,
-  belowskip=3mm,
-  showstringspaces=false,
-  columns=flexible,
-  basicstyle={\small\ttfamily},
-  numbers=none,
-  numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
-  breaklines=true,
-  breakatwhitespace=true,
-  tabsize=3
-}
-\usepackage{graphicx}
-\graphicspath{{Images/}}
 \usepackage{amsmath,amssymb}
 \usepackage{ifpdf}
 %\usepackage{cite}
@@ -58,457 +34,161 @@
 \textbf{
 \begin{center}
 {
-\large{School of Engineering and Applied Science (SEAS), Ahmedabad University}\vspace{5mm}
+\large{School of Engineering and Applied Science (SEAS),Ahmedabad University}\vspace{5mm}
 }
 \end{center}
 %
 \begin{center}
 \large{Probability and Stochastic Processes (MAT277)\\ \vspace{4mm}
-Homework Assignment-1\\\vspace{2mm}
-Enrollment No:  \hspace{4cm} Name:   }
+Homework Assignment-1\\\vspace{10mm}
+Enrollment No: AU2140161 \hspace{3cm} Name: Mihir Kotecha } \vspace{2mm}
 \end{center}}
 \vspace{2mm}
 
 
 \begin{enumerate}
-\item \large \textbf{We are given that A is an event in which a person has a disease and B is an event in which the person has tested positive for the disease.}\\
-\begin{enumerate}
-    \textit{We are given that, }\\\\
-    $P(B|A) = 099 \textit{ and } P(B|A') = 0.005$\\\\
-    \textit{We are also given that only 0.1 percentage of the population has the disease, }\\\\
-    $\therefore $ $P(A) = \cfrac{0.1}{100}$\\\\
+\item \large 
 
-    \textbf{We have to find the probability that a person does not have the disease given that the test was positive, }\\\\\\
+\textbf{Alex told us that either face 1 or face 5 had turned up. Calculate the probability that
+face 5 has turned up.}\\\\
 
-    $\begin{aligned}
-    \therefore P(A'|B) &= \cfrac{P(B|A') * P(A')}{(P(B|A') * P(A'))+(P(B|A) * P(A))}\hspace{6mm}  --\textit{[Using Baye's Theorem]}\\\\
-    &= \cfrac{0.005*0999}{(0.005*0999)+(0.99*0.001)}\\\\
-    &= \cfrac{0.004995}{0.004995+0.00099}\\\\
-    &= \cfrac{0.004995}{0.005985}\\\\
-    &= 0.8345
-    \end{aligned}$
-\end{enumerate}	
+
+
+\textbf{Let P(A) be the probability of getting a 1:} \\\\
+$\therefore$ $P(A) = 0.24$\\\\\
+
+\textbf{Let P(B) be the probability of getting a 5: } \\\\
+$\therefore$ $P(B) = 0.04$\\\\
+
+\textbf{It is given that either 5 or 1 has turned up, we need to find the probability of getting a 5.}\\\\
+
+$\begin{aligned}
+P(B|B \cup A) &= \cfrac{P(B \cap (B \cup A)}{P(B \cup A)} \\\\
+&= \cfrac{P(B)}{P(A \cup B)}\\\\
+&= \cfrac{P(B)}{P(A) + P(B)}\hspace{5mm} \textit{[Since A and B are mutually exclusive]}    \\\\
+&= \cfrac{0.04}{0.04 + 0.24} \\\\
+&= \cfrac{1}{7} = 0.143
+\end{aligned}$
 
 \newpage
 
 \item \large 
+\textbf{There are two events E1 and E2 and $P(E1 | E2) = 0.5$ and $P(E2 | E1) = 0.6$ and $P(E1 \cup E2)$ = 0.5}
 \begin{enumerate}
-	\item {Here we are supposed to prove that the relative frequency approach to assigning probabilities satisfies the major 3 Axioms of the probability.} \\\\  
-        \textit{As we clearly know, it's represented in the following form : }\\\\
+    \item 
+    \textbf{We need to find $P(E1 \cap E2)$: }\\\\
+    $Given, \hspace{3mm}P(E1|E2) = \cfrac{P(E1 \cap E2)}{P(E2)} = 0.5$\\\\
+    $\therefore$ \textit{from above equation: } $P(E2) = \cfrac{P(E1 \cap E2)} {0.5}$ \hspace{5mm} \textit{}{$---$ (1)}\\\\\\
 
-        $p(A) \equiv \cfrac{nA}{n}$\\\\\
+    $Also, \hspace{3mm}P(E2|E1) = \cfrac{P(E1 \cap E2)}{P(E1)} = 0.6$\\\\
+    $\therefore$ \textit{from above equation: } $P(E1) = \cfrac{P(E1 \cap E2)} {0.6}$ \hspace{5mm} \textit{}{$---$ (2)}\\\\\\
 
-        \begin{enumerate}
-            \item  As nA $\geq$ 0 and n $\geq$ 0, for the first Axiom, \\
-            we can clearly say that $p(A) \geq 0.$ \\\ 
-            \item Here, $p(S) = 1 $, as S occurs at every trial, S is the sample space. \\
-            Hence, $nS = n$ \\\ 
-            \item As A and B are independent events, \\
-            if $ A \cap B = \emptyset $, \\ 
-            then $ n(A + B) = nA + nB .$ \\\\ 
-            \therefore \hspace{3mm} $p(A \cup B) = p(A) + p(B)$ \\ 
-        \end{enumerate}
-        \newpage 
+    \textbf{Now,}\\\\
+    $P(E1 \cup E2)$ = 0.5\\\\
+    $\therefore$ $P(E1) + P(E2) - P(E1 \cap E2) = 0.5$\\\\
+    $\therefore$ $\cfrac{P(E1 \cap E2)}{0.5} + \cfrac{P(E1 \cap E2)}{0.6} - P(E1 \cap E2) = 0.5$\hspace{5mm} \textit{[From (1) and (2)]}\\\\
+    $\therefore$ $P(E1 \cap E2)*(\cfrac{1}{0.5} + \cfrac{1}{0.6} - 1) = 0.5$\\\\\
+    $\therefore$ $P(E1 \cap E2) = \cfrac{0.5}{2.67}$\\\\
+    \boldmath $P(E1 \cap E2) = 0.187$
 
-        \item \textbf{Here we are supposed to prove that the conditional probability approach satisfies the major 3 Axioms of the probability.} \\\\  
-        As we clearly know, it's represented in the following form :  
 
-        \begin{gather}
-        p(A / B) = \cfrac{p(A \cap B)}{p(B)} \nonumber
-        \end{gather} \\ 
+    \newpage \item
+    \textbf{Now let us find if E1 and E2 are dependent or not: }\\\\
 
-         \begin{enumerate}
+    \textit{On substituting the value of $P(E1 \cap E2)$ in (1): }\\\\
+    $P(E2) = \cfrac{0.187}{0.5} = 0.374$\\\\\
+
+    \textit{Similarly, on substituting the value in (2): }\\\\
+    $P(E1) = \cfrac{0.187}{0.6} = 0.312$\\\\\
+
+    \textbf{Now,}\\\\
+    $P(E1)*P(E2) = 0.312 * 0.374 = 0.117$\\\\
+
+    \textbf{We can see that the above value is not equal to $P(E1 \cap E2)$, thus the two events are Dependent. }
+\end{enumerate}
             
-            \item  We can surely state that $p(A/B) \geq 0$ as it is a ratio of two non-negative numbers, so it is always going to give a positive value or zero as the answer. \\
-            \item If we consider Event E and Sample Space S then the sum of all probabilities of all the events in the given sample space is going to be equal to 1.  
-            So if we consider $E \subset S$, then we can say that $p(E/S) = 1$ \\ 
-            \item The conditional probability is always consistent with Joint Probability, so if we consider, A, B and C to be mutually exclusive events, \\ \\ 
-            $P( ( A \cup B ) | C ) \\\\ 
-            = \cfrac{P( (A \cup B) ) \cap C}{P(C)}  \\\\  
-            = \cfrac{P(A \cap C) + P(B \cap C)}{P(C)} \\ \\ 
-            = P(A|C) + P(B|C) $ \\\\ 
-        \end{enumerate}
-
-\end{enumerate}
 
 
 \newpage
 
-\item \large A company has 5 different types of bulb production which contribute to 30, 25, 15, 10, 20 percent of the production respectively. The probability of one of them being defective is 0.01, 0.03, 0.02, 0.08 and 0.05 respectively.\\\\
+\item \large We are tossing an unfair dice repeatedly until we we get two heads in a row. The probability of getting a head $P(H) = p$. We need to find the winning probability. We win when we get two heads in a row. \\\\
+
+The winning series can be as follows:
+
+HH, THH, HTHH, THTHH, HTHTHH ... \\\\
+
+$\begin{aligned}
+    \therefore P(win) &= p^2 + (1-p)*p^2 + p*(1-p)*p^2 + p*(1-p)^2*p^2 + ....\\\\
+    &= p^2*[1 + (1-p) + p*(1-p) + p*(1-p)^2 + ...]\\\\
+    &= p^2*[(1 + p(1-p) + p^2(1-p)^2 + ...) + ((1-p) + p*(1-p)^2 + p^2*(1-p)^3 + ...)]\\\\
+    &= p^2*[\cfrac{1}{1-p+p^2} + \cfrac{1-p}{1-p+p^2}]\\\\
+    &= p^2*[\cfrac{2-p}{1-p+p^2}]
+\end{aligned}$
+\newpage
+
+\item \large \textbf{A ten sided fair dice is rolled until a six is obtained. Let the number of throws be X.}
 \begin{enumerate}
-\item We need to find the probability of a randomly picked bulb being defective:\\\\
-\textit{Since the contribution of each type of bulb is not same:}\\\\
+\item \textbf{We need to find the probability for X=5}\\\\
+\textbf{For this to happen we need the six to occur exactly on the 5th throw}\\\\
+$\therefore$ $P(X = 5) = \cfrac{9}{10}*\cfrac{9}{10}*\cfrac{9}{10}*\cfrac{9}{10}*\cfrac{1}{10}$\\\\
+
+$\therefore$ $P(X = 5) = 0.065$\\\\\
+
+\newpage
+
+\item \large \textbf{Now we the conditional probability i.e. given $X>5$ what is $X \geq 6$: }\\\\
 $\begin{aligned}
-    P(Defective) = (0.01*0.3) + (0.03*0.25) + (0.02*0.15) + (0.08*0.1) + (0.05*0.2)
-\end{aligned}$\\
-
-\boxed{$\therefore$ $P(Defective) = 0.0315$}
-
-
- \newpage
-\item Now we need to find the conditional probability that given the bulb is defective what is the probability the bulb is of the 4Th type:\\\\\
-
-\textit{Now let the probability of a bulb being defective be $P(D)$ and the probability of the bulb being from the 4Th unit be $P(U4)$: }\\
-
-$\begin{aligned}
-    \therefore P(U4|D) &= \cfrac{P(D|U4) * P(U4)}{P(D)}\hspace{10mm}     --\textit{[Using Baye's Theoram]}\\\\
-    &= \cfrac{0.08 * 0.1}{0.0315}\hspace{23mm}     --\textit{[Value from part A.]}\\\\
-    &= 0.2539\\\\\\
+P(X \geq 6 | X>5) &= \cfrac{P(X\geq6 \cap X>5)}{P(X>5)}\\\\
+&= \cfrac{P(X>5)}{P(X>5)}\\\\
+&= 1
 \end{aligned}$
-
-\boxed{$\therefore$ $P(U4|D) = 0.2539$}
-
+	
 \end{enumerate}
 
 \newpage
 
-\item \large \textbf{According to the question we need to prove that: }\\\\
-$P(A1 \cap A2 \cap ... \cap An) = P(A1)*P(A2|A1)*P(A3|A1 \cap A2)...P(An|A1 ∩ A2 ∩ .. ∩ An−1)$ \\\\\\
+\item \large \textbf{We are given the probabilities of arrival and leaving timings of employ. According to the question: }
 
+\textbf{Let A be an event where the employ arrives late,}\\\\
+$\therefore$ $P(A) = 0.15$\\\
 
-\textit{Let us consider a base case with just 2 events: }\\
+\textbf{Let B be an event where the employ leaves early,}\\\\
+$\therefore$ $P(B) = 0.3$\\\
 
-$P(A_{1})* P(A_{2}|A_{1}) = P(A_{1}) * (\cfrac{P(A_{2} \cap A_{1})}{P(A_{1})})$\\
+\textbf{Also,}\\\\
+$P(A \cap B) = 0.08$\\\\
 
-$\therefore$ $P(A_{2} \cap A_{1}) = P(A_{1})* P(A_{2}|A_{1})$\hspace{10mm}     $--$[1]\\\\
-
-\textbf{Let $X = P(A_{1} \cap A_{2} \cap ... \cap A_{n-1})$}\\\\
-
-\textbf{Now,}\\\\
-
+\textbf{We need to find the probability of the employ arriving early given that he leaves late: }
 
 $\begin{aligned}
-     P(A_{1} \cap A_{2} \cap ... \cap A_{n}) &=  P(X \cap A_{n})\\\\
-     &= P(A_n | B) * P(B)\hspace{10mm} --\textit{from [1]} \\\\
-     &= P(A_n| P(A_{1} \cap A_{2} \cap ... \cap A_{n-1})) * P(A_{1} \cap A_{2} \cap ... \cap A_{n-1})\\\\
-     &= P(A_1)*P(A_2|A_1)*P(A_3|A_1 \cap A_2)...P(A_n|A_1 ∩ A_2 ∩ .. ∩ A_n−1)\\\\
-\end{aligned}$
-
-\textbf{Hence Proved.}
-
-\newpage
-\item \large \textbf{We are given that A and B are independent, )}\\\\
-$\therefore$ $P(A \cap B = P(A) * P(B)$\\\\
-
-\begin{enumerate}
-    \item \textbf{We need to prove $A$ and $B'$ are independent: }\\\\
-    \textit{Let us consider: }\\\\
-    $\begin{aligned}
-        P(A)*P(B') &= P(A) * (1 - P(B))\\\\
-        &= P(A) - P(A)*P(B)\\\\
-        &= P(A) - P(A \cap B)\\\\
-        &= P(A \cap B')\\\\
-    \end{aligned}$
-
-    \boxed{$\therefore$ $P(A \cap B') = P(A) * P(B')$}
-
-    \newpage
-
-    \item \textbf{We need to prove $A'$ and $B$ are independent: }\\\\
-        \textit{Let us consider: }\\\\
-    $\begin{aligned}
-        P(A')*P(B) &= P(B) * (1 - P(A))\\\\
-        &= P(B) - P(B)*P(A)\\\\
-        &= P(B) - P(A \cap B)\\\\
-        &= P(A' \cap B)\\\\
-    \end{aligned}$
-
-    \boxed{$\therefore$ $P(A' \cap B) = P(A') * P(B)$}
-
-
-    \newpage
-    \item \textbf{We need to prove A' and B' are independent: }\\\\
-    \textit{Let us consider: }\\\\
-    $\begin{aligned}
-        P(A') * P(B') &= (1 - P(A)) * (1 - P(B))\\\\
-        &= 1 - P(A) - P(B) + P(A \cap B)\\\\
-        &= 1 - (P(A) + P(B) - P(A \cap B))\\\\
-        &= 1 - P(A \cup B)\\\\
-        &= P(A' \cap B')\\\\
-    \end{aligned}$
-
-    \boxed{$\therefore$ $P(A' \cap B') = P(A') * P(B')$}
-\end{enumerate}
-\newpage
-
-\item \large Given a PDF function of a Gaussian Random Variable:\\\\
-$f_x(X) = c * exp(-(2*x^2 + 3x +1))$\\\\
-
-\begin{enumerate}
-    \item \textit{We need to find the value of the constant: }\\\\
-    $\int_{-\infty}^{\infty} c * exp(-(2*x^2 + 3x +1)) = 1$  --[From properties of PDF]\\\\
-    $\therefore c \cdot \int_{-\infty}^{\infty} exp(-2(x^2 + (\cfrac{3}{2})x + \cfrac{9}{16} + \cfrac{1}{2} + \cfrac{9}{16}  dx = 1$\\\\
-    $\therefore c \cdot \int_{-\infty}^{\infty} exp(-2((x + \cfrac{3}{4})^2 - (\cfrac{1}{4})^2)) dx = 1$\\\\
-    $\therefore c * e^{\cfrac{1}{8}} * \int_{-\infty}^{\infty} exp(-2(x + \cfrac{3}{4})^2) = 1$\\\\
-    $\therefore c \cdot e^(1/8) * \sqrt{\cfrac{2}{\pi}} = 1$\\\\
-    $\therefore$ $c = \sqrt{\cfrac{2}{\pi}} * e^(- \cfrac{1}{8})$\\\\\\
-    \boxed{c = 0.7042}
-
-    \newpage
-
-    \item \textit{Substituting the value of c in the function: }\\\\
-    $\begin{aligned}
-        f_x(X) &= \sqrt{\cfrac{2}{\pi}} * exp(-2(x - \cfrac{3}{4})^2)\\\\
-    \end{aligned}
-    $
-
-    \textbf{Comparing the above equation with the standard Gaussian Equation: }\\\\
-    $m = \cfrac{-3}{4}\hspace{4mm} \textit{and} \hspace{4mm} \sigma = \cfrac{1}{2}$
-\end{enumerate}
-
-\newpage
-\item \textbf{We are given the probability that a student with an A in MAT277 gets an invitation is 0.9 and a student with B in MAT 277 gets an invitation is 0.1.}\\\\
-
-\begin{enumerate}
-    \item \textit{We need to find the probability mass function for 
-a random variable Y where Y is the number of booths a student must visit before his/her first invitation.}\\\\
-\textit{Here Y is a geometric Random Variable: }\\\\
-$\begin{aligned}
- \therefore   P_{Y}(y) &= P(Y=y)\\\\
- &= p \cdot (1 - p)^{y-1}
+P(A' |  B') &= \cfrac{P(A' \cap B')}{P(B')}\\\\
+&= \cfrac{P(A \cup B)'}{P(B')}\\\\
+&= \cfrac{(P(A) + P(B) - P(A \cup B))'}{P(B')}\\\\
+&= \cfrac{1-(P(A) + P(B) - P(A \cup B))}{1 - (P(B))}\\\\
+&= \cfrac{1 - (0.15 + 0.3 - 0.8)}{0.7}\\\\
+&= 0.9
 \end{aligned}$
 
 \newpage
-\item
-\textit{First let's find the probability that a student with A grade does not get an Off-Campus placement: }\\\\
 
-\textit{This means that the student does not get interview even after 5 interviews: }\\\\
+\item \large \textbf{We are given that A is an event in which the product breaks down in the third year and B is the event in which the product survives the first two years. Also, T is a random variable which represents the lifetime of a product.}\\\\
+
+\textbf{Also,}\\
+$P(T \geq t) = e ^ {\cfrac{-t}{5}} $ \textbf{, $t \geq 0$}\\\\
+$P(T \geq 2) = 0673$\\\\
+
+\textbf{We need to find the conditional probability A given B i.e. $P(A|B)$: }\\\\
+
 $\begin{aligned}
-    \therefore P(Y > 5) &= (1 - p)^5\\\\
-    &= (1 - 0.9)^5\\\\
-    &= 10^{-5}\\\\
+    P(A|B) &= P(X=3 | X\geq2)\\\\
+    &= \cfrac{P(X=3 \cap X\geq2)}{P(X \geq 2)}\\\\
+    &= \cfrac{P(X=3)}{P(X \geq 2)}\\\\
+    &= \cfrac{P(X \geq 2) - P(X \geq 3)}{P(X \geq 2)}\\\\
+    &= \cfrac{e^\frac{-2}{5} - e^\frac{-3}{5}}{0.6703}\\\\
+    &= \cfrac{0.6704 - 0.5488}{0.6703}\\\\
+    &= \cfrac{0.1215}{0.6703}\\\\
+    &= 0.1812
 \end{aligned}$
-
-\textit{Now to find the probability that a student with B grade gets an interview: }\\\\
-$\begin{aligned}
-    \begin{aligned}
-        \therefore P(Y \leq 5) &= 1 - P(Y > 5)\\\\
-        &= 1 - (1 - p)^5\\\\
-        &= 1 - (0.9)^5\\\\
-        &= 1 - 0.5904\\\\
-        &= 0.4095\\\\
-    \end{aligned}
-\end{aligned}$
-\end{enumerate}
-\newpage
-
-\item\textbf{As per the question,}\\\\
-$f_x(x)=\cfrac{c}{x^2+4}$\\\\
-\begin{enumerate}
-    \item \textbf{We need to find the value of constant C: }\\\\
-\begin{math}
-\int_{-\infty}^{\infty} \cfrac{c}{x^2+4} \hspace{4mm}dx = 1\\\\\\
-\therefore c \int_{-\infty}^{\infty} \cfrac{1}{x^2+4} \hspace{4mm}dx = 1\\\\\\
-\therefore c [ \cfrac{1}{2} * tan^{-1} ( \cfrac{x}{2} ) ]_{-\infty}^{\infty} = 1\\\\\\
-\therefore \cfrac{c}{2} [  tan^{-1} \left( {\infty} \right) - tan^{-1} \left( {-\infty} \right) ] = 1\\\\\\
-\therefore \cfrac{c}{2}  [ \cfrac{\pi}{2} - (\cfrac{-\pi}{2})] = 1\\\\\\
-\end{math}
-\boxed{$\therefore$  $c = \cfrac{2}{\pi}$}
-
-\newpage
-\item\large
-\textbf{We need to find} $Pr(X > 2)$\\\\\\
-$\begin{aligned}
-Pr(X > 2) &= \int_{2}^{\infty} \cfrac{c}{x^2+4}\\\\
-&= \cfrac{2}{\pi} \int_{2}^{\infty} \cfrac{1}{x^2+4}\\\\
-&= \cfrac{1}{\pi} \left[  tan^{-1} \left( {\infty} \right) - tan^{-1} \left( {1} \right) \right]\\\\
-&= \cfrac{1}{\pi} \left[ \cfrac{\pi}{2} - \cfrac{\pi}{4} \right]\\\\
-&= 0.5 - 0.25\\\\\
-&= 0.25
-\end{aligned}$
-\newpage
-\item \large
-\textbf{We need to find} $Pr(X < 3)$\\\\
-$\begin{aligned}
-Pr(X < 3) &= \int_{-\infty}^{3} \cfrac{c}{x^2+4}\\\\
-&= \cfrac{2}{\pi} \int_{-\infty}^{3} \cfrac{1}{x^2+4}\\\\
-&= \cfrac{1}{\pi} [  tan^{-1} \left( {\cfrac{3}{2}} \right) - tan^{-1} ( {-\infty} ) ]\\\\
-&= \cfrac{1}{\pi} [ \cfrac{3\pi}{10} - (\cfrac{-\pi}{2}) ]\\\\
-&= 0.3 + 0.5\\\\
-&= 0.8
-\end{aligned}$
-\newpage
-
-\item\large
-\textbf{We need to find} $Pr(X < 3|X > 2)$\\\\
-$\begin{aligned}
-Pr(X < 3|X > 2) &= \cfrac{Pr(X < 3 \cap X > 2)}{Pr(X > 2)}\\\\
-&= \cfrac{Pr(2<X<3)}{Pr(X>2)}\\\\
-\end{aligned}$\\\\
-\textbf{Solving the numerator,}\\\\
-$\begin{aligned}
-Pr(2<X<3) &= \int_{2}^{3} \cfrac{c}{x^2+4} \hspace{4mm} dx\\\\\
-&= \cfrac{2}{\pi} \int{2}^{3} \cfrac{1}{x^2+4}\\\\\
-&= \cfrac{1}{\pi} \left[  tan^{-1} \left( {\cfrac{3}{2}} \right) - tan^{-1} \left( {1} \right) \right]\\\\
-&= \cfrac{1}{\pi} \left[ \cfrac{3\pi}{10} - \cfrac{\pi}{4} \right]\\\\\
-&= 0.3 - 0.25\\\\
-&= 0.05
-\end{aligned}$\\\\
-\textbf{Required probability,}\\\\
-$\begin{aligned}
-Pr(X < 3|X > 2) &= \cfrac{0.05}{0.25}\\\\
-&= 0.2\\\\
-\end{aligned}$
-
-\boxed{Pr(X < 3 | X > 2) = 0.2}
-\end{enumerate}
-
-\newpage
-\item\large
-
-\begin{enumerate}
-    \item \textbf{To determine the probability of Jason’s hitting the target}\\\\
-\text{Since we are calculating the distance from the centre}\\ \text{range would be from 0 to 2.5 for hitting the target,}\\\\
-$\therefore$ \textbf{Required probability,}\\\\
-$\begin{aligned}
-f_x(x) &= \int_a^b \cfrac{x}{\sigma ^2} \cdot e^{-x^2/2\sigma ^2} \hspace{2mm}dx\\\\
-\therefore f_x(x) &= \int_0^{2.5} \cfrac{x}{4} \cdot e^{-x^2/8} dx
-\end{aligned}$\\\\\\
-$\begin{aligned}
-\hspace{6mm} Let, \hspace{2mm} u &= \cfrac{x^2}{8}\\\\
- du &= \cfrac{x}{4} \hspace{2mm} dx\\\\
-\end{aligned}$\\\\
-\textbf{So,}\\\\
-$\begin{aligned}
-f(x) &= \int_0^{6.25/8} e^{-u} du\\\\
-&= - [ e^{-u} ]_0^{6.25/8}\\\\
-&= - [ e^{-6.25/8} - e^0 ]\\\\
-&= 1 - 0.458\\\\
-&= 0.542
-\end{aligned}$
-
-\newpage
-\item
-\large
-\textbf{To determine the probability of Jason’s hitting the bull’s-eye}\\\\
-To calculate the probability of hitting bulls eye, we would take radial distance of bull's eye which will range from 0 to 0.5,\\\\
-$\therefore$ \hspace{2mm} \textbf{Required probability,}\\\\
-$\begin{aligned}
-f_x(x) &= \int_a^b \cfrac{x}{\sigma ^2} \cdot e^{-x^2/2\sigma ^2} \hspace{2mm}dx\\\\
-\therefore \hspace{2mm} f_x(x) &= \int_0^{0.5} \cfrac{x}{4} \cdot e^{-x^2/8} dx
-\end{aligned}$\\\\\\
-$\begin{aligned}
-\hspace{6mm}Let, \hspace{2mm} u &= \cfrac{x^2}{8}\\\\
- du &= \cfrac{x}{4} \hspace{2mm} dx\\\\
-\end{aligned}$\\\\\\
-$\begin{aligned}
-\hspace{6mm} f(x) &= \int_0^{0.25/8} e^{-u} du\\\\
-&= - [ e^{-u}]_0^{0.25/8}\\\\
-&= - [ e^{-0.25/8} - e^0 ]\\\\
-&= 1 - 0.9693\\\\
-&= 0.0307
-\end{aligned}$
-
-\newpage
-\item \large
-\textbf{We need to find the conditional probability of Jason hitting the bull’s-eye given that he hits the target}\\\\
-\textbf{Let event A be the event that bulls eye gets hit,}\\\\
-$\begin{aligned}
-\therefore P(A) = 0.0307 \hspace{7.8cm} --from \hspace{2mm} (b)
-\end{aligned}$\\\\
-\textbf{Let event B be the event that target gets hit,}\\\\
-$\begin{aligned}
-\therefore P(B) = 0.542 \hspace{8cm} --from \hspace{2mm} (a)
-\end{aligned}$\\\\
-\textbf{Required probability,}\\\\
-$\begin{aligned}
-P(A|B) &= \cfrac{P(A \cap B)}{P(B)}\\\\
-&= \cfrac{P(A)}{P(B)}\\\\
-&= \cfrac{0.0307}{0.542}\\\\
-&= 0.0567
-\end{aligned}$
-\end{enumerate}
-
-\newpage
-\item\large
-\textbf{Arrival of bus at paldi bus station is given by below PMF:} \\\\
-$ P(X=k) = \cfrac{(\lambda .t)^k}{k!} . \exp^{- \lambda t}$ \\\\
-\textbf{Where,}\\
-$ \lambda = 4$ \textbf{buses/minute}\\\\
-\begin{enumerate}
-\item \textbf{Probability that fewer than four buses will arrive in the first t = 10 minutes}\\\\
-$\begin{aligned}
-P(X<4) &= P(3) + P(2) + P(1) + P(0) \\\\
- &= \cfrac{(4 * 10)^3}{3!} \cdot e^{-40} + \cfrac{(4 \times 10)^2}{2!} \cdot e^{-40} + \cfrac{(4 * 10)^1}{1!} \cdot e^{-40} + \cfrac{(4 * 10)^0}{0!} \cdot e^{-40}\\\\
- &= e^{-40} [\cfrac{32000}{3} + 800 + 40 + 1 ]\\\\
- &= e^{-40} * \cfrac{34523}{3}\\\\
- &= 1.467 * 10^{-13}
-\end{aligned}$
-
-\newpage
-\item
-\large
-\textbf{Probability that fewer than four buses will arrive in the first t = 2 hours}\\\\
-$\begin{aligned}
-P(X<4) &= P(3) + P(2) + P(1) + P(0) \\\\
- &= \cfrac{(4 * 120)^3}{3!} \cdot e^{-480} + \cfrac{(4 * 120)^2}{2!} \cdot e^{-480} + \cfrac{(4 * 120)^1}{1!} \cdot e^{-480} + \cfrac{(4 * 120)^0}{0!} \cdot e^{-480}\\\\
- &= e^{-480} [18432000 + 115200 + 480 + 1]\\\\
- &= e^{-480}* 18547681\\\\
- &= 6.41 *  10^{-202}
-\end{aligned}$
-\end{enumerate}
-
-\newpage
-\item\large
-\begin{enumerate}
-    \item \textit{We need to find the probability of an error occurring when t = 1 and n = 8,}\\\\
-
-   $ \begin{aligned}
-        p(E > t) &= p(E > 1)\\\\
-        &= 1 - p(E \leq 1)\\\\
-        &= 1 - [p(E = 0) + p(E = 1)]\\\\
-    \end{aligned}
-    $
-
-    \textit{Here $p(E = X)$  is the probability of an error occurring when the Xth bit is received: }\\\\
-    $\begin{aligned}
-        p(E > 1) &= 1 - [(1 - 0.05)^n + (1 - 0.05)^{n-1} * 0.05]\\\\
-        &=  1 - [(1 - 0.05)^8 + (1 - 0.05)^{7} * 0.05]\\\\
-        &= 1 - 0.6983\\\\
-        &= 0.3016
-    \end{aligned}$
-
-    \newpage
-    \item\textit{Now we need to find the probability of an error occurring when t = 3 and n = 31}\\\\
-
-       $ \begin{aligned}
-        p(E > t) &= p(E > 3)\\\\
-        &= 1 - p(E \leq 3)\\\\
-        &= 1 - [p(E = 0) + p(E = 1) + p(E = 3)]\\\\
-    \end{aligned}$
-
-      $ = 1 - [(1 - 0.05)^n + (1 - 0.05)^{n-1} * 0.05 + (1 - 0.05)^{n-2} * (0.05)^2 + (1 - 0.05)^{n-3} * (0.05)^3]\\\\
-         = 1 - [(1 - 0.05)^31 + (1 - 0.05)^{30} * 0.05 + (1 - 0.05)^{29} * (0.05)^2 + (1 - 0.05)^{28} * (0.05)^3]\\\\
-         = 0.7847$
-\end{enumerate}
-
-\newpage
-\item
-\textbf{Python code to generate random numbers using Bernoulli's Distribution}
-\Large
-
-\begin{lstlisting}
-import numpy as np
-import random
-def BinomialUsingBernouliRandomVariable(n , p):
-  return np.sum([np.random.binomial(1,p) for i in range (n)])
-
-for i in range(10):
-  n = random.randint(1,10000)
-  p = random.randint(1,10)/10
-  print(n,p)
-  print( BinomialUsingBernouliRandomVariable(n,p))
-\end{lstlisting}
-
-\begin{figure}[htp]
-    \centering
-    \caption{Python Code}
-    \includegraphics{image.png}
-    \label{fig:CodePy}
-\end{figure}
-
-
-
 
 
 

@@ -98,7 +98,7 @@ face 3 has turned up, Given Alex tells either face 3 or face 6 has turned up.}
 \newpage
 \item \textbf{There exists two events E1 \& E2 such that $P(E1 \ |\ E2) = 0.45$, $P(E2 \ |\ E1) = 0.5$ and $P(E1 \cup E2) = 0.4$}
   \begin{enumerate}
-    \item\textit{Calculate $P(E1 \Cap E2)$:}\\\\
+    \item\textit{Calculate $P(E1 \cap E2$):}\\\\
     \textit{According to Conditional Probability theorem we can say,}\\\\
     $\begin{aligned}
       P(E1 \ |\ E2)P(E2) & = P(E2 \ |\ E1)P(E1)\\
@@ -106,18 +106,19 @@ face 3 has turned up, Given Alex tells either face 3 or face 6 has turned up.}
     \end{aligned}$\\\\
     \textit{Applying Basic Probaility theorem:}\\\\
     $\begin{aligned}
-      P(E1 \Cup E2) & = P(E1) + P(E2) + P(E1 \Cap E2)\\
-      0.4 & = 0.9P(E2) + P(E2) + P(E1 \Cap E2)\\\\
-      \therefore P(E1 \Cap E2) = 1.9P(E2) - 0.4\\\\
-    \end{aligned}$\\
-    \textit{Now, Substituting these values in equation:}\\\\
+      P(E1 \cup E2) & = P(E1) + P(E2) + P(E1 \cap E2)\\
+      0.4 & = 0.9P(E2) + P(E2) + P(E1 \cap E2)\\\\
+    \end{aligned}$
+
+    $\therefore P(E1 \cap E2) = 1.9P(E2) - 0.4$ \hspace{8cm}......(1)\\\\
+    \textit{Now, Substituting these equation in conditional probability equation:}\\\\
     $\begin{aligned}
-      P(E1 \ |\ E2) & = \frac{P(E1 \Cap E2)}{P(E2)}\\\\
+      P(E1 \ |\ E2) & = \frac{P(E1 \cap E2)}{P(E2)}\\\\
       0.45 & = \frac{1.9P(E2) - 0.4}{P(E2)}\\
       0.4 & = 1.45P(E2)\\\\
       \therefore P(E2) = 0.275
     \end{aligned}$\\\\
-    \textit{Substituting value of e2 in equation 1, we get}\\\\
+    \textit{Substituting value of P(E2) in equation 1, we get}\\\\
     $\therefore P(E1) = 0.2475$\\\\
     \item \textit{ Comment on the dependency relation between event E1 and E2:}
     
@@ -128,5 +129,53 @@ face 3 has turned up, Given Alex tells either face 3 or face 6 has turned up.}
     \textnormal{as probability of them happening together was founf to be 12.25\%}
   \end{enumerate}
 
+\newpage
+\item\textbf{Given Probabilies are:}\\
+  \begin{enumerate}
+    \item\textbf{Let's denote the probability of a Red ball as:  $P(R) = 0.45$}
+    \item\textbf{Let's denote the probability of a Striped ball as:  $P(S) = 0.3$}
+    \item\textbf{Let's denote the probability of a Red ball with stripes as:  $P(RS) = P(R \cap S) = 0.2$}\\
+  \end{enumerate}
+  \textit{To find the probability that ball is striped given the ball picked is a Red one.}\\
+  \begin{align*}
+    P(S \ |\ R) & = \frac{P(R \cap S)}{P(R)}\\\\
+    & = \frac{0.2}{0.45}\\\\
+    & = 0.4444444...
+  \end{align*}\\
+  \[
+     \boxed{\therefore\ P(A \ |\ A \cup B)\ \ \approx \ \ 0.4445}\\
+  \]
+
+  \textit{Hence, the probability that the ball is striped one given the ball in red ball is approx 44.45\%}\\\\
+
+\item \textbf{Let A denote the event where number 8 is obtained while tossing a 8-sided unbiased dice}\\
+$\therefore P(A) = \ \cfrac{1}{8}$ = \ p\\\\
+$\therefore P(A') = 1 - p $  
+
+\textnormal{X denotes the number of tosses required to get number 8 as an outcome.}\\
+\begin{enumerate}
+    \item \textnormal{The probability that X = 6:}\\
+    \textit{we use the equation:}
+    \begin{align*}
+      P(X) & = P(A')^{(X-1)}.P(A)\\\\
+      P(X_6)\  & =\  (1-p)^{5}.p\\
+      & =\ (\cfrac{7}{8})^{5}.\cfrac{1}{8}\\
+      & =\ (0.875)^{5}*(0.125)\\
+      & =\ 0.0641136169
+    \end{align*}\\
+    \[
+     \boxed{\therefore\ P(X_6)\ \ \approx \ \ 0.06412}\\
+    \]\\
+    \item \textnormal{Conditional Probaility that $X \leq 6$ given $X < 9$:}\\\\
+    \begin{align*}
+      P(X\leq 6 \ | \ X < 9) & = \cfrac{P(X\leq 6 \cap X < 9)}{P(X < 9)}\\\\
+      & = \cfrac{P(X < 9)}{P(X < 9)}
+    \end{align*}\\
+    \[
+     \boxed{\therefore\ P(X\leq 6 \ | \ X < 9)\ \ = \ \ 1}\\
+    \]
+    \textit{Hence, as the equation suggests both the cases are same, resulting 100\% probability.}\\\\
+
+  \end{enumerate}
 \end{enumerate}
 \end{document}
