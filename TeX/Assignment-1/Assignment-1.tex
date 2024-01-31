@@ -148,6 +148,7 @@ face 3 has turned up, Given Alex tells either face 3 or face 6 has turned up.}
 
   \textit{Hence, the probability that the ball is striped one given the ball in red ball is approx 44.45\%}\\\\
 
+\newpage  
 \item \textbf{Let A denote the event where number 8 is obtained while tossing a 8-sided unbiased dice}\\
 $\therefore P(A) = \ \cfrac{1}{8}$ = \ p\\\\
 $\therefore P(A') = 1 - p $  
@@ -174,8 +175,34 @@ $\therefore P(A') = 1 - p $
     \[
      \boxed{\therefore\ P(X\leq 6 \ | \ X < 9)\ \ = \ \ 1}\\
     \]
+
     \textit{Hence, as the equation suggests both the cases are same, resulting 100\% probability.}\\\\
 
   \end{enumerate}
+
+\newpage
+\item\textbf{Given Probabilies are:}\\
+  \begin{enumerate}
+    \item\textbf{probability that an employee arrives late:  $P(A_l) = 0.15$}
+    \item\textbf{probability that an employee leaves early:  $P(L_e) = 0.25$}
+    \item\textbf{probability that an employee arrives late and leaves early:  $P(A_l \cap L_e) = 0.8$}\\
+  \end{enumerate}
+  \textit{We need to find the probability of the employee arriving early given that he leaves late: }
+
+  \begin{align*}
+    P(A_l' |  L_e') &= \cfrac{P(A_l' \cap L_e')}{P(L_e')}\\\\
+    & = \cfrac{P(A_l \cup L_e)'}{P(L_e')}\\\\
+    & = \cfrac{(P(A_l) + P(L_e) - P(A_l \cup L_e))'}{P(L_e')}\\\\
+    & = \cfrac{1-(P(A_l) + P(L_e) - P(A_l \cup L_e))}{1 - P(L_e)}\\\\
+    & = \cfrac{1 - (0.15 + 0.25 - 0.8)}{0.75}\\\\
+    & = 0.8\\
+  \end{align*}
+  \[
+     \boxed{\therefore\ P(A_l' |  L_e')\ \ = \ \ 0.8}\\
+  \]
+
+  \textit{Hence, the probability of the employee arriving early given that he leaves late is 80\%.}\\\\
+
+
 \end{enumerate}
 \end{document}
