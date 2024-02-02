@@ -203,6 +203,42 @@ $\therefore P(A') = 1 - p $
 
   \textit{Hence, the probability of the employee arriving early given that he leaves late is 80\%.}\\\\
 
+  \newpage
+  \item\textnormal{Given S = \{ 1, 2, ..., n\}, and X is a subset of S where if coins lands a heads then that particular element is added to X, and otherwise not.}\\
+  \begin{enumerate}
+    \item \textnormal{For each coin toss there are two possible outcomes: either it is included in X or not.}\\
+    \textnormal{Given that a fair coin is tossed and all tosses are independent, the probability of it being}\\
+    \textnormal{in X is ($\cfrac{1}{2})$ and that of not being in X is ($\cfrac{1}{2})$.}\\\\
+    \textnormal{As there are total \it n \normalfont element/coins in the set S, and each element has 2 possible outcomes,}\\
+    \textnormal{Total number of possible outcomes will be: $2^n$.}\\\\
+    \textnormal{Since each outcome is equally likely to be include in set X or not, i.e ($\cfrac{1}{2})$,}
+    \textnormal{and there are total of $2^n$ outcomes, and each of them having equal probability of occuring, i.e ($\cfrac{1}{2})^n$.}\\\\
+    \textnormal{$\therefore$ Set X  is equally likely to be any one of the $2^n$ possible subsets.}\\
+    \item \textnormal{X and Y are two sets choosen independently and uniformly at random from $2^n$ subsets of set S.}\\
+    \textit{Note: here X and Y are not representing the outcomes of individual coin flips, they represent two subsets randomly chosen from set S.}\\
+    \begin{enumerate}
+      \item $Pr(X \subseteq Y)$:\\
+      \textnormal{For each element in the set S, there are two possibilities, it is included in X or it is not.}
+      \textnormal{Similarly, there are two possibilities for each element regarding Y, it is included in Y or it is not.}\\
+      \textnormal{Probability that a specific element is in X is ($\cfrac{1}{2})$, and that it is in Y is also ($\cfrac{1}{2})$.}\\
+      \textnormal{Now for X to be subset of Y, every element in X must also be ther in Y, Hence Probaility that}
+      \textnormal{a element is in both is: $(\cfrac{1}{2})(\cfrac{1}{2}) = \cfrac{1}{4}$.}\\\\
+      \[
+        \boxed{\therefore\  Pr(X \subseteq Y) = (\cfrac{1}{4})^n}\\
+      \]\textit{(as there as n elements)}\\
+      \item $Pr(X \cup Y = \{1, 2,..., n\})$:\\
+      \textnormal{Probability that a specific element is in either of X or Y, is the sum of probability of a element being in X and probability of a element being in Y.}
+      \begin{align*}
+        Pr(X \cup Y = \{1, 2,..., n\}) &= P(X) + P(Y)\\
+        &= (\cfrac{1}{2})+(\cfrac{1}{2})\\
+        &= 1
+      \end{align*}
+      \[
+        \boxed{\therefore Pr(X \cup Y = \{1, 2,..., n\}) = 1}\\
+      \]
+      \textit{Hence, it is certain that union of X and Y is indeed set S.}
+    \end{enumerate}
+  \end{enumerate}
 
 \end{enumerate}
 \end{document}
