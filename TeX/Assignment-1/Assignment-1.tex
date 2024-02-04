@@ -73,132 +73,147 @@ face 3 has turned up, Given Alex tells either face 3 or face 6 has turned up.}
         \end{center}
 
         \textit{Let A be the event that face 3 has turned up and B be the event that face 6 has turned up.}\\\\
-        $\therefore $ $P(A) = 0.11\ \ \ \&\ \ $ $P(B) = 0.07$\\\\
+        $\therefore $ $\Pr(A) = 0.11\ \ \ \&\ \ $ $\Pr(B) = 0.07$\\\\
         \textit{We know that these two are mutually exclusive events, hence:}\\\\
         $\begin{aligned}
-        \therefore P(A \cup B) & = P(A) + P(B)\\
+        \therefore \Pr(A \cup B) & = \Pr(A) + \Pr(B)\\
         & = 0.11 + 0.32 \\
         & = 0.43
         \end{aligned}$\\\\
-        \textit{Clearly, here we have to find the conditional probability, $P(A \ |\ A \cup B)$}
+        \textit{Clearly, here we have to find the conditional probability, $\Pr(A \ |\ A \cup B)$}
 
         \begin{align*}
-        P(A \ |\ A \cup B) & = \frac{P(A \cap (A \cup B))}{P(A \cup B)}\\\\
-        & = \frac{P(A)}{P(A \cup B)}\\\\
+        \Pr(A \ |\ A \cup B) & = \frac{\Pr(A \cap (A \cup B))}{\Pr(A \cup B)}\\\\
+        & = \frac{\Pr(A)}{\Pr(A \cup B)}\\\\
         & = \frac{0.11}{0.43}\\\\
         & = 0.2558139535.
         \end{align*}
 
         \[
-          \boxed{\therefore\ P(A \ |\ A \cup B)\ \ \approx \ \ 0.2559}
+          \boxed{\therefore\ \Pr(A \ |\ A \cup B)\ \ \approx \ \ 0.2559}
         \]
         
         \textit{Hence, the probability that face 3 has turned up, given either face 3 or face 6 has turned up is approx 25.59\%}
 \end{enumerate}
 \newpage
-\item \textbf{There exists two events E1 \& E2 such that $P(E1 \ |\ E2) = 0.45$, $P(E2 \ |\ E1) = 0.5$ and $P(E1 \cup E2) = 0.4$}
+\item \textbf{There exists two events E1 \& E2 such that $\Pr(E1 \ |\ E2) = 0.45$, $\Pr(E2 \ |\ E1) = 0.5$ and $\Pr(E1 \cup E2) = 0.4$}
   \begin{enumerate}
-    \item\textit{Calculate $P(E1 \cap E2$):}\\\\
+    \item\textit{Calculate $\Pr(E1 \cap E2$):}\\\\
     \textit{According to Conditional Probability theorem we can say,}\\\\
     $\begin{aligned}
-      P(E1 \ |\ E2)P(E2) & = P(E2 \ |\ E1)P(E1)\\
+      \Pr(E1 \ |\ E2)\Pr(E2) & = \Pr(E2 \ |\ E1)\Pr(E1)\\
       0.45P(E2) & = 0.5P(E1) \\
     \end{aligned}$\\\\
     \textit{Applying Basic Probaility theorem:}\\\\
     $\begin{aligned}
-      P(E1 \cup E2) & = P(E1) + P(E2) + P(E1 \cap E2)\\
-      0.4 & = 0.9P(E2) + P(E2) + P(E1 \cap E2)\\\\
+      \Pr(E1 \cup E2) & = \Pr(E1) + \Pr(E2) + \Pr(E1 \cap E2)\\
+      0.4 & = 0.9P(E2) + \Pr(E2) + \Pr(E1 \cap E2)\\\\
     \end{aligned}$
 
-    $\therefore P(E1 \cap E2) = 1.9P(E2) - 0.4$ \hspace{8cm}......(1)\\\\
+    $\therefore \Pr(E1 \cap E2) = 1.9P(E2) - 0.4$ \hspace{8cm}......(1)\\\\
     \textit{Now, Substituting these equation in conditional probability equation:}\\\\
     $\begin{aligned}
-      P(E1 \ |\ E2) & = \frac{P(E1 \cap E2)}{P(E2)}\\\\
-      0.45 & = \frac{1.9P(E2) - 0.4}{P(E2)}\\
+      \Pr(E1 \ |\ E2) & = \frac{\Pr(E1 \cap E2)}{\Pr(E2)}\\\\
+      0.45 & = \frac{1.9P(E2) - 0.4}{\Pr(E2)}\\
       0.4 & = 1.45P(E2)\\\\
-      \therefore P(E2) = 0.275
+      \therefore \Pr(E2) = 0.275
     \end{aligned}$\\\\
-    \textit{Substituting value of P(E2) in equation 1, we get}\\\\
-    $\therefore P(E1) = 0.2475$\\\\
+    \textit{Substituting value of $\Pr(E2)$ in equation 1, we get}\\\\
+    $\therefore \Pr(E1) = 0.2475$\\\\
+    $\therefore \Pr(E1 \cap E2) = 0.1225$\\
     \item \textit{ Comment on the dependency relation between event E1 and E2:}
     
     \textnormal{When event E2 occurs, there's a 45\% chance that event E1 will occur. On the other hand if event E1 occurs, there's a 50\% chance that event E2 will occur.}
     \textnormal{This shows that the events are unsymmetrically related.}
     
-    \textnormal{Also upon calculating it was found that, there's some shared occurance happening beteen two of the given events,}
-    \textnormal{as probability of them happening together was founf to be 12.25\%}
+    \textnormal{Also upon calculating we can see that, there's some shared occurance happening between two of the given events,}
+    \textnormal{as probability of them happening together was found to be 12.25\%.}
   \end{enumerate}
 
 \newpage
 \item\textbf{Given Probabilies are:}\\
   \begin{enumerate}
-    \item\textbf{Let's denote the probability of a Red ball as:  $P(R) = 0.45$}
-    \item\textbf{Let's denote the probability of a Striped ball as:  $P(S) = 0.3$}
-    \item\textbf{Let's denote the probability of a Red ball with stripes as:  $P(RS) = P(R \cap S) = 0.2$}\\
+    \item\textbf{Let's denote the probability of a Red ball as:  $\Pr(R) = 0.45$}
+    \item\textbf{Let's denote the probability of a Striped ball as:  $\Pr(S) = 0.3$}
+    \item\textbf{Let's denote the probability of a Red ball with stripes as:  $\Pr(RS) = \Pr(R \cap S) = 0.2$}\\
   \end{enumerate}
   \textit{To find the probability that ball is striped given the ball picked is a Red one.}\\
   \begin{align*}
-    P(S \ |\ R) & = \frac{P(R \cap S)}{P(R)}\\\\
+    \Pr(S \ |\ R) & = \frac{\Pr(R \cap S)}{\Pr(R)}\\\\
     & = \frac{0.2}{0.45}\\\\
     & = 0.4444444...
   \end{align*}\\
   \[
-     \boxed{\therefore\ P(A \ |\ A \cup B)\ \ \approx \ \ 0.4445}\\
+     \boxed{\therefore\ \Pr(S \ |\ R )\ \ \approx \ \ 0.4445}\\
   \]
 
   \textit{Hence, the probability that the ball is striped one given the ball in red ball is approx 44.45\%}\\\\
 
 \newpage  
 \item \textbf{Let A denote the event where number 8 is obtained while tossing a 8-sided unbiased dice}\\
-$\therefore P(A) = \ \cfrac{1}{8}$ = \ p\\\\
-$\therefore P(A') = 1 - p $  
+$\therefore \Pr(A) = \ \cfrac{1}{8}$ = \ p\\\\
+$\therefore \Pr(A') = 1 - p $  
 
 \textnormal{X denotes the number of tosses required to get number 8 as an outcome.}\\
 \begin{enumerate}
     \item \textnormal{The probability that X = 6:}\\
     \textit{we use the equation:}
     \begin{align*}
-      P(X) & = P(A')^{(X-1)}.P(A)\\\\
-      P(X_6)\  & =\  (1-p)^{5}.p\\
+      \Pr(X) & = \Pr(A')^{(X-1)}.\Pr(A)\\\\
+      \Pr(X_6)\  & =\  (1-p)^{5}.p\\
       & =\ (\cfrac{7}{8})^{5}.\cfrac{1}{8}\\
       & =\ (0.875)^{5}*(0.125)\\
       & =\ 0.0641136169
-    \end{align*}\\
+    \end{align*}
     \[
-     \boxed{\therefore\ P(X_6)\ \ \approx \ \ 0.06412}\\
-    \]\\
-    \item \textnormal{Conditional Probaility that $X \leq 6$ given $X < 9$:}\\\\
-    \begin{align*}
-      P(X\leq 6 \ | \ X < 9) & = \cfrac{P(X\leq 6 \cap X < 9)}{P(X < 9)}\\\\
-      & = \cfrac{P(X < 9)}{P(X < 9)}
-    \end{align*}\\
-    \[
-     \boxed{\therefore\ P(X\leq 6 \ | \ X < 9)\ \ = \ \ 1}\\
+     \boxed{\therefore\ \Pr(X_6)\ \ \approx \ \ 0.06412}\\
     \]
-
-    \textit{Hence, as the equation suggests both the cases are same, resulting 100\% probability.}\\\\
-
+    \item \textnormal{Conditional Probability that $X \leq 6$ given $X < 9$:}
+    \begin{center}
+    $\begin{aligned}
+      \Pr(X \leq 6 \ | \ X < 9) & = \frac{\Pr(X \leq 6 \cap X < 9)}{\Pr(X < 9)}\\
+     & = \frac{\Pr(X \leq 6)}{\Pr(X < 9)}\\
+     & = \dfrac{ \sum_{i=1}^{6}((1 - p)^{(i - 1)}*p)}{ \sum_{j=1}^{8}((1 - p)^{(j - 1)}*p)}\\
+     & = \dfrac{ \sum_{i=1}^{6}(\frac{7}{8}^{(i - 1)}\frac{1}{8})}{ \sum_{j=1}^{8}(\frac{7}{8}^{(j - 1)}\frac{1}{8})}\\
+     \end{aligned}$
+   \end{center}
+   \textnormal{Using the formula of Sum of Geometric series} 
+   \begin{equation}                    
+    a *( \dfrac{1-r^n}{1-r} ) \ where  \ a =\frac{1}{8}, \ r = \frac{7}{8}
+    \end{equation}
+   \textnormal{upon solving, we get} \begin{center}
+       $\sum_{i=1}^{6}(\frac{7}{8}^{(i - 1)})$ and $\sum_{j=1}^{8}(\frac{7}{8}^{(j - 1)})$
+   \end{center}
+   \begin{center}
+       $\begin{aligned}
+          \dfrac{\sum_{i=1}^{6}(\frac{7}{8}^{(i - 1)}* \frac{1}{8})}{\sum_{j=1}^{8}(\frac{7}{8}^{(j - 1)}* \frac{1}{8})} = \frac{0.551204}{0.656391}\\
+       \end{aligned}$
+   \end{center}
+   \begin{center}
+       $\boxed{\therefore\ \Pr(X\leq 6 \ | \ X < 9)\ \ =  \ 0.8397\ }$
+   \end{center}
+\textit{Hence, the probability that $X \leq 6$ given $X < 9$ is $0.8397$ .}\\\\
   \end{enumerate}
 
 \newpage
 \item\textbf{Given Probabilies are:}\\
   \begin{enumerate}
-    \item\textbf{probability that an employee arrives late:  $P(A_l) = 0.15$}
-    \item\textbf{probability that an employee leaves early:  $P(L_e) = 0.25$}
-    \item\textbf{probability that an employee arrives late and leaves early:  $P(A_l \cap L_e) = 0.8$}\\
+    \item\textbf{probability that an employee arrives late:  $\Pr(A_l) = 0.15$}
+    \item\textbf{probability that an employee leaves early:  $\Pr(L_e) = 0.25$}
+    \item\textbf{probability that an employee arrives late and leaves early:  $\Pr(A_l \cap L_e) = 0.08$}\\
   \end{enumerate}
   \textit{We need to find the probability of the employee arriving early given that he leaves late: }
 
   \begin{align*}
-    P(A_l' |  L_e') &= \cfrac{P(A_l' \cap L_e')}{P(L_e')}\\\\
-    & = \cfrac{P(A_l \cup L_e)'}{P(L_e')}\\\\
-    & = \cfrac{(P(A_l) + P(L_e) - P(A_l \cup L_e))'}{P(L_e')}\\\\
-    & = \cfrac{1-(P(A_l) + P(L_e) - P(A_l \cup L_e))}{1 - P(L_e)}\\\\
-    & = \cfrac{1 - (0.15 + 0.25 - 0.8)}{0.75}\\\\
-    & = 0.8\\
+    \Pr(A_l' |  L_e') &= \cfrac{\Pr(A_l' \cap L_e')}{\Pr(L_e')}\\\\
+    & = \cfrac{\Pr(A_l \cup L_e)'}{\Pr(L_e')}\\\\
+    & = \cfrac{(\Pr(A_l) + \Pr(L_e) - \Pr(A_l \cup L_e))'}{\Pr(L_e')}\\\\
+    & = \cfrac{1-(\Pr(A_l) + \Pr(L_e) - \Pr(A_l \cup L_e))}{1 - \Pr(L_e)}\\\\
+    & = \cfrac{1 - (0.15 + 0.25 - 0.08)}{0.75}\\\\
+    & = 0.9066666667\\
   \end{align*}
   \[
-     \boxed{\therefore\ P(A_l' |  L_e')\ \ = \ \ 0.8}\\
+     \boxed{\therefore\ \Pr(A_l' |  L_e')\ \ = \ \ 0.9067}\\
   \]
 
   \textit{Hence, the probability of the employee arriving early given that he leaves late is 80\%.}\\\\
@@ -217,28 +232,53 @@ $\therefore P(A') = 1 - p $
     \item \textnormal{X and Y are two sets choosen independently and uniformly at random from $2^n$ subsets of set S.}\\
     \textit{Note: here X and Y are not representing the outcomes of individual coin flips, they represent two subsets randomly chosen from set S.}\\
     \begin{enumerate}
-      \item $Pr(X \subseteq Y)$:\\
+      \item $\Pr(X \subseteq Y)$:\\
       \textnormal{For each element in the set S, there are two possibilities, it is included in X or it is not.}
       \textnormal{Similarly, there are two possibilities for each element regarding Y, it is included in Y or it is not.}\\
       \textnormal{Probability that a specific element is in X is ($\cfrac{1}{2})$, and that it is in Y is also ($\cfrac{1}{2})$.}\\
       \textnormal{Now for X to be subset of Y, every element in X must also be ther in Y, Hence Probaility that}
       \textnormal{a element is in both is: $(\cfrac{1}{2})(\cfrac{1}{2}) = \cfrac{1}{4}$.}\\\\
       \[
-        \boxed{\therefore\  Pr(X \subseteq Y) = (\cfrac{1}{4})^n}\\
+        \boxed{\therefore\  \Pr(X \subseteq Y) = (\cfrac{1}{4})^n}\\
       \]\textit{(as there as n elements)}\\
-      \item $Pr(X \cup Y = \{1, 2,..., n\})$:\\
+      \item $\Pr(X \cup Y = \{1, 2,..., n\})$:\\
       \textnormal{Probability that a specific element is in either of X or Y, is the sum of probability of a element being in X and probability of a element being in Y.}
       \begin{align*}
-        Pr(X \cup Y = \{1, 2,..., n\}) &= P(X) + P(Y)\\
+        \Pr(X \cup Y = \{1, 2,..., n\}) &= \Pr(X) + \Pr(Y)\\
         &= (\cfrac{1}{2})+(\cfrac{1}{2})\\
         &= 1
       \end{align*}
       \[
-        \boxed{\therefore Pr(X \cup Y = \{1, 2,..., n\}) = 1}\\
+        \boxed{\therefore \Pr(X \cup Y = \{1, 2,..., n\}) = 1}\\
       \]
       \textit{Hence, it is certain that union of X and Y is indeed set S.}
     \end{enumerate}
   \end{enumerate}
-
+\newpage
+\item\textnormal{We know that there are several different min-cut sets in the graph.}
+    
+    \textnormal{Let us consider $C_1, ...,C_k$ be the distinct minimum cuts of the graph.}\\
+    \textnormal{Let $\mathcal{E}_i$ be the event that $C_i$ is output using the analysis of the randomized min-cut algorithm.}\\
+    \textnormal{Since the event $\mathcal{E}_i$ is disjoint, it makes all these randomized events disjoint as follows:}\\
+    \begin{center}
+        $\sum_{i,j} \ \Pr[\mathcal{E}_i] \leq 1.$
+    \end{center}
+    \textnormal{By the analysis of the randomized min-cut algorithm, is showed that:}\\
+    \begin{center}
+        $\Pr[\mathcal{E}_i] = \frac{n(n-1)}{2}$
+    \end{center}
+    \textnormal{for every $i$, which then implies that}\\
+    \begin{center}
+        $k \leq \frac{n(n-1)}{2}.$
+    \end{center}
+    \textnormal{This holds true as the n-cycle has exactly $\binom{n}{2}$ minimum cuts.}\\
+    \textnormal{Hence, from the above explanation, it is concluded that there can be at most $\frac{n(n-1)}{2}$ distinct min cut-sets in a graph.}\\
+\newpage
+\item \textbf{Inclusion-Exclusion Principle}
+  \begin{align*}
+    \Pr\left(\bigcup_{i=1}^{n} E_i\right) = \sum_{i=1}^{n} \Pr(E_i) - \sum_{i<j}^{} \Pr(E_i E_j) + \sum_{i<j<k}^{} \Pr(E_i E_j E_k) - ... + (-1)^{n+1}\Pr(E_1..... E_n)
+  \end{align*}
+  \textnormal{This formula consists of alternating sums of the sizes of intersections of the sets.}
+  
 \end{enumerate}
 \end{document}
