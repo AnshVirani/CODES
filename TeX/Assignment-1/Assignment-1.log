@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  4 FEB 2024 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  4 FEB 2024 18:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -568,32 +568,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
  []
 
 [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 262--265
+Underfull \hbox (badness 10000) in paragraph at lines 268--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--278
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
 
  []
 
 [8]
-Overfull \hbox (28.90956pt too wide) detected at line 324
+Overfull \hbox (28.90956pt too wide) detected at line 330
 \OML/cmm/m/it/10 S[] \OT1/cmr/m/n/10 = [] [](\OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  S[] \OT1/cmr/m/n/10 = [] [](\OML/cmm/m/it/10 E[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  [] S[] \OT1/cmr/m/n/10 = [] [](\OML/cmm/m/it/10 E[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 ::: \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; [] ; n:
  []
 
 [9]
-Overfull \hbox (6.28069pt too wide) detected at line 357
+Overfull \hbox (6.28069pt too wide) detected at line 363
 \OML/cmm/m/it/10 S[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  S[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E[] \OMS/cmsy/m/n/10 \ \OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;  S[] \OT1/cmr/m/n/10 = [] \OML/cmm/m/it/10 P [] []k \OT1/cmr/m/n/10 = 3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; [] ; n:
  []
 
@@ -612,7 +612,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  68i,10n,79p,563b,379s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Assignment-1.pdf (10 pages, 192178 bytes).
+Output written on Assignment-1.pdf (10 pages, 192266 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream

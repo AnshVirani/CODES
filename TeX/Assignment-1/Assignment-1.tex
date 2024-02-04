@@ -242,10 +242,16 @@ $\therefore \Pr(A') = 1 - p $
         \boxed{\therefore\  \Pr(X \subseteq Y) = (\cfrac{1}{4})^n}\\
       \]\textit{(as there as n elements)}\\
       \item $\Pr(X \cup Y = \{1, 2,..., n\})$:\\
-      \textnormal{Probability that a specific element is in either of X or Y, is the sum of probability of a element being in X and probability of a element being in Y.}
+      \textnormal{Probability that a specific element is in either of X or Y, is the sum of probability of a element being in X and probability of a element being in Y.}\\
+      Applying the complement rule
+
+      \begin{align*}
+        \Pr(X \cup Y) = 1 - \Pr(X \cup Y)^{'}\\
+        \Pr(X \cup Y)^{'} = \Pr(X^{'} \cap Y^{'})
+      \end{align*}
       \newpage
       \begin{align*}
-        \Pr(X \cup Y = \{1, 2,..., n\}) & = 1 - \Pr(X^{'} \cup\ Y^{'})\\
+        \Pr(X \cup Y = \{1, 2,..., n\}) & = 1 - \Pr(X^{'} \cap\ Y^{'})\\
         &= 1 - \Pr(X^{'}) \Pr(Y^{'})\\
         &= 1 - (\cfrac{1}{2})^{n}(\cfrac{1}{2})^{n}\\\\
         &= \left(\cfrac{3}{4}\right)^{n}
@@ -343,7 +349,7 @@ P\left(\bigcup_{i=1}^{l} E_i\right) \leq \sum_{i=1}^{l} P(E_i) - \sum_{1 \leq i 
 \end{equation*}
 
 Hence, the inequality for \( l \) odd is proved.
-\item[c.] Recall the Bonferroni inequality which states that for odd \( k \) in \( 1,2,\ldots,n \),
+\item[(c)] Recall the Bonferroni inequality which states that for odd \( k \) in \( 1,2,\ldots,n \),
 \begin{equation*}
 P\left(\bigcup_{i=1}^{l} E_i\right) \leq \sum_{j=1}^{k} (-1)^{j+1} S_j,
 \end{equation*}
