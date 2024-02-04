@@ -243,13 +243,15 @@ $\therefore \Pr(A') = 1 - p $
       \]\textit{(as there as n elements)}\\
       \item $\Pr(X \cup Y = \{1, 2,..., n\})$:\\
       \textnormal{Probability that a specific element is in either of X or Y, is the sum of probability of a element being in X and probability of a element being in Y.}
+      \newpage
       \begin{align*}
-        \Pr(X \cup Y = \{1, 2,..., n\}) &= \Pr(X) + \Pr(Y)\\
-        &= (\cfrac{1}{2})+(\cfrac{1}{2})\\
-        &= 1
+        \Pr(X \cup Y = \{1, 2,..., n\}) & = 1 - \Pr(X^{'} \cup\ Y^{'})\\
+        &= 1 - \Pr(X^{'}) \Pr(Y^{'})\\
+        &= 1 - (\cfrac{1}{2})^{n}(\cfrac{1}{2})^{n}\\\\
+        &= \left(\cfrac{3}{4}\right)^{n}
       \end{align*}
       \[
-        \boxed{\therefore \Pr(X \cup Y = \{1, 2,..., n\}) = 1}\\
+        \boxed{\therefore \Pr(X \cup Y = \{1, 2,..., n\}) = \left(\cfrac{3}{4}\right)^{n}}\\
       \]
       \textit{Hence, it is certain that union of X and Y is indeed set S.}
     \end{enumerate}
@@ -274,11 +276,105 @@ $\therefore \Pr(A') = 1 - p $
     \textnormal{This holds true as the n-cycle has exactly $\binom{n}{2}$ minimum cuts.}\\
     \textnormal{Hence, from the above explanation, it is concluded that there can be at most $\frac{n(n-1)}{2}$ distinct min cut-sets in a graph.}\\
 \newpage
-\item \textbf{Inclusion-Exclusion Principle}
-  \begin{align*}
-    \Pr\left(\bigcup_{i=1}^{n} E_i\right) = \sum_{i=1}^{n} \Pr(E_i) - \sum_{i<j}^{} \Pr(E_i E_j) + \sum_{i<j<k}^{} \Pr(E_i E_j E_k) - ... + (-1)^{n+1}\Pr(E_1..... E_n)
-  \end{align*}
-  \textnormal{This formula consists of alternating sums of the sizes of intersections of the sets.}
+% \item \textbf{Inclusion-Exclusion Principle}
+%   \begin{align*}
+%     \Pr\left(\bigcup_{i=1}^{n} E_i\right) = \sum_{i=1}^{n} \Pr(E_i) - \sum_{i<j}^{} \Pr(E_i E_j) + \sum_{i<j<k}^{} \Pr(E_i E_j E_k) - ... + (-1)^{n+1}\Pr(E_1..... E_n)
+%   \end{align*}
+%   \textnormal{This formula consists of alternating sums of the sizes of intersections of the sets.}
+\item
+\item[(a)]\begin{equation*}
+  P\left(\bigcup_{i=1}^{n} E_i\right) = \sum_{i=1}^{n} P(E_i) - \sum_{\substack{i,j=1 \\ i < j}}^{n} P(E_i \cap E_j) + \ldots + (-1)^{l+1} \sum_{\substack{i_1,\ldots,i_l=1 \\ i_1 < \cdots < i_l}}^{n} P\left(\bigcap_{r=1}^{l} E_{i_r}\right) + \ldots
+  \end{equation*}
   
+  It is given that \( E_1, \ldots, E_n \) be the \( n \) events.
+  
+  Let \( l \) is odd, then for events \( E_1, \ldots, E_n \), the relation is as follows:
+  \begin{equation*}
+  P\left(\bigcup_{i=1}^{l} E_i\right) \leq \sum_{i=1}^{l} P(E_i) - \sum_{\substack{i,j=1 \\ i < j}}^{l} P(E_i \cap E_j) + \ldots + (-1)^{l+1} \sum_{\substack{i_1,\ldots,i_l=1 \\ i_1 < \cdots < i_l}}^{l} P\left(\bigcap_{r=1}^{l} E_{i_r}\right) \ldots \quad (1)
+  \end{equation*}
+  
+  Now, let \( l \) is even, then for events \( E_1, \ldots, E_n \), the relation is as follows:
+  \begin{equation*}
+  P\left(\bigcup_{i=1}^{l} E_i\right) \geq \sum_{i=1}^{l} P(E_i) - \sum_{\substack{i,j=1 \\ i < j}}^{l} P(E_i \cap E_j) + \ldots + (-1)^{l+1} \sum_{\substack{i_1,\ldots,i_l=1 \\ i_1 < \cdots < i_l}}^{l} P\left(\bigcap_{r=1}^{l} E_{i_r}\right) \ldots \quad (2)
+  \end{equation*}
+  
+  From equation (1) and (2), the relation is as follows:
+  \begin{equation*}
+  P\left(\bigcup_{i=1}^{n} E_i\right) = \sum_{i=1}^{n} P(E_i) - \sum_{\substack{i,j=1 \\ i < j}}^{n} P(E_i \cap E_j) + \ldots + (-1)^{l+1} \sum_{\substack{i_1,\ldots,i_l=1 \\ i_1 < \cdots < i_l}}^{n} P\left(\bigcap_{r=1}^{l} E_{i_r}\right) + \ldots
+  \end{equation*}
+  
+  Hence, inclusion-exclusion principle is proved. 
+  \item[(b)]
+  \begin{equation*}
+  P\left(\bigcup_{i=1}^{l} E_i\right) \leq \sum_{i=1}^{l} P(E_i) - \sum_{1 \leq i < j \leq l} P(E_i \cap E_j) + \ldots + (-1)^{l+1} \sum_{1 \leq i_1 < i_2 < \dots < i_l \leq l} P\left(E_{i_1}\cap...\cap E_{i_k}\right)
+  \end{equation*}
+  It is given that \( l \) is odd.\\
+  According to the Bonferroni inequality which states that for odd \( k \) in \( 1,2,\ldots,n \),
+  \begin{center}
+    $P\left(\bigcup_{i=1}^{l} E_i\right) \leq \sum_{j=1}^{k} (-1)^{j+1} S_j,$  
+  \end{center}
+  , and for even \( k \) in \( 1,2,\ldots,n \),
+  \begin{center}
+      $P\left(\bigcup_{i=1}^{l} E_i\right) \geq \sum_{j=1}^{k} (-1)^{j+1} S_j$,
+  \end{center}
+
+  where,
+\begin{equation*}
+S_1 = \sum_{i=1}^{l} \Pr(E_i), \quad S_2 = \sum_{1 \leq i < j \leq l} \Pr(E_i \cap E_j), \quad \text{and} \quad S_k = \sum_{1 \leq i_1 < i_2 < \dots < i_k \leq l} \Pr(E_{i_1}\cap...\cap E_{i_k}) \text{ for } k = 3,4,\ldots,n.
+\end{equation*}
+
+Expand the right-hand side of the inequality
+\begin{equation*}
+P\left(\bigcup_{i=1}^{l} E_i\right) \leq \sum_{j=1}^{k} (-1)^{j+1} S_j,
+\end{equation*}
+as follows:
+\begin{equation*}
+(-1)^1 S_1 + (-1)^2 S_2 + (-1)^3 S_3 + \ldots + (-1)^k S_k = S_1 - S_2 + S_3 - \ldots + (-1)^k S_k.
+\end{equation*}
+
+Solve the above expression further as follows:
+\begin{equation*}
+P\left(\bigcup_{i=1}^{l} E_i\right) \leq S_1 - S_2 + S_3 - \ldots + (-1)^k S_k.
+\end{equation*}
+
+Substitute \( S_j \) in the above expression. It is found that
+\begin{equation*}
+P\left(\bigcup_{i=1}^{l} E_i\right) \leq \sum_{i=1}^{l} P(E_i) - \sum_{1 \leq i < j \leq l} P(E_i \cap E_j) + \ldots + (-1)^{l+1} \sum_{1 \leq i_1 < i_2 < \dots < i_l \leq l} P\left(E_{i_1}\cap...\cap E_{i_l}\right).
+\end{equation*}
+
+Hence, the inequality for \( l \) odd is proved.
+\item[c.] Recall the Bonferroni inequality which states that for odd \( k \) in \( 1,2,\ldots,n \),
+\begin{equation*}
+P\left(\bigcup_{i=1}^{l} E_i\right) \leq \sum_{j=1}^{k} (-1)^{j+1} S_j,
+\end{equation*}
+and for even \( k \) in \( 1,2,\ldots,n \),
+\begin{equation*}
+P\left(\bigcup_{i=1}^{l} E_i\right) \geq \sum_{j=1}^{k} (-1)^{j+1} S_j,
+\end{equation*}
+where,
+\begin{equation*}
+S_1 = \sum_{i=1}^{l} P(E_i), \quad S_2 = \sum_{1 \leq i < j \leq l} P(E_i \cap E_j), \quad S_k = \sum_{1 \leq i_1 < i_2 < \dots < i_k \leq l} P\left(E_{i_1}\cap...\cap E_{i_k}\right) \text{ for } k = 3,4,\ldots,n.
+\end{equation*}
+
+Expand the right-hand side of the inequality
+\begin{equation*}
+P\left(\bigcup_{i=1}^{l} E_i\right) \geq \sum_{j=1}^{k} (-1)^{j+1} S_j,
+\end{equation*}
+as follows:
+\begin{equation*}
+(-1)^1 S_1 + (-1)^2 S_2 + (-1)^3 S_3 + \ldots + (-1)^k S_k = S_1 - S_2 + S_3 - \ldots + (-1)^k S_k.
+\end{equation*}
+
+Solve the above expression further as follows:
+\begin{equation*}
+P\left(\bigcup_{i=1}^{l} E_i\right) \geq S_1 - S_2 + S_3 - \ldots + (-1)^{k} S_k.
+\end{equation*}
+
+Substitute \( S_j \) in the above expression. It is found that
+\begin{equation*}
+P\left(\bigcup_{i=1}^{l} E_i\right) \geq \sum_{i=1}^{l} P(E_i) - \sum_{1 \leq i < j \leq l} P(E_i \cap E_j) + \ldots + (-1)^{k} \sum_{1 \leq i_1 < i_2 < \dots < i_k \leq l} P\left(E_{i_1}\cap...\cap E_{i_l}\right).
+\end{equation*}
+
+Hence, the Bonferroni inequality is proved.
 \end{enumerate}
 \end{document}
