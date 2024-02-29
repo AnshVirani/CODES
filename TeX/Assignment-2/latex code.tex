@@ -1,0 +1,81 @@
+\documentclass{article}
+\newcounter{rownumbers}
+\newcommand\rownumber{\stepcounter{rownumbers}\arabic{rownumbers}}
+%\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{amsmath,amsfonts,mathtools}
+
+\graphicspath{ {C:\Users\harsh\OneDrive\Documents} }
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=-2mm,
+ bottom=2mm,
+ }
+ 
+%\usepackage[margin=0.5in]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{ifpdf}
+%\usepackage{cite}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{pdfpages}
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+\usepackage{parskip}
+%\onecolumn
+%\input{psfig}
+\usepackage{color}
+\usepackage{graphicx}
+\setlength{\textheight}{23.5cm} \setlength{\topmargin}{-1.05cm}
+\setlength{\textwidth}{6.5in} \setlength{\oddsidemargin}{-0.5cm}
+\renewcommand{\baselinestretch}{1}
+\pagenumbering{arabic}
+\linespread{1.15}
+\begin{document}
+\textbf{
+\begin{center}
+{
+\large{School of Engineering and Applied Science (SEAS), Ahmedabad University}\vspace{4mm}
+}
+\end{center}
+%
+\begin{center}
+\large{Probability and Stochastic Processes (MAT277)\\ \vspace{4mm}
+Homework Assignment-2\\\vspace{2mm}
+Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
+\end{center}}
+\vspace{2mm}
+
+\vspace{10mm}
+
+\begin{enumerate}
+\item 
+  \begin{enumerate}
+    \item \textbf{Let event A be the probability that Omega is significant: $\Pr(A) = 0.75$}
+    \item \textbf{Let there be an event that the Algorithm Delta produces a positive result, given that Omega is significant: $\Pr(B|A) = 1-0.15 = 0.85$}
+    \item \textbf{Let there be an event that the Algorithm Delta produces a positive result, given that Omega is insignificant: $\Pr(B|A') = 0.15$}
+    \item \textbf{The probability that Omega is insignificant: $\Pr(A') = 0.25$}\\
+  \end{enumerate}
+  \textit{The Probability that the message is significant given Algorithm Delta is positive is,}
+  \begin{align*}
+    Pr(A|B) &= \frac{Pr(B|A).Pr(A)}{Pr(B|A).Pr(A) + Pr(B|A').Pr(A')}\\\\
+    &= \frac{(0.85). (0.75)}{(0.85). (0.75) + (0.15). (0.25)}\\\\
+    &= \frac{0.6375}{0.675}\\\\
+    &= 0.9444444
+  \end{align*}
+  \[
+     \boxed{\therefore\ \Pr(A|B )\ \ \approx \ \ 0.945}\\
+  \]
+
+  \textit{Hence, as the probability that message contains critical information is less than 95\%, we should opt for further analysis.}\\\\
+\newpage
+\item 
+\end{enumerate}
+\end{document}
