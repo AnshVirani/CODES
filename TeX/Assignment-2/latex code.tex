@@ -141,6 +141,33 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
      \boxed{\therefore P\{X > 2\} = 1 - \left(\cfrac{c.\lambda^2 + 2c.\lambda + 2c}{2}\right)}\\
     \]
   \end{enumerate}
-\end{enumerate}
+\newpage
+\item 
+The event that the contestant knows the Answer to Question-1: \(E_1\)\\
+The event that the contestant knows the Answer to Question-2: \(E_2\)\\
+The random variable representing winnings for answering Question-1 correctly: \(X_1\)\\
+The random variable representing winnings for answering Question-2 correctly: \(X_2\)\\
+The amount won for answering Question-1 correctly: \(V_1\)\\
+The amount won for answering Question-2 correctly: \(V_2\)\\
+The probability of knowing the answer to Question-1: \(P_1\)\\
+The probability of knowing the answer to Question-2: \(P_2\)\\\\
+\textbf{\textit{Case-i}} If they attempt Question-1 first:\\
+$\bullet$ Get Question 1 right and Question 2 right\\
+$\bullet$ Get Question 1 right and Question 2 wrong\\
+$\bullet$ Get Question 1 wrong\\
+So the expected winnings for attempting Question-1 first is given by:
+\begin{align*}
+  P_1.P_2.\left(V_1 + V_2\right) +  P_1.\left(1 - P_2\right).\left(V_1\right) + \left(1 - P_1\right).0
+\end{align*}
+\textbf{\textit{Case-ii}} If they attempt Question-2 first:\\
+$\bullet$ Get Question 2 right and Question 1 right\\
+$\bullet$ Get Question 2 right and Question 1 wrong\\
+$\bullet$ Get Question 2 wrong\\
+So the expected winnings for attempting Question-2 first is given by:
+\begin{align*}
+  P_2.P_1.\left(V_1 + V_2\right) +  P_2.\left(1 - P_1\right).\left(V_2\right) + \left(1 - P_2\right).0
+\end{align*}
+Hence, To maximize expected winnings, the contestant should attempt the question first that yields the higher expected value from these above two equations.
 
+\end{enumerate}
 \end{document}
