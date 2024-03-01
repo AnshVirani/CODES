@@ -91,10 +91,29 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
     \textnormal{The probability of not rolling a 6 on a single trial is: \(\Pr(A') = \cfrac{5}{6}\)}\\\\
     Now, let us consider the event that a six occurs on the \(k^{th}\) roll. This implies that there were \(k-1\) consecutive non-six outcomes followed by a six. The probability of this sequence is given by:
     \begin{align*}
-      \Pr(X = k) & = \Pr(A')^{(X-1)}.\Pr(A)\\\\
-      & =\ \left(\cfrac{5}{6}\right)^{k-1}\cdot \left(\cfrac{1}{6}\right)\\
+      \Pr(X= k) & = \Pr(A')^{(X-1)}.\Pr(A)\\\\
+      \Pr(X= k)& =\ \left(\cfrac{5}{6}\right)^{k-1}\cdot \left(\cfrac{1}{6}\right)\\
     \end{align*}
-    \item 
+    \item To Check the legitimacy of the PMF, we need to satisfy two conditions:
+      \begin{enumerate}
+        \item Each probability of P(X = k) is non-negative for all possible values of \(k\).
+        \begin{align*}
+          \Pr(X=k) \geq 0\\\\
+          \left(\cfrac{5}{6}\right)^{k-1}\cdot \left(\cfrac{1}{6}\right) \geq 0
+        \end{align*}
+        This is ture because both the terms, \(\left(\cfrac{5}{6}\right)^{k-1}\) and \(\left(\cfrac{1}{6}\right)\) are non-negative.\\
+        \item The sum of all probabilities over all possible values of \(k\) is equal to 1.
+        \begin{align*}
+          \sum_{k=1}^{n} P(X=k)\ =\ \sum_{k=1}^{n} \left(\cfrac{5}{6}\right)^{k-1}\cdot \left(\cfrac{1}{6}\right)
+        \end{align*}
+        It's a geometric series where the sum can be represented as:\\
+        \begin{align*}
+          \sum_{k=1}^{n} \left(\frac{5}{6}\right)^{k-1} \cdot \left(\frac{1}{6}\right) &= \left(\frac{1}{6}\right) \cdot \frac{1 - \left(\frac{5}{6}\right)^n}{1 - \frac{5}{6}} \\
+          &= 1 - \left(\frac{5}{6}\right)^n
+      \end{align*}
+      This term approaches 1 as \(n\) tends to infinity, the sum of probabilities converges to 1.\\\\
+      $\therefore$ this PMF is legitimate.
+      \end{enumerate}
   \end{enumerate}
 \end{enumerate}
 
