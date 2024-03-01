@@ -76,6 +76,26 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
 
   \textit{Hence, as the probability that message contains critical information is less than 95\%, we should opt for further analysis.}\\\\
 \newpage
-\item 
+\item \textbf{An undirected graph $G$ with $n$ nodes is given.}\\
+  \textnormal{The min-cut algorithm works by iteratively contracting edges until only two nodes remain, representing the two disjoint sets of the minimum cut. The contraction process merges nodes, and the algorithm repeats until only two super-nodes are left.}\\
+  \begin{enumerate}
+    \item \textnormal{The total number of edges in the graph is given by the binomial coefficient \( \binom{n}{2} \), which represents all possible ways to choose 2 nodes out of n. This is equal to \(\cfrac{n(n-1)}{2}\).}\\\\
+    \textnormal{During the contraction process, each contraction operation results in a unique cut. Since there are \(\cfrac{n(n-1)}{2}\) distinct edges in the graph, there can be at most \(\cfrac{n(n-1)}{2}\) distinct cuts formed during the contraction process.}\\
+    \(\therefore\)  we can argue that there can be at most \(\cfrac{n(n-1)}{2}\) distinct min-cut sets in a graph $G$ with $n$ nodes using the analysis of the min-cut algorithm.\\
+    \item 
+  \end{enumerate}
+\newpage
+\item \textbf{Let A denote the event where number 6 is obtained while tossing a 6-sided unbiased dice.}\\
+  \begin{enumerate}
+    \item \textnormal{The probability of rolling a 6 on a single trial is: \(\Pr(A) = \cfrac{1}{6}\)}\\\\
+    \textnormal{The probability of not rolling a 6 on a single trial is: \(\Pr(A') = \cfrac{5}{6}\)}\\\\
+    Now, let us consider the event that a six occurs on the \(k^{th}\) roll. This implies that there were \(k-1\) consecutive non-six outcomes followed by a six. The probability of this sequence is given by:
+    \begin{align*}
+      \Pr(X = k) & = \Pr(A')^{(X-1)}.\Pr(A)\\\\
+      & =\ \left(\cfrac{5}{6}\right)^{k-1}\cdot \left(\cfrac{1}{6}\right)\\
+    \end{align*}
+    \item 
+  \end{enumerate}
 \end{enumerate}
+
 \end{document}
