@@ -75,6 +75,7 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
   \]
 
   \textit{Hence, as the probability that message contains critical information is less than 95\%, we should opt for further analysis.}\\\\
+
 \newpage
 \item \textbf{An undirected graph $G$ with $n$ nodes is given.}\\
   \textnormal{The min-cut algorithm works by iteratively contracting edges until only two nodes remain, representing the two disjoint sets of the minimum cut. The contraction process merges nodes, and the algorithm repeats until only two super-nodes are left.}\\
@@ -84,6 +85,7 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
     \(\therefore\)  we can argue that there can be at most \(\cfrac{n(n-1)}{2}\) distinct min-cut sets in a graph $G$ with $n$ nodes using the analysis of the min-cut algorithm.\\
     \item 
   \end{enumerate}
+
 \newpage
 \item \textbf{Let A denote the event where number 6 is obtained while tossing a 6-sided unbiased dice.}\\
   \begin{enumerate}
@@ -112,8 +114,34 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
           &= 1 - \left(\frac{5}{6}\right)^n
       \end{align*}
       This term approaches 1 as \(n\) tends to infinity, the sum of probabilities converges to 1.\\\\
-      $\therefore$ this PMF is legitimate.
+      $\therefore$ This PMF is legitimate.
       \end{enumerate}
+  \end{enumerate}
+
+\newpage
+\item \textbf{The PMF of random variable X is given by:}
+\begin{align*}
+  p(i) = \cfrac{c.\lambda^i}{i!},\ \ \ \ i = 0, 1, 2,...\\
+\end{align*}
+\textnormal{Given $\lambda$ is a positive value.}
+  \begin{enumerate}
+    \item P\{X=0\} can be obtained by simply Substituting \(i\) = 0 in the above equation.
+    \begin{align*}
+      P\{X=0\} &= p(0) = \cfrac{c.\lambda^0}{0!}\\\\
+      &= c
+    \end{align*}
+    \[
+     \boxed{\therefore P\{X=0\} = c}\\
+    \]\\
+    \item P\{X \(>\) 2\} can also be written in other form as: 1 - P\{X \(\leq\) 2\}
+    \begin{align*}
+      P\{X\leq 2\} &= p(0) + p(1) + p(2)\\\\
+      &= c + \cfrac{c.\lambda^1}{1!} + \cfrac{c.\lambda^2}{2!}\\\\
+      P\{X > 2\} &= 1 - \left(c + c.\lambda + \cfrac{c.\lambda^2}{2}\right)\\
+    \end{align*}
+    \[
+     \boxed{\therefore P\{X > 2\} = 1 - \left(\cfrac{c.\lambda^2 + 2c.\lambda + 2c}{2}\right)}\\
+    \]
   \end{enumerate}
 \end{enumerate}
 
