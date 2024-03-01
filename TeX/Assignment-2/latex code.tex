@@ -143,31 +143,60 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
   \end{enumerate}
 \newpage
 \item 
-The event that the contestant knows the Answer to Question-1: \(E_1\)\\
-The event that the contestant knows the Answer to Question-2: \(E_2\)\\
-The random variable representing winnings for answering Question-1 correctly: \(X_1\)\\
-The random variable representing winnings for answering Question-2 correctly: \(X_2\)\\
-The amount won for answering Question-1 correctly: \(V_1\)\\
-The amount won for answering Question-2 correctly: \(V_2\)\\
-The probability of knowing the answer to Question-1: \(P_1\)\\
-The probability of knowing the answer to Question-2: \(P_2\)\\\\
-\textbf{\textit{Case-i}} If they attempt Question-1 first:\\
-$\bullet$ Get Question 1 right and Question 2 right\\
-$\bullet$ Get Question 1 right and Question 2 wrong\\
-$\bullet$ Get Question 1 wrong\\
-So the expected winnings for attempting Question-1 first is given by:
-\begin{align*}
-  P_1.P_2.\left(V_1 + V_2\right) +  P_1.\left(1 - P_2\right).\left(V_1\right) + \left(1 - P_1\right).0
-\end{align*}
-\textbf{\textit{Case-ii}} If they attempt Question-2 first:\\
-$\bullet$ Get Question 2 right and Question 1 right\\
-$\bullet$ Get Question 2 right and Question 1 wrong\\
-$\bullet$ Get Question 2 wrong\\
-So the expected winnings for attempting Question-2 first is given by:
-\begin{align*}
-  P_2.P_1.\left(V_1 + V_2\right) +  P_2.\left(1 - P_1\right).\left(V_2\right) + \left(1 - P_2\right).0
-\end{align*}
-Hence, To maximize expected winnings, the contestant should attempt the question first that yields the higher expected value from these above two equations.
+  The event that the contestant knows the Answer to Question-1: \(E_1\)\\
+  The event that the contestant knows the Answer to Question-2: \(E_2\)\\
+  The random variable representing winnings for answering Question-1 correctly: \(X_1\)\\
+  The random variable representing winnings for answering Question-2 correctly: \(X_2\)\\
+  The amount won for answering Question-1 correctly: \(V_1\)\\
+  The amount won for answering Question-2 correctly: \(V_2\)\\
+  The probability of knowing the answer to Question-1: \(P_1\)\\
+  The probability of knowing the answer to Question-2: \(P_2\)\\\\
+  \textbf{\textit{Case-i}} If they attempt Question-1 first:\\
+  $\bullet$ Get Question 1 right and Question 2 right\\
+  $\bullet$ Get Question 1 right and Question 2 wrong\\
+  $\bullet$ Get Question 1 wrong\\
+  So the expected winnings for attempting Question-1 first is given by:
+  \begin{align*}
+    P_1.P_2.\left(V_1 + V_2\right) +  P_1.\left(1 - P_2\right).\left(V_1\right) + \left(1 - P_1\right).0
+  \end{align*}
+  \textbf{\textit{Case-ii}} If they attempt Question-2 first:\\
+  $\bullet$ Get Question 2 right and Question 1 right\\
+  $\bullet$ Get Question 2 right and Question 1 wrong\\
+  $\bullet$ Get Question 2 wrong\\
+  So the expected winnings for attempting Question-2 first is given by:
+  \begin{align*}
+    P_2.P_1.\left(V_1 + V_2\right) +  P_2.\left(1 - P_1\right).\left(V_2\right) + \left(1 - P_2\right).0
+  \end{align*}
+  Hence, To maximize expected winnings, the contestant should attempt the question first that yields the higher expected value from these above two equations.
 
+\newpage
+\item \textbf{A PMF is given by}\\
+  \begin{align*}
+    P(X={i}) = log_{10} \left(\cfrac{i + 1}{i}\right), \ \ \ i = 1, 2, 3,..., 9
+  \end{align*}
+  \begin{enumerate}
+    \item to prove,
+    \begin{align*}
+      \sum_{i=1}^{9} log_{10}\left(\frac{i + 1}{i}\right) = 1\\
+    \end{align*}
+    $\therefore$ Solving \textbf{L.H.S}:
+    \begin{align*}
+      \sum_{i=1}^{9} log_{10}\left(\frac{i + 1}{i}\right) &= log_{10}\left(\frac{2}{1}\right) + log_{10}\left(\frac{3}{2}\right) + ....\ log_{10}\left(\frac{10}{9}\right)\\
+      &= log_{10}\left[\left(\cfrac{2}{1}\right)\cdot\left(\cfrac{3}{2}\right)\cdot ...\cdot\left(\cfrac{10}{9}\right)\right]\\
+      &= log_{10}\left(10\right)\\
+      &= 1\\
+      &= \textbf{R.H.S}
+    \end{align*}
+    Hence, Proved.\\
+    \item $P(X \leq j) $
+    \begin{align*}
+      \sum_{i=1}^{j} log_{10}\left(\frac{i + 1}{i}\right) &= log_{10}\left(\frac{2}{1}\right) + log_{10}\left(\frac{3}{2}\right) + ....\ log_{10}\left(\frac{j + 1}{j}\right)\\
+      &= log_{10}\left[\left(\cfrac{2}{1}\right)\cdot\left(\cfrac{3}{2}\right)\cdot ...\cdot\left(\cfrac{j + 1}{j}\right)\right]\\
+      &= log_{10}\left(j + 1\right)\\
+    \end{align*}
+    \[
+     \boxed{\therefore P\{X \leq j\} = log_{10}\left(j + 1\right)}\\
+    \]
+  \end{enumerate}
 \end{enumerate}
 \end{document}
