@@ -81,7 +81,11 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
     \item \textnormal{The total number of edges in the graph is given by the binomial coefficient \( \binom{n}{2} \), which represents all possible ways to choose 2 nodes out of n. This is equal to \(\cfrac{n(n-1)}{2}\).}\\\\
     \textnormal{During the contraction process, each contraction operation results in a unique cut. Since there are \(\cfrac{n(n-1)}{2}\) distinct edges in the graph, there can be at most \(\cfrac{n(n-1)}{2}\) distinct cuts formed during the contraction process.}\\
     \(\therefore\)  we can argue that there can be at most \(\cfrac{n(n-1)}{2}\) distinct min-cut sets in a graph $G$ with $n$ nodes using the analysis of the min-cut algorithm.\\
-    \item 
+    \item We consider the analysis of the min-cut Algorithm, which indicates that for a graph to have a min-cut of size $k$, each vertex in the graph must have $k$ as their degree, $i.e$ removing $k$ edges should disconnect the entire graph.\\\\
+    Since it's given that the graph is undirected, the number of vertices will be twice the number of edges.\\
+    If each of the $n$ vertices has a degree of atleast $k$, the total degree count is atleast ($n\cdot k$)\\\\
+    However, each edge has been counted twice as it connects two vertices, the actual number chqanges to: ($\cfrac{n\cdot k}{2}$).\\\\
+    Hence, if Graph $G$ has min-cut cardinality $k$, then it has atleast $\left(\cfrac{n\cdot k}{2}\right)$ edges.
   \end{enumerate}
 
 \newpage
