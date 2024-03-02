@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  2 MAR 2024 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  2 MAR 2024 11:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -467,22 +467,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--210
 
  []
 
-[7] [8] (./latex code.aux)
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
+
+ []
+
+[8] (./latex code.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6451 strings out of 474165
- 98746 string characters out of 5749497
+ 6457 strings out of 474165
+ 98852 string characters out of 5749497
  1938528 words of memory out of 5000000
- 28654 multiletter control sequences out of 15000+600000
+ 28660 multiletter control sequences out of 15000+600000
  563537 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,79p,563b,346s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "latex code.pdf" (8 pages, 161576 bytes).
+Output written on "latex code.pdf" (8 pages, 164546 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream

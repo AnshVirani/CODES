@@ -226,5 +226,35 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
 
 \newpage
 \item 
+  From the distribution function of the random variable X:\\\\
+  For $1 \leq x < 3$:
+  \begin{align*}
+    P(X = 1) = F(1) - F(-\infty) = \frac{1}{4} - 0 = \frac{1}{4}
+  \end{align*}
+  For $3 \leq x < 4$:
+  \begin{align*}
+    P(X = 3) = F(3) - F(1) = \frac{5}{8} - \frac{1}{4} = \frac{3}{8}
+  \end{align*}
+  For $4 \leq x < 6$:
+  \begin{align*}
+    P(X = 4) = F(4) - F(3) = \frac{3}{4} - \frac{5}{8} = \frac{1}{8}
+  \end{align*}
+  For $6 \leq x < 7$:
+  \begin{align*}
+    P(X = 6) = F(6) - F(4) = \frac{7}{8} - \frac{3}{4} = \frac{1}{8}
+  \end{align*}
+  For $x \geq 7$:
+  \begin{align*}
+    P(X = 7) = 1 - F(6) = 1 - \frac{7}{8} = \frac{1}{8}
+  \end{align*}
+  Therefore, the probability mass function (PMF) of the random variable $X$ is:
+  \[ P(X = x) = 
+    \begin{cases} 
+    \frac{1}{4} & \text{if } 1 \leq x < 3 \\
+    \frac{3}{8} & \text{if } 3 \leq x < 4 \\
+    \frac{1}{8} & \text{if } 4 \leq x < 7, x \geq 7 \\
+    0 & \text{otherwise}
+    \end{cases}
+  \]
 \end{enumerate}
 \end{document}
