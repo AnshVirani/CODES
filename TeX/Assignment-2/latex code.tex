@@ -198,5 +198,33 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
      \boxed{\therefore P\{X \leq j\} = log_{10}\left(j + 1\right)}\\
     \]
   \end{enumerate}
+\newpage
+\item
+  Let us denote \(G\) as the number of correct guesses,\\
+  Let \(P(G=k)\) denote the probability of having exactly \(k\) correct guesses.\\
+  This signifies that the guesses are continuously correct till \(k^{th}\) guess, which is incorrect.\\
+  The probability of guessing correct card for the \(1^{st}\) time: \(\left(\cfrac{1}{n}\right)\),\\
+  The probability of guessing correct card for the \(2^{nd}\) time: \(\left(\cfrac{1}{n-1}\right)\),\\
+  .\\.\\.\\
+  The probability of guessing correct card for the \(k^{th}\) time: \(\left(\cfrac{1}{n-k+1}\right)\),\\
+  \begin{align*}
+    P(G=k) &= \left(\cfrac{1}{n}\right)\cdot\left(\cfrac{1}{n-1}\right)\cdot\left(\cfrac{1}{n-2}\right)\cdot ... \cdot\left(\cfrac{1}{n-k+2}\right)\cdot\left(\cfrac{1}{n-k+1}\right)
+  \end{align*}
+  \textit{We can rewrite the product of denominator's as:}
+  \begin{align*}
+    n\cdot\left(n-1\right)\cdot\left(n-2\right)\cdot...\cdot\left(n-k+1\right) = \cfrac{n!}{(n-k)!}
+  \end{align*}
+  $\therefore$
+  \begin{align*}
+    P(G=k) &= \left(\cfrac{1}{n\cdot\left(n-1\right)\cdot\left(n-2\right)\cdot...\cdot\left(n-k+1\right)}\right)\\
+    &= \left(\cfrac{1}{\cfrac{n!}{(n-k)!}}\right)\\\\
+    &= \cfrac{(n-k)!}{n!}
+  \end{align*}
+  \[
+     \boxed{\therefore P(G=k) = \cfrac{(n-k)!}{n!}}\\
+    \]
+
+\newpage
+\item 
 \end{enumerate}
 \end{document}
