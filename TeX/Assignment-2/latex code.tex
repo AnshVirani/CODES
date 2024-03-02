@@ -310,5 +310,60 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
       \[ P(X = 3) = \left(\cfrac{1}{2^3}\right) = \cfrac{1}{8} \]
     \end{enumerate}
   \end{enumerate}
+
+\newpage
+\item 
+  \textbf{We've been tasked with comparing poisson ratio and binomial Probability for some cases were $n$ is large but $p$ is very small, but their product \textit{i.e} $(\lambda = n\cdot p$) is a moderate number.}
+  Here are the various cases to compare:
+  \begin{enumerate}
+    \item 
+    \( P(X = 2) \) when \( n = 8, p = 0.1 \):\\
+    Binomial Probability:
+    \begin{align*}
+      P(X = 2) &= \binom{8}{2} (0.1)^2 (0.9)^6 \\ 
+      &= 0.1488
+    \end{align*}   
+    Poisson Approximation:
+    \begin{align*}
+      P(X = 2) &= \frac{e^{-0.8} \cdot (0.8)^2}{2!}\\
+      &= 0.1438
+    \end{align*}
+    \item 
+    \( P(X = 9) \) when \( n = 10, p = 0.95 \):\\
+    Binomial Probability:
+    \begin{align*}
+      P(X = 9) &= \binom{10}{9} (0.95)^9 (0.05)^1 \\ 
+      &= 0.3151
+    \end{align*}   
+    Poisson Approximation:
+    \begin{align*}
+      P(X = 9) &= \frac{e^{-9.5} \cdot (9.5)^9}{9!}\\
+      &= 0.13
+    \end{align*}
+    \item 
+    \( P(X = 0) \) when \( n = 10, p = 0.1 \):\\
+    Binomial Probability:
+    \begin{align*}
+      P(X = 0) &= \binom{10}{0} (0.1)^0 (0.9)^{10} \\ 
+      &= 0.3487
+    \end{align*}   
+    Poisson Approximation:
+    \begin{align*}
+      P(X = 0) &= \frac{e^{-1} \cdot (1)^0}{0!}\\
+      &= 0.3679
+    \end{align*}
+    \item 
+    \( P(X = 4) \) when \( n = 9, p = 0.2 \):\\
+    Binomial Probability:
+    \begin{align*}
+      P(X = 4) &= \binom{9}{4} (0.2)^4 (0.8)^5 \\ 
+      &= 0.066
+    \end{align*}   
+    Poisson Approximation:
+    \begin{align*}
+      P(X = 4) &= \frac{e^{-1.8} \cdot (1.8)^4}{4!}\\
+      &= 0.0723
+    \end{align*}
+  \end{enumerate}
 \end{enumerate}
 \end{document}
