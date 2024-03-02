@@ -222,39 +222,69 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
   \end{align*}
   \[
      \boxed{\therefore P(G=k) = \cfrac{(n-k)!}{n!}}\\
-    \]
+  \]
 
 \newpage
 \item 
-  From the distribution function of the random variable X:\\\\
+  From the distribution function of the random variable \(X\):\\\\
   For $1 \leq x < 3$:
   \begin{align*}
-    P(X = 1) = F(1) - F(-\infty) = \frac{1}{4} - 0 = \frac{1}{4}
+    P(X = 1) = F(1) - F(-\infty) = \cfrac{1}{4} - 0 = \cfrac{1}{4}
   \end{align*}
   For $3 \leq x < 4$:
   \begin{align*}
-    P(X = 3) = F(3) - F(1) = \frac{5}{8} - \frac{1}{4} = \frac{3}{8}
+    P(X = 3) = F(3) - F(1) = \cfrac{5}{8} - \cfrac{1}{4} = \cfrac{3}{8}
   \end{align*}
   For $4 \leq x < 6$:
   \begin{align*}
-    P(X = 4) = F(4) - F(3) = \frac{3}{4} - \frac{5}{8} = \frac{1}{8}
+    P(X = 4) = F(4) - F(3) = \cfrac{3}{4} - \cfrac{5}{8} = \cfrac{1}{8}
   \end{align*}
   For $6 \leq x < 7$:
   \begin{align*}
-    P(X = 6) = F(6) - F(4) = \frac{7}{8} - \frac{3}{4} = \frac{1}{8}
+    P(X = 6) = F(6) - F(4) = \cfrac{7}{8} - \cfrac{3}{4} = \cfrac{1}{8}
   \end{align*}
   For $x \geq 7$:
   \begin{align*}
-    P(X = 7) = 1 - F(6) = 1 - \frac{7}{8} = \frac{1}{8}
+    P(X = 7) = 1 - F(6) = 1 - \cfrac{7}{8} = \cfrac{1}{8}
   \end{align*}
-  Therefore, the probability mass function (PMF) of the random variable $X$ is:
+  Therefore, the probability mass function (PMF) of the random variable $X$ is:\\\\
   \[ P(X = x) = 
     \begin{cases} 
-    \frac{1}{4} & \text{if } 1 \leq x < 3 \\
-    \frac{3}{8} & \text{if } 3 \leq x < 4 \\
-    \frac{1}{8} & \text{if } 4 \leq x < 7, x \geq 7 \\
+    \cfrac{1}{4} & \text{if } 1 \leq x < 3 \\\\
+    \cfrac{3}{8} & \text{if } 3 \leq x < 4 \\\\
+    \cfrac{1}{8} & \text{if } 4 \leq x < 7, x \geq 7 \\\\
     0 & \text{otherwise}
     \end{cases}
+  \]
+
+\newpage
+\item 
+  We want to compute the conditional probability that the gambler wins $i$ (where $i = 1, 2, 3$), given that he wins a positive amount. The conditional probability is given by:
+  \[
+  P(X = i | X > 0) = \cfrac{P(X=i\  \cap\  X>0)}{P(X > 0)}
+  \]
+  First, we calculate the probability of winning a positive amount:
+  \[
+  P(X > 0) = \cfrac{13}{55} + \cfrac{1}{11} + \cfrac{1}{165}
+  \]
+  Finally, we substitute these value into the conditional probability formula to obtain:
+  \begin{align*}
+    P(X = 1 | X > 0) = \cfrac{\cfrac{13}{55}}{\cfrac{13}{55} + \cfrac{1}{11} + \cfrac{1}{165}} = 0.7\overline{09}\\\\
+  \end{align*}
+  \[
+    \boxed{\therefore P(X = 1 | X > 0) = 0.7\overline{09}}\\
+  \]
+  \begin{align*}
+    P(X = 2 | X > 0) = \cfrac{\cfrac{1}{11}}{\cfrac{13}{55} + \cfrac{1}{11} + \cfrac{1}{165}} = 0.\overline{27}\\\\
+  \end{align*}
+  \[
+     \boxed{\therefore P(X = 2 | X > 0) = 0.\overline{27}}\\
+  \]
+  \begin{align*}
+    P(X = 3 | X > 0) = \cfrac{\cfrac{1}{165}}{\cfrac{13}{55} + \cfrac{1}{11} + \cfrac{1}{165}} = 0.0\overline{18}\\
+  \end{align*}
+  \[
+     \boxed{\therefore P(X = 3 | X > 0) = 0.0\overline{18}}\\
   \]
 \end{enumerate}
 \end{document}
