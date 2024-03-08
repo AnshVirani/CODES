@@ -1,0 +1,192 @@
+\documentclass{article}
+\newcounter{rownumbers}
+\newcommand\rownumber{\stepcounter{rownumbers}\arabic{rownumbers}}
+%\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{amsmath,amsfonts,mathtools}
+
+\graphicspath{ {C:\Users\harsh\OneDrive\Documents} }
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=-2mm,
+ bottom=2mm,
+ }
+ 
+%\usepackage[margin=0.5in]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{ifpdf}
+%\usepackage{cite}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{pdfpages}
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+\usepackage{parskip}
+%\onecolumn
+%\input{psfig}
+\usepackage{color}
+\usepackage{graphicx}
+\setlength{\textheight}{23.5cm} \setlength{\topmargin}{-1.05cm}
+\setlength{\textwidth}{6.5in} \setlength{\oddsidemargin}{-0.5cm}
+\renewcommand{\baselinestretch}{1}
+\pagenumbering{arabic}
+\linespread{1.15}
+\begin{document}
+\textbf{
+\begin{center}
+{
+\large{School of Engineering and Applied Science (SEAS), Ahmedabad University}\vspace{5mm}
+}
+\end{center}
+%
+\begin{center}
+\large{Probability and Stochastic Processes (MAT277)\\ \vspace{4mm}
+Homework Assignment-3\\\vspace{2mm}
+Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
+\end{center}}
+\vspace{2mm}
+
+
+\vspace{10mm}
+
+\begin{enumerate}
+\item 
+    Consider that Alice and Bob have no first girl child then they have \(k\) children as mentioned in the question. So, the probability for no girl child is \( \left(\cfrac{1}{2^k}\right)\).\\\\
+    When they have one girl the probability is the complement of no girl child,\\
+    \[
+    \left(1 - \cfrac{1}{2^k}\right)
+    \]
+    The first \( i^{th} \) offspring are usually boys, that is to have at least \( i \geq 1 \) the probability is \( \cfrac{1}{2^i} \).\\
+    Therefore, the predicted number of male children has increased as
+    \[
+    \sum_{i=1}^k \left(\cfrac{1}{2^i}\right) = \left(1 - \cfrac{1}{2^k}\right)
+    \]
+    \[
+        \boxed{\therefore\ \textnormal{The expected number of female or male children is same that is } \left(1 - \cfrac{1}{2^k}\right).}
+    \]
+\newpage
+\item 
+\begin{enumerate}
+    \item 
+    \textbf{Maximizing the expected amount of money:}\\
+    Given that the commodity sells for \$2 per ounce now, we have \$1000 to spend. \\
+    Therefore, we can buy 
+    \[ 
+    \cfrac{1,000}{2} = 500 \text{ ounces}
+    \]
+    After one week, the price of the commodity can either increase to \$4 per ounce or decrease to \$1 per ounce. Both possibilities are equally likely.\\
+    \begin{enumerate}
+        \item If the price increases to \$4 per ounce:
+        \begin{itemize}
+            \item we have 500 ounces.
+            \item Selling them at \$4 per ounce would give us \( 500 \times 4 = \$2,000. \)
+        \end{itemize}
+        \item If the price decreases to \$1 per ounce:
+        \begin{itemize}
+            \item we still have 500 ounces.
+            \item Selling them at \$1 per ounce would give us \( 500 \times 1 = \$500. \)
+        \end{itemize}
+    \end{enumerate}
+    Since both the scenarios are equally likely to occur, we calculate the expected value by taking the average of the possible outcomes:
+    \[
+        E [\text{Money at the end of the week}] = \cfrac{2,000 + 500}{2} = \$1,250
+    \]
+    \[
+        \boxed{\therefore\ \textnormal{Our expected amount of the commodity at the end of the week will be \(\approx\) 1,250 ounces.}}
+    \]
+    \item \textbf{Maximizing the expected amount of the commodity at the end of the wek:}\\
+    We should wait until the end of the week to buy because the price will either be \$1 or \$4 per ounce with equal probability.\\\\
+    Therefore, calculating the expected price at the end of the week by taking average we get, \$2.50 per ounce.\\    
+    With the given amount, we can buy
+    \[
+    \cfrac{1,000}{2.50} = 400 \text{ ounces}
+    \]
+    \[
+        \boxed{\therefore\ \textnormal{Our expected amount of the commodity at the end of the week will be 400 ounces.}}
+    \]
+    Hence, if our objective is to maximize the expected amount of money, we should buy the commodity now and hold onto it.\\\\
+    That strategy ensures us obtain the most commodity for your money, taking into account the uncertainty that can take place within the price fluctuations.\\
+    \end{enumerate}
+
+\newpage
+\item 
+    Let, the variable \( X \) denotes the player's winnings. The probability that the player wins their \( n^{th} \) game is given by \( \left(\cfrac{1}{2}\right)^n \).\\
+    Calculating the Expectation:
+        \begin{align*}
+        E [X] &= \sum_{i=1}^{\infty} X P(X = X) \\\\
+            &= \sum_{i=1}^{\infty} \left[2^n\cdot \left(\frac{1}{2}\right)^n\right] \\\\
+            &= \sum_{i=1}^{\infty} (1) \\\\
+            &= \infty
+        \end{align*}
+        \begin{enumerate}
+            \item 
+            No, I would not be pay \$1 million to play this game once.\\
+            Considering the best case scenario: \$1 million to play once and you win in the first toss, you will take home a big amount \$2 million. But on the other hand, if you lose the bet, you will lose the invested amount.(\textit{Not a small amount})\\\\
+            \textit{The fact \( E[X] = \infty \) is the expected value in the long run, not for one game.}\\
+            \item 
+            Yes, the expectation when considering a long run is indeed "something large," so we can expect the profit. Therefore, one can pay \$1 million for each game.
+        \end{enumerate}
+
+\newpage
+\item 
+    From the properties of expectation,    
+    \[
+        E[a] = a, \quad \text{here } a \text{ is a constant.}
+    \]
+    \[
+        E[a - X] = a - E[X], \quad \text{here } X \text{ is a random variable.}
+    \]
+    Consider any constant function \( y \) as function of random variable \( X \) as below.
+    \[
+        y = (X - E[X])^k \quad \ldots (1)
+    \]  
+    Expand R.H.S of eq.(1) using Binomial's expansion,
+    \begin{align*}
+        y &= (X - E[X])^k \\
+          &= \binom{k}{0} X^k (-E[X])^0 + \binom{k}{1} X^{k-1}\cdot(-E[X])^1 + \ldots + \binom{k}{k-1} X^1\cdot(-E[X])^{k-1} \\
+          &= X^k + \binom{k}{1} X^{k-1}\cdot(-E[X]) + \ldots + \binom{k}{k-1} X(-E[X])^{k-1}
+    \end{align*}
+    From the properties of expectation, 
+    \begin{equation*}
+        E[a] = a, \quad \text{here } a \text{ is aconstant.}
+    \end{equation*}
+    \begin{equation*}
+        E[a - X] = a - E[X], \quad \text{here } X \text{ is a random variable.}
+    \end{equation*} 
+    Consider any constant function \( y \) as function of random variable \( X \) as below.
+    \begin{equation}
+        y = (X - E[X])^k \ldots (1)
+    \end{equation}
+        Expand Right hand side of equation (1) using Binomial's expansion,
+    \begin{equation*}
+        y = (X - E[X])^k = \binom{k}{0}X^k(-E[X])^0 + \binom{k}{1}X^{k-1}(-E[X])^1 + \ldots + \binom{k}{k}X^0(-E[X])^k
+    \end{equation*}
+    \begin{equation*}
+        = X^k + \binom{k}{1}X^{k-1}(-E[X]) + \ldots + (-E[X])^k
+    \end{equation*}
+    From above expansion,
+    \begin{equation*}
+        y - X^k = (-E[X])^k - \binom{k}{1}X^{k-1}(-E[X]) + \ldots + \binom{k}{k-1}X(-E[X])^{k-1} \ldots (2)
+    \end{equation*} 
+    Apply expectation on both sides of equation (2). 
+    \begin{equation*}
+        E[y - X^k] = E[(-E[X])^k - \binom{k}{1}X^{k-1}(-E[X]) + \ldots + \binom{k}{k-1}X(-E[X])^{k-1}] \ldots (3)
+    \end{equation*}  
+    On applying properties of expectation from the equation (3).  
+    \begin{equation*}
+        E[X^k] = (E[X])^k - \binom{k}{1}E[X^{k-1}(-E[X])] + \ldots + \binom{k}{k-1}E[X(-E[X])^{k-1}] \ldots (4)
+    \end{equation*}
+    From above expression (4) it is interpreted that, 
+    \begin{equation*}
+        (E[X])^k > (E[X])^k
+    \end{equation*}
+    Hence, the required objective is proved.
+\end{enumerate}
+\end{document}
