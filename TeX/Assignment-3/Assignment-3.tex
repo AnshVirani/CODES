@@ -154,19 +154,19 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
     \begin{align*}
         (X - E[X])^k 
         &= \binom{k}{0}X^k(-E[X])^0 + \binom{k}{1}X^{k-1}(-E[X])^1 + \ldots + \binom{k}{k}X^0(-E[X])^k \\
-        &= X^k + \binom{k}{1}X^{k-1}(-E[X]) + \ldots + (-E[X])^k
+        &= X^k + (-E[X])^k - \binom{k}{1}X^{k-1}(E[X]) + \ldots + (-E[X])^k
     \end{align*}
     substituting these values in eq.(1),
     \begin{equation*}
-        y - X^k = (-E[X])^k + \binom{k}{1}X^{k-1}(-E[X]) + \ldots + \binom{k}{k-1}X(-E[X])^{k-1} \hspace{20mm}\ldots (2)
+        y - X^k = (E[X])^k - \binom{k}{1}X^{k-1}(E[X]) + \ldots + \binom{k}{k-1}X(-E[X])^{k-1} \hspace{20mm}\ldots (2)
     \end{equation*} 
     Apply expectation on both sides of eq.(2),
     \begin{equation*}
-        E[y - X^k] = E[(-E[X])^k + \binom{k}{1}X^{k-1}(-E[X]) + \ldots + \binom{k}{k-1}X(-E[X])^{k-1}] \hspace{10mm}\ldots (3)
+        E[y - X^k] = E\left[(E[X])^k - \binom{k}{1}X^{k-1}(E[X]) + \ldots + \binom{k}{k-1}X(-E[X])^{k-1}\right] \hspace{10mm}\ldots (3)
     \end{equation*}  
     On applying properties of expectation from the eq.(3), 
     \begin{equation*}
-        E[X^k] = (E[X])^k + \binom{k}{1}E[X^{k-1}(-E[X])] + \ldots + \binom{k}{k-1}E[X(-E[X])^{k-1}] \hspace{15mm}\ldots (4)
+        E[X^k] = (E[X])^k - \binom{k}{1}E[X^{k-1}(E[X])] + \ldots + \binom{k}{k-1}E[X(-E[X])^{k-1}] \hspace{15mm}\ldots (4)
     \end{equation*}
     From the above eq.(4) it is interpreted that,
     \begin{equation*}
@@ -289,22 +289,25 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
 
 \newpage
 \item 
-    Let \(f\) be a convex function on the interval I. If \(x_1, x_2, \ldots, x_n \in I\) and \(t_1, t_2, \ldots, t_n\) are non negative real numbers such that \(t_1 + t_2 + \ldots + t_n = 1\), then
-    \[
-        f\left(\sum_{i=1}^{n} t_ix_i\right) \leq \sum_{i=1}^{n} t_if(x_i).
-    \]
-    \begin{proof}
-    The case for \(n = 2\) is true by the definition of convex. Assume the relation holds for \(n\), then we have
-    \[ 
-        f\left(\sum_{i=1}^{n+1} t_ix_i\right) = f\left(\sum_{i=1}^{n} t_ix_i + t_{n+1}x_{n+1}\right) = f\left(t_{n+1}x_{n+1} + (1 - t_{n+1}) \cfrac{1}{1 - t_{n+1}}\sum_{i=1}^{n} t_ix_i\right) 
-    \]
-    \[ 
-        \leq t_{n+1}f(x_{n+1}) + (1 - t_{n+1})f\left(\cfrac{1}{1 - t_{n+1}}\sum_{i=1}^{n} t_ix_i\right) 
-    \]
-    \[ 
-        = \sum_{i=1}^{n+1} t_if(x_i).
-    \]
-    Hence, by induction, the theorem is proven.
-    \end{proof}
+    \begin{enumerate}
+    \item 
+        Let \(f\) be a convex function on the interval I. If \(x_1, x_2, \ldots, x_n \in I\) and \(\lambda_1, \lambda_2, \ldots, \lambda_n\) are non negative real numbers such that \(\sum_{i=1}^{n} \lambda_i = 1\), then
+        \[
+            f\left(\sum_{i=1}^{n} \lambda_i x_i\right) \leq \sum_{i=1}^{n} \lambda_i f(x_i).
+        \]
+        The case for \(n = 2\) is true by the definition of convex. Assume the relation holds for \(n\), then we have
+        \begin{align*}
+            f\left(\sum_{i=1}^{n+1} \lambda_i x_i\right) &= f\left(\sum_{i=1}^{n} \lambda_i x_i + \lambda_{n+1}x_{n+1}\right)
+            = f\left(\lambda_{n+1}\cdot x_{n+1} + (1 - \lambda_{n+1}) \cfrac{1}{1 - \lambda_{n+1}}\sum_{i=1}^{n} \lambda_i x_i\right)\\
+            &\leq \lambda_{n+1}\cdot f(x_{n+1}) + (1 - \lambda_{n+1})\cdot f\left(\cfrac{1}{1 - \lambda_{n+1}}\sum_{i=1}^{n} \lambda_i x_i\right)\\
+            &= \lambda_{n+1}\cdot f(x_{n+1}) + (1 - \lambda_{n+1})\cdot f\left(\sum_{i=1}^{n} \cfrac{\lambda_i}{1 - \lambda_{n+1}}\cdot x_i\right)\\
+            &\leq \lambda_{n+1}\cdot f(x_{n+1}) + (1 - \lambda_{n+1})\cdot \sum_{i=1}^{n} \cfrac{\lambda_i}{1 - \lambda_{n+1}}\cdot f(x_i)\\
+            &= \sum_{i=1}^{n} \lambda_i\cdot f(x_i) + \lambda_{n+1}\cdot f(x_{n+1})\\
+            &= \sum_{i=1}^{n+1} \lambda_i f(x_i).
+        \end{align*} 
+        \textit{Hence, by induction, the theorem is proven.}\\
+    \item 
+        
+    \end{enumerate}
 \end{enumerate}
 \end{document}
