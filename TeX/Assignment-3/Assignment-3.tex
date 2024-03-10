@@ -180,36 +180,17 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
         \item
             It is given that the length of the streaks is
             \[ 
-                k = \cfrac{\log_2 n + 1}{2} \text{ where } n \text{ is some power of 2.} 
+                k = \cfrac{\log_{2}{n+1}}{2} \text{ where } n \text{ is some power of 2.} 
             \]
-            Consider the length of streaks be denoted by \( k \) and \( Y_i \) be that term of sequence of flips which 
-            represents \( 1 \) whenever the streak of length \( k \) starts from the \( i \)-th flip.\\    
-            The length of the streak will be \( k \) from the \( i \)-th flip if the flips \( Y_i's \) are all same for \( i = 1,\ldots,n-k+1 \).
-            It follows that
+            Consider the length of streaks be denoted by \(k\) and \(Y_i\) be that term of sequence of flips which 
+            represents \(1\) whenever the streak of length \(k\) starts from the \(i\)-th flip.\\\\
+            The length of the streak will be \( k \) from the \(i\)-th flip if the flips \(Y_i's\) are all same for \(i = 1,\ldots,n-k+1\).
+            therefore
             \[ 
                 \sum_{i=1}^{n-k+1} Y_i
             \]
-            will the total number of streaks of length \( k \).\\
-            It is known by the linearity of expectations that
-            \[
-                E\left[\sum_{i=1}^n X_i\right] = \sum_{i=1}^n E[X_i].
-            \]
-            Therefore, the expected value is,
-            \[
-                E\left[\sum_{i=1}^{n-k+1} Y_i\right] = \sum_{i=1}^{n-k+1} E[Y_i].
-            \]
-            The objective is to prove that the expected number of streaks of length \( k \) given scenario of the streak of flips is \( \cfrac{\log_2 n + 1}{n} \) where \( n \) is some power of 2.\\
-            Consider the length of streaks be denoted by \( k \) and \( Y_i \) be that term of sequence of flips which represents 1 whenever the streak of length \( k \) starts from the \( i \)-th flip.\\
-            The length of the streak will be \( k \) from the \( i \)-th flip if the flips \( Y_i's \) are all same for \( i = 1,...,n-k+1 \). It follows that
-            \[
-                \sum_{i=1}^{n-k+1} Y_i
-            \]
-            will the total number of streaks of length \( k \).
-            It is known by the linearity of expectations that
-            \[
-                E\left[\sum_{i=1}^{n-k+1} X_i\right] = \sum_{i=1}^{n-k+1} E[X_i].
-            \]
-            Therefore, the expected value is,
+            will be the total number of streaks of length \(k\).\\
+            linearity of expectations states that
             \[
                 E\left[\sum_{i=1}^{n-k+1} Y_i\right] = \sum_{i=1}^{n-k+1} E[Y_i] = \sum_{i=1}^{n-k+1} Pr(Y_i = 1).
             \]
@@ -221,69 +202,52 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
             \[
                 E\left[\sum_{i=1}^{n-k+1} Y_i\right] = \sum_{i=1}^{n-k+1} \left(\cfrac{1}{2}\right)^{k-1}.
             \]
-            Substitute \( \log_2 n + 1 \) for \( k \) and simplify as follows:
-            \[
-                E\left[\sum_{i=1}^{n-k+1} Y_i\right] = \sum_{i=1}^{n-k+1} \left(\cfrac{1}{2}\right)^{\log_2 n} = \cfrac{n-k+1}{n}.
-            \]
-            Further simplify using integration,
-            \[
-                E\left[\sum_{i=1}^{n-k+1} Y_i\right] = \sum_{i=1}^{n-k+1} \cfrac{1}{n} = \cfrac{n-k+1}{n} = \cfrac{n - \log_2 n - 1 + 1}{n} = 1 - \cfrac{\log_2 n}{n}
-            \]
-            Since \(\cfrac{\log_2 n}{n}\) is of order 1, the expected number of streaks of order \(k\) is \(1 - O(1)\) with respect to \(n\).\\
+            substituting, \( \log_{2}{n+1} \) for \( k \)
+            \begin{align*}
+                E\left[\sum_{i=1}^{n-k+1} Y_i\right] &= \sum_{i=1}^{n-k+1} \left(\cfrac{1}{2}\right)^{\log_2 n}\\
+                &= \sum_{i=1}^{n-k+1} \left(\cfrac{1}{2^{\log_2 n}}\right)\\
+                &= \sum_{i=1}^{n-k+1} \cfrac{1}{n}\\
+                &= \cfrac{n-k+1}{n}\\
+                &= \cfrac{n - \log_2 n - 1 + 1}{n}\\
+                &= 1 - \cfrac{\log_2 n}{n}
+            \end{align*}
+            Since \(\cfrac{\log_2 n}{n}\) is of order 1, the expected number of streaks of order \(k\) is \(1 - o(1)\) with respect to \(n\).\\\\
             \textit{Hence, proved.}
-    
+        \newpage
         \item 
-            The objective is to prove that
-            \[
-                Pr(\text{no streak of length at least } [\log_2 n - 2\log_2\log_2 n]) < \cfrac{1}{n}.
-            \]            
-            Let \(n\) be the number of terms in the sequence of flips and the length of streaks be denoted by \(k\).\\            
-            If the terms of the sequence be grouped into distinct blocks of \(k\) consecutive flips, then there will be \(\cfrac{n}{k}\) such blocks.\\            
-            Let \(E_1\) be the event that the sequence of \(n\) terms does not have any streaks of length \(k\) and \(E_2\) be the event that none of the blocks have a streak of length \(k\).\\
-            It is easy to observe that \(E_1\) is possible if \(E_2\) holds, that is if none of the blocks have the streaks of length \(k\) then sequence will also not have any such streak.\\
-            Therefore, \(Pr(E_1) \leq Pr(E_2)\).\\            
-            Since the coin is fair and flips are independent, the probability that a block of \( k \) consecutive flips has a streak of length \( k \) will be \( \left(\cfrac{1}{2}\right)^{k-1} \). Therefore, the probability that a block does not have any streak of length \( k \) is \( 1 - \cfrac{1}{2^{k-1}} \).\\
-            As there are \( \cfrac{n}{k} \) blocks,
+            Let \(n\) be the number of terms in the sequence of flips and the length of streaks be denoted by \(k\).\\\\
+            If they are grouped into distinct blocks of \(k\) consecutive flips, then there will be \(\cfrac{n}{k}\) such blocks.\\\\
+            Let \(E_1\) be the event that the sequence of \(n\) terms does not have any streaks of length \(k\) and \(E_2\) be the event that none of the blocks have a streak of length \(k\).\\\\
+            It is easy to observe that \(E_1\) is possible if \(E_2\) holds, that is if none of the blocks have the streaks of length \(k\) then sequence will also not have any such streak.\\\\
+            Therefore, \(Pr(E_1) \leq Pr(E_2)\).\\\\
+            Since the coin is fair and flips are independent, the probability that a block of \(k\) consecutive flips has a streak of length \(k\) will be \(\left(\cfrac{1}{2}\right)^{k-1}\). Therefore, the probability that a block does not have any streak of length \(k\) is \(\left[1 - \left(\cfrac{1}{2^{k-1}}\right)\right]\).\\
+            As there are \(\cfrac{n}{k}\) blocks,
             \[
                 Pr(E_2) = \left(1 - \cfrac{1}{2^{k-1}}\right)^{\cfrac{n}{k}}.
             \]            
-            Use the facts that \( k = 1 \leq \log_2 n - 2\log_2\log_2 n \), \( \cfrac{n}{k} \leq \cfrac{n}{\log_2 n} \), and \( 1 - x \leq e^{-x} \) to simplify the probability of \( E_2 \).            
-            \[
-                Pr(E_2) \leq \left(1 - \cfrac{1}{2^{(\log_2 n - 2\log_2\log_2 n)}}\right)^{\cfrac{n}{\log_2 n}}
-            \]            
-            \[
-                = \left(\cfrac{\log_2^2 n}{n}\right)^{\cfrac{n}{\log_2 n}-1}
-            \]            
-            \[
-                \leq \exp\left(-\cfrac{n}{\log_2 n}\left(\cfrac{\log_2^2 n}{n}\right)\right)
-            \]            
-            \[
-                = \exp\left(-\log_2 n \left(\cfrac{\log_2 n}{n} \left(\log_2 n - 1\right)\right)\right)
-            \]            
-            \[
-                Pr(E_2) = \exp\left(-\log_2 n \left(1 - \cfrac{\log_2 n}{n}\right)\right)
-            \]            
-            It is obtained that \( Pr(E_2) = \exp\left(-\log_2 n \left(1 - \cfrac{\log_2 n}{n}\right)\right) \).\\
-            Simplify further using the properties of logarithmic function.
-            \[
-                Pr(E_2) = \exp\left(-\log_2 n \left(1 - \cfrac{\log_2 n}{n}\right)\right)
-            \]
-            \[
-                \leq \exp\left(-\log_2 n \left(\cfrac{1}{\log_2 e}\right)\right)
-            \]
-            \[
-                = \exp\left(\cfrac{\log_2 n}{\log_2 e}\right)
-            \]
-            \[
-                = \exp(-\ln n)
-            \]
+            Using the facts that \( k = 1 \leq \log_2 n - 2\log_2\log_2 n \), \( \cfrac{n}{k} \leq \cfrac{n}{\log_2 n} \), and \( 1 - x \leq e^{-x} \) and substituting them in the equation of the probability of \( E_2 \).            
+            \begin{align*}
+                Pr(E_2) &\leq \left(1 - \cfrac{1}{2^{(\log_2 n - 2\log_2\log_2 n)}}\right)^{\cfrac{n}{\log_2 n}}\\
+                &= \left(\cfrac{\log_2^2 n}{n}\right)^{\cfrac{n}{\log_2 n}-1}\\
+                &\leq \exp\left[-\cfrac{n}{\log_2 n}\left(\cfrac{\log_2^2 n}{n}\right)\right]\\
+                &= \exp\left[-\log_2 n \left(\cfrac{\log_2 n}{n} \left(\log_2 n - 1\right)\right)\right]\\
+                Pr(E_2) &= \exp\left[-\log_2 n \left(1 - \cfrac{\log_2 n}{n}\right)\right]
+            \end{align*}            
+            It is obtained that \(Pr(E_2) = \exp\left[-\log_2 n \left(1 - \cfrac{\log_2 n}{n}\right)\right]\).\\
+            Simplifing further using the properties of logarithmic function, we get:
+            \begin{align*}
+                Pr(E_2) &= \exp\left[-\log_2 n \left(1 - \cfrac{\log_2 n}{n}\right)\right]\\
+                &\leq \exp\left(-\log_2 n \left(\cfrac{1}{\log_2 e}\right)\right)\\
+                &= \exp\left(\cfrac{\log_2 n}{\log_2 e}\right)\\
+                &= \exp(-\ln n)
+            \end{align*}
             It follows that
             \[
                 Pr(E_2) \leq \cfrac{1}{n}.
             \]
-            Hence, it is proved that
+            \textit{Hence, it is proved that}
             \[
-                Pr(\text{no streak of length at least } [\log_2 n - 2\log_2 \log_2 n]) < \cfrac{1}{n}.
+                \mathbf{Pr(\textbf{no streak of length at least }[\log_2 n - 2\log_2 \log_2 n]) < \cfrac{1}{n}}.
             \]
     \end{enumerate}
 
@@ -309,5 +273,126 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
     \item 
         
     \end{enumerate}
+
+\newpage
+\item
+    \begin{enumerate}
+    \item 
+        \begin{enumerate}
+        \item
+            To find \(\mathbf{E[(4X - 1)^2]}\), we can use the properties of expected value.
+            \begin{align*}
+                E[(4X - 1)^2] = E[16X^2 - 8X + 1]
+            \end{align*}
+            \textit{By using linearity of expectation:}
+            \begin{align*}
+                E[16X^2 - 8X + 1] = 16E[X^2] - 8E[X] + E[1]
+            \end{align*}
+            We know that,
+            \begin{align*}
+                Var(X) = E[X^2] - (E[X])^2\\
+                \therefore E[X^2] = Var(X) + (E[X])^2
+            \end{align*}
+            substituting this into the expression,we get:
+            \begin{align*}
+                16(Var(X) + (E[X])^2) - 8E[X] + 1 &= 16(1 + 3^2) - (8 \times 3) + 1 = 16(10) - 24 + 1\\
+                &= 160 - 24 + 1 = 137
+            \end{align*}
+            \[
+                \boxed{\therefore E\left[(4X - 1)^2\right] = 137}
+            \]
+        \item
+            Now, let's find \(\mathbf{Var(5 - 2X)}\):
+            \begin{align*}
+                E[5 - 2X] = 5 - 2E[X]\\
+                5 - (2 \times 3) = 5 - 6 = -1
+            \end{align*}
+            \begin{align*}
+                Var(5 - 2X) &= E[(5 - 2X)^2] - [E(5 - 2X)]^2\\
+                &= E[25 - 20X + 4X^2] - (-1)^2
+            \end{align*}
+            Using the properties of expectation:
+            \begin{align*}
+                25 - 20E[X] + 4E[X^2] - 1 &= 25 - (20 \times 3) + (4 \times 10) - 1
+                \\ &= 25 - 60 + 40 - 1 = 4
+            \end{align*}
+            \[
+                \boxed{\therefore Var(5 - 2X) = 4}
+            \]\\
+        \end{enumerate}
+    \item
+        The total number of selecting 2 cards from a deck of 52 cards is given by: \(n(T)\) = \(\binom{52}{2}\) = 1326.\\\\
+        Now, considering both the selected cards are of the same suit: \(n(ss)\) = \(\binom{4}{1}\).\(\binom{13}{2}\) = 312.\\\\
+        Similarly, if both the selected cards are of the same color: \(n(sc)\) = \(\binom{2}{1}\).\(\binom{26}{2}\) = 650.\\\\
+        \begin{align*}
+            \therefore Pr(ss) = \cfrac{312}{1326} \approx 0.2353\\
+            \therefore Pr(sc) = \cfrac{650}{1326} \approx 0.4902\\
+        \end{align*}
+        \(\therefore \textnormal{It implies that} P(X=1) = Pr(sc)\)\ ...[the player won \$1]\\
+        \(\therefore \textnormal{It implies that} P(X=2) = Pr(ss)\)\ ...[the player won \$2]\\\\
+        For other cases, it's given that a player will lose \$0.50
+        \begin{align*}
+        \therefore P(X= -0.50) &= 1 - P(X=1) - P(X=2)\\
+        &= 1- [0.2353 + 0.4902]\\
+        &= 0.2745
+        \end{align*}
+        We know that,
+        \begin{align*}
+            Var(X) = E[X^2] - (E[X])^2\ \ \ \ \ \ ...(i)\\
+            E[X^2] = \sum x^2.P(X=x)\ \ \& \ \ E[X] = \sum x.P(X=x)
+        \end{align*}
+        \begin{align*}
+            \therefore  E[X^2] &= (2^2\times 0.2353) + (1^2\times 0.4902) + (-0.5^2\times 0.2745)\\
+            &= 1.5
+        \end{align*}
+        \begin{align*}
+            \therefore  E[X] &= (2\times 0.2353) + (1\times 0.4902) + (-0.5\times 0.2745)\\
+            &= 0.8235
+        \end{align*}
+        \begin{align*}
+            Var(X) &= E[X^2] - (E[X])^2\\
+            &= 1.5 - (0.8235^2)\\
+            &= 0.8218
+        \end{align*}
+        \(\therefore\) The variance of the amount won by the player is, \$0.8218.\\
+    \item
+        Let's say we have two teams A \& B.\\
+        If Team A has a winning Probability of \(p\), then winning probability of Team B will be \((1-p)\).
+        Let \(N\) be total number of games played when \(i=2\).\\
+        Hence, \(N\) can take only two values \(i.e,\) 2 OR 3 (Since for atleast one of them to win, atmost 3 games are required).\\
+        \(P(N=2) = P(N=2, A\ wins) + P(N=2, B\ wins)\)\\
+        \(= p^2 + (1-p)^2\)\\\\
+        \(P(N=3) = P(N=3, A\ wins) + P(N=3, B\ wins)\)\\
+        $\bullet$ For A to win when \(N=3\), A has to win the \(3^{rd}\) game and any of the first two games.\\\\
+        \(\therefore P(N=3, A\ wins) = p.(1-p).p + (1-p).p.p\)\\
+        \(=2.p^2.(1-p)\)\\\\
+        $\bullet$ Similarly for B to win when\(N=3\), we get:\\\\
+        \(\therefore P(N=3, B\ wins) = p.(1-p).(1-p) + (1-p).p.(1-p)\)\\
+        \(=2.p.(1-p)^2\)\\\\
+        We get the Expectation:
+        \begin{align*}
+            E[N] &= 2.P(N=2) + 3.P(N=3)\\
+            &= \left[2.\left(p^2 + (1-p)^2\right)\right] + \left[3.\left(2p^2(1-p) + 2p(1-p)^2\right)\right]\\
+            &= -2p^2 + 2p + 2
+        \end{align*}
+        Similarly,
+        \begin{align*}
+            E[N^2] &= 2^2.P(N=2) + 3^2.P(N=3)\\
+            &= \left[4.\left(p^2 + (1-p)^2\right)\right] + \left[9.\left(2p^2(1-p) + 2p(1-p)^2\right)\right]\\
+            &= -10p^2 + 10p + 4
+        \end{align*}
+        The variance can we calculated by,
+        \begin{align*}
+            Var(N) &= E[N^2] - (E[N])^2\\
+            &= \left[-10p^2 + 10p + 4\right] - \left[-2p^2 + 2p + 2\right]^2\\
+            &= -4p^4 + 8p^3 - 6p^2 + 2p
+        \end{align*}
+
+        $\bullet$ \textbf{The \(2^{nd}\) part can't be proved as the value of probability can't be more than 1 (we are given 12).}
+    \end{enumerate}
+
+\newpage
+\item
+    v
 \end{enumerate}
 \end{document}
