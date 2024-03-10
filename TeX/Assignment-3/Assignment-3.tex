@@ -271,7 +271,18 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
         \end{align*} 
         \textit{Hence, by induction, the theorem is proven.}\\
     \item 
-        
+        We all know that expectation is denoted by:
+        \begin{align*}
+            E[X] &= \sum_{i=1}^{n} X_i P(X_i) \\
+        \end{align*}
+        Since, \(P(X_i)\geq 0\), let \(\lambda_i = P(X_i)\geq 0\) \& \(\sum_{i=1}^{n} P(X_i) = 1\)\\\\
+        \begin{align*}
+            \therefore 
+            f(E[X]) &= f\left(\sum_{i}^{n}x_i P(X_i)\right)\\
+            &= f\left(\sum_{i}^{n}X_i \lambda_i\right) \leq \sum_{i}^{n}\lambda_i f(X_i)\\
+            &= \sum_{i}^{n}p(X_i) f(X_i)\leq E[f(X)]
+        \end{align*}
+        \textit{Hence, Proved}
     \end{enumerate}
 
 \newpage
@@ -393,6 +404,139 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
 
 \newpage
 \item
-    v
+    \begin{enumerate}
+        \item 
+        Determine the value of 
+        \[ 
+            Pr\left(\cfrac{1}{2} \leq X \leq \cfrac{3}{4}\right) \text{ and } Pr\left(X \leq \cfrac{1}{2}\  \middle| \ \cfrac{1}{4} \leq X \leq \cfrac{3}{4}\right)
+        \]\\
+        We know that \(X\) be a uniform random variable on [0,1]. Thus,
+        The density function of \(X\) is given as follows:
+        \[ 
+            f(x) = 1, \quad 0 < x < 1 
+        \]
+        Conditional probability for continuous random variable is defined as
+        \[ 
+            Pr(E|F) = \cfrac{Pr(E \cap F)}{Pr(F)} 
+        \]
+        Substitute \( E = X \leq \cfrac{1}{2} \) and \( F = \cfrac{1}{4} \leq X \leq \cfrac{3}{4} \) in 
+        \[ 
+            Pr(E|F) = \cfrac{Pr(E \cap F)}{Pr(F)}
+        \]
+        as follows:
+        \begin{align*}
+            Pr\left(X \leq \cfrac{1}{2}\  \middle| \ \cfrac{1}{4} \leq X \leq \cfrac{3}{4}\right) &= \cfrac{Pr\left(\left(X \leq \cfrac{1}{2}\right)\cap \left(\cfrac{1}{4} \leq X \leq \cfrac{3}{4}\right)\right)}{Pr\left(\cfrac{1}{4} \leq X \leq \cfrac{3}{4}\right)}\\\\
+            &= \cfrac{Pr\left(\cfrac{1}{4} \leq X \leq \cfrac{1}{2}\right)}{Pr\left(\cfrac{1}{4} \leq X \leq \cfrac{3}{4}\right)}
+        \end{align*}
+        It is known that the probability of the interval \( [a,b] \) is given by the integral
+        \[ 
+            Pr(a \leq X \leq b) = \int_a^b f(x) \ dx 
+        \]
+        applying this to find the probability of the interval [a,b]:
+        \begin{align*}
+            Pr\left(X \leq \cfrac{1}{2}\ \middle| \ \cfrac{1}{4} \leq X \leq \cfrac{3}{4}\right) &= \cfrac{\int_{1/4}^{1/2} 1 \ dx}{\int_{1/4}^{3/4} 1 \ dx}\\
+            &= \cfrac{\left[ x \right]_{1/4}^{1/2}}{\left[ x \right]_{1/4}^{3/4}}\\
+            &= \cfrac{1}{2}
+        \end{align*}
+        substituting \( E = X \leq \cfrac{1}{4} \) and \( F = \cfrac{1}{3} \leq X \leq \cfrac{2}{3} \) in
+        \[ 
+            Pr(E|F) = \cfrac{Pr(E \cap F)}{Pr(F)}
+        \]
+        \begin{align*}
+            Pr\left( X \leq \cfrac{1}{4}\ \middle| \ X \leq \cfrac{1}{3} \right) &= \cfrac{Pr\left(\left(X \leq \cfrac{1}{4}\right) \cap \left(\left(X \leq \cfrac{1}{3}\right) \cup \left(X \geq \cfrac{2}{3}\right) \right) \right)}{Pr\left( \left(X \leq \cfrac{1}{3}\right) \cup \left(X \geq \cfrac{2}{3}\right) \right)}\\ 
+            &= \cfrac{Pr\left( X \leq \cfrac{1}{4} \right)}{Pr\left( \left(X \leq \cfrac{1}{3}\right) \cup \left(X \geq \cfrac{2}{3}\right) \right)}
+        \end{align*}
+        We know that \( Pr(A \cup B) = Pr(A) + Pr(B) - Pr(A \cap B) \).
+
+        Here 
+        \[ 
+            Pr\left( \left( X \leq \cfrac{1}{3} \right) \cap \left( X \geq \cfrac{2}{3} \right) \right) = 0
+        \]
+        so,
+        \[ 
+            {Pr\left( \left(X \leq \cfrac{1}{3}\right) \cup \left(X \geq \cfrac{2}{3}\right) \right)} = Pr\left( X \leq \cfrac{1}{3} \right) + Pr\left( X \geq \cfrac{2}{3} \right)
+        \]
+        \[ 
+            Pr\left( X \leq \cfrac{1}{4}\  \middle| \ \left( X \leq \cfrac{1}{3} \right) \cup \left( X \geq \cfrac{2}{3} \right) \right) = 
+            \cfrac{Pr\left( X \leq \cfrac{1}{4} \right)}{Pr\left( X \leq \cfrac{1}{3} \right) + Pr\left( X \geq \cfrac{2}{3} \right)} 
+        \]\\
+        It is known that the probability of the interval \( [a,b] \) is given by the integral 
+        \[ 
+            Pr(a \leq X \leq b) = \int_{a}^{b} f(x) \ dx 
+        \]
+        \begin{align*} 
+            Pr\left( X \leq \cfrac{1}{4} \middle| \left( X \leq \cfrac{1}{3} \right) \cup \left( X \geq \cfrac{2}{3} \right) \right) &= 
+            \cfrac{\int_{0}^{1/4} 1 \ dx}{\int_{0}^{1/3} 1 \ dx + \int_{2/3}^{1} 1 \ dx} \\
+            &= \cfrac{\left[ x \right]_{0}^{1/4}}{\left[ x \right]_{0}^{1/3} + \left[ x \right]_{2/3}^{1}}\\ 
+            &= \cfrac{\cfrac{1}{4} - 0}{\left( \cfrac{1}{3} - 0 \right) + \left( 1 - \cfrac{2}{3} \right)} \\
+            &= \cfrac{\cfrac{1}{4}}{\cfrac{1}{3} + \cfrac{1}{3}} \\\\
+            &= \cfrac{\left(\cfrac{1}{4}\right)}{\left(\cfrac{2}{3}\right)} \\
+            &= \cfrac{3}{8}\\ 
+        \end{align*}
+        Hence, the values are 
+
+        \[ 
+            \boxed{Pr\left( X \leq \cfrac{1}{4} \middle| X \leq \cfrac{1}{3} \right) = \cfrac{1}{2} \quad \text{and} \quad 
+            Pr\left( X \leq \cfrac{1}{4} \middle| \left( X \leq \cfrac{1}{3} \right) \cup \left( X \geq \cfrac{2}{3} \right) \right) = \cfrac{3}{8}.}
+        \]\\
+    \item 
+        Find the expected value of the \(k^{th}\) largest of the \(n\) random variables.\\
+        The objective is to find \(E[\max\{x_1,x_2,\ldots,x_n\}]\)\\
+        Therefore, 
+        \begin{align*}
+            F_{\max\{x_1,x_2,\ldots,x_n\}}(a) &= P(x_1 \leq a, x_2 \leq a, \ldots, x_n \leq a)\\
+            &= F_x(a) F_x(a) \ldots F_x(a)\\
+            &= (1-e^{\lambda_1 a})(1-e^{\lambda_2 a})...(1-e^{\lambda_n a})
+        \end{align*}
+        Now, since
+        \begin{align*}
+            E\left[F_{\max\{x_1,x_2,\ldots,x_n\}}\right] &= \int_0^\infty 1 - F_{\max\{x_1,x_2,\ldots,x_n\}}(a) \ da\\
+            &= \int_0^\infty (1-e^{\lambda_1 a})(1-e^{\lambda_2 a})...(1-e^{\lambda_n a}) \ da\\
+            &= \int_0^\infty 1 - (1-e^{a})(1-e^{a})...(1-e^{a}) \ da
+        \end{align*}
+        Since, parameter \(\lambda\) is 1, that is,
+        \[
+            \lambda_1 = \lambda_2 = \ldots = \lambda_n = 1
+        \]
+        This implies;
+        \[
+            \int_0^\infty (1 - (1-e^{a})^n) \ da = \int_0^\infty 1 - \left(1 - ne^{a} + \cfrac{n(n-1)e^{2a}}{2!} - \ldots - \cfrac{n(n-1)(n-r+1)(-e^{a})^r}{r!} + \ldots \infty\right)
+        \]
+        expanding the binomial expression,
+        \[
+            (1-x)^n = 1 + (-nx) + \cfrac{n(n-1)}{2}x^2 + \ldots + \cfrac{(-1)^r(n(n-1)\ldots(n-r+1))}{r!}x^r + \ldots \infty
+        \]
+        Therefore,
+        \begin{align*}
+            E[\max\{x_1,x_2,\ldots,x_n\}] &= \int_0^\infty ne^{a} - \cfrac{n(n-1)e^{2a}}{2!} + \ldots + \cfrac{(-1)^r(n(n-1))}{r!} - (n-r+1)e^{ar}\ da\\
+            &= \left[ne^{a} - \cfrac{n(n-1)e^{2a}}{4} + \ldots + (-1)^r\cfrac{n(n-1) - (n-r+1)e^{ar}}{(rr!)}\right]_0^\infty\\
+            &= \infty
+        \end{align*}
+    \item 
+        It is known that one person must wait exactly for 15 minutes for the other person. So, the inequality when two people meet can be written as: \(|X - Y| \leq 15\).\\\\
+        Consider that \(X\) and \(Y\) are random variables, which are independent and uniformly distributed on the interval \([0,60]\).\\\\
+        The inequality is divided as follows:\\
+        For the first 15 minutes, the probability is \(\left(y + \cfrac{1}{4}\right)\). For the next half an hour, the probability is \(\left(\cfrac{1}{2}\right)\) and for the next 15 minutes, the probability is \(\left(\cfrac{5}{4} - y\right)\).\\\\
+        Therefore we calculate the required probability \(P(|X - Y| \leq 15)\):
+        \begin{align*}
+            P(|X - Y| \leq 15) &= \int_{-\infty}^{\infty} \int_{y-15}^{y+15} f_{X,Y}(x,y) \,dx\,dy\\
+            &= \int_0^{y+15} \int_{y-15}^{y+15} f_{X}(x) f_{Y}(y) \,dx\,dy\\
+            &= \int_0^{60}\int_{y-15}^{y+15} f_{X}(x) \,dx\,dy
+        \end{align*}
+        It is obtained from the problem that
+        \[
+            \int_{y-15}^{y+15} f_{X}(x) \,dx = 
+            \begin{cases} 
+            y + \cfrac{1}{4}, & 0 \leq y < 15 \\
+            \cfrac{1}{2}, & 15 \leq y < 45 \\
+            \cfrac{5}{4} - y, & 45 \leq y \leq 60 
+            \end{cases}
+        \]
+        \begin{align*}
+            P(|X - Y| \leq 15) &= \int_{0}^{15} \left(y + \cfrac{1}{4}\right) \,dy + \int_{15}^{45} \left(\cfrac{1}{2}\right) \,dy + \int_{45}^{60} \left(\cfrac{5}{4} - y\right) \,dy\\
+            &= \cfrac{1}{2} \left(\cfrac{1}{4}\right)^2 + \left(\cfrac{1}{4}\right)^2 + \left(\cfrac{1}{4}\right) + \cfrac{1}{2} \left(\cfrac{1}{4}\right)^2 + \left(\cfrac{1}{4}\right)^2\\
+            &= \cfrac{7}{16}
+        \end{align*}
+    \end{enumerate}
 \end{enumerate}
 \end{document}
