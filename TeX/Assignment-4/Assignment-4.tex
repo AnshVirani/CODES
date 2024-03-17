@@ -63,56 +63,28 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
 \item 
     To find the probability density function (PDF) of the random variable $Z = aX^2$, where $X$ is a normal random variable with mean 0 and variance $\sigma^2$, and $a > 0$, we'll use the method of transformation of variables.\\
     Let's denote the PDF of $X$ as $f_X(x)$, and the PDF of $Z$ as $f_Z(z)$. We'll first find the cumulative distribution function (CDF) of $Z$ and then differentiate it to obtain the PDF.
-    \begin{enumerate}
-        \item 
         The CDF of $Z$,
         \[
             F_Z(z) = P(Z \leq z) = P(aX^2 \leq z)
         \]
         Since $a > 0$, we can rewrite this as:
         \[
-            F_Z(z) = P(X^2 \leq \cfrac{z}{a})
+            F_Z(z) = P(\left| X\right|\leq \cfrac{z}{a})
         \]
-        CDF of $X^2$:
         \[
-            F_{X^2}(t) = P(X^2 \leq t)
-        \]
-        Since $X$ is a standard normal random variable, $X^2$ follows a chi-square distribution with one degree of freedom ($\chi^2(1)$).
-        \[
-            F_{X^2}(t) = P(X^2 \leq t) = P(|X| \leq \sqrt{t})
-        \]
-        CDF of the standard normal distribution, is given by:
-        \[
-            \Phi(x) = \cfrac{1}{\sqrt{2\pi}} \int_{-\infty}^x e^{-\cfrac{u^2}{2}} du
+            F_X(x) = \cfrac{1}{\sqrt{2\pi }\sigma} \cdot exp^{-\cfrac{x^2}{2\sigma^2}}
         \]
         So,
-        \[
-            F_{X^2}(t) = 2 \cdot \Phi(\sqrt{t}) - 1
-        \]
-    \end{enumerate}
-    \begin{enumerate}
-        \setcounter{enumi}{1}
-        \item differentiating to find the PDF:
-        \[
-            f_Z(z) = \cfrac{d}{dz}F_Z(z)
-        \]
-        \[
-            = \cfrac{d}{dz}\left(2 \cdot \Phi\left(\sqrt{\cfrac{z}{a}}\right) - 1\right)
-        \]
-        \[
-            = \cfrac{1}{\sqrt{\pi}} \cdot \cfrac{1}{2\sqrt{a}} \cdot e^{-\cfrac{z}{2a}} \cdot \cfrac{1}{\sqrt{z}}
-        \]
-        \[
-            = \cfrac{1}{2\sqrt{\pi a}} \cdot \cfrac{1}{\sqrt{z}} \cdot e^{-\cfrac{z}{2a}}
-        \]
-    \end{enumerate}
+        differentiating to find the PDF:
+        \begin{align*}    
+            f_Z(z) &= \cfrac{d}{dz}F_Z(z)\\
+            &= 2.f_X\left(\sqrt{z/a}\right)\\
+            &= 2.\cfrac{1}{\sqrt{2\pi }\sigma} \cdot exp \left(-\cfrac{z/a}{2\sigma^2}\right)\\
+            &= \cfrac{2}{\sqrt{2\pi }\sigma} \cdot exp \left(-\cfrac{z}{2a\sigma^2}\right)\\
+        \end{align*}
     So, the probability density function (PDF) of the random variable $Z = aX^2$ is:
     \[
-        f_Z(z) = \cfrac{1}{2\sqrt{\pi a}} \cdot \cfrac{1}{\sqrt{z}} \cdot e^{-\cfrac{z}{2a}}
-    \]
-    The probability density function (PDF) of the random variable $Z = aX^2$, where $X$ is a normal random variable with mean 0 and variance $\sigma^2$, and $a > 0$, is given by:
-    \[
-        f_Z(z) = \cfrac{1}{2\sqrt{\pi a}} \cdot \cfrac{1}{\sqrt{z}} \cdot e^{-\cfrac{z}{2a}}
+        f_Z(z) = \cfrac{2}{\sqrt{2\pi }\sigma} \cdot exp \left(-\cfrac{z}{2a\sigma^2}\right)
     \]
 
 \newpage
@@ -140,42 +112,22 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
     
 \newpage
 \item
-    Any straight line passing through the point (0, \(l\)) can be represented by the equation $y = mx + l$, where $m$ is the slope of the line.
+    A line passing through \((0, l)\) can be described by its slope \(m\), with the x-intercept occurring when \(y = 0\). This leads to the relation \(X = -\cfrac{l}{m}\), where \(m\) is the slope of the line.
 
-    From the line equation, we get $x = -\cfrac{l}{m}$.
+    To express the PDF of \(X\), we consider the angle \(\theta\) the line makes with the x-axis, with \(\theta\) uniformly distributed between \(-\cfrac{\pi}{2}\) and \(\cfrac{\pi}{2}\). The slope \(m\) is related to \(\theta\) by \(m = \tan(\theta)\).
 
-    Since $m$ can take any real value, the x-intercept can take any real value as well, except $x=0$ (as the line cannot intersect the x-axis at the origin).
-    
-    As we're drawing the line randomly, we can assume that the probability of the line having any particular slope $m$ is uniformly distributed between negative and positive infinity.
-
-    Therefore, the Probability Density Function (PDF) $f(x)$ is:
+    when doing the transformation from \(\theta\) to \(X\):
     \[
-    f(x) = \begin{cases}
-    k, & \text{if } x \neq 0\\
-    0, & \text{if } x = 0
-    \end{cases}
+        X(\theta) = -\cfrac{l}{\tan(\theta)}
     \]
-
-    Where $k$ is a constant representing the uniform probability density over the entire real line except $x = 0$.
-
-    To find $k$, we can integrate $f(x)$ over its entire range (excluding $x=0$) and set the result equal to 1, since the total probability density over all possible values must equal 1.
-
+    Diffrentiating \(X\) with respect to \(\theta\):
     \[
-    \int_{-\infty}^{-\epsilon} k\,dx + \int_{\epsilon}^{\infty} k\,dx = 1
+        \cfrac{dX}{d\theta} = \cfrac{l}{\sin^2(\theta)}
     \]
-    where $\epsilon$ is a small positive value approaching zero.
-
-    \begin{align*}
-    2k\int_{\epsilon}^{\infty} dx &= 1\\
-    2k\left[x\right]_{\epsilon}^{\infty} &= 1\\
-    2k(\infty - \epsilon) &= 1\\
-    2k \cdot \infty &= 1\\
-    2k \cdot \infty &\approx 1\\
-    k \cdot \infty &\approx \cfrac{1}{2}\\
-    k &\approx 0
-    \end{align*}
-
-    The constant $k$ represents the uniform probability density over the real line except at $x = 0$. Integrating the probability density function $f(x)$ over its entire range (excluding $x=0$) and setting it equal to 1 yields $k \approx 0$, indicating that $f(x)$ is effectively zero at $x = 0$, consistent with the notion that the line cannot intersect the x-axis at the origin.
+    Given the uniform distribution of \(\theta\), the PDF of \(\theta\), \(f_\theta(\theta)\), is \(\cfrac{1}{\pi}\) for \(\theta \in \left(-\cfrac{\pi}{2}, \cfrac{\pi}{2}\right)\). Applying the transformation rule, the PDF of \(X\) in terms of \(\theta\) is:
+    \[
+        f_X(\theta) = \cfrac{|l|}{\pi \sin^2(\theta)}
+    \]
     
 \newpage
 \item
@@ -321,10 +273,28 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
 
 \newpage
 \item
+    The properties of normal distributions play a crucial role in determining the distribution of a linear combination of two independent normal random variables. Specifically, for $X \sim N(\mu_X, \sigma_X^2)$ and $Y \sim N(\mu_Y, \sigma_Y^2)$, the distribution of $Z = X - Y$ can be found as follows:
+
+    The expected value (mean) of $Z$ is given by the difference of the means of $X$ and $Y$:
+    \[
+    \mu_Z = E[Z] = E[X - Y] = E[X] - E[Y] = \mu_X - \mu_Y.
+    \]
+
+    The variance of $Z$ is given by the sum of the variances of $X$ and $Y$, since variance is additive for independent variables, and subtraction of variables is equivalent to adding a negative variable:
+    \[
+    \sigma_Z^2 = Var[Z] = Var[X - Y] = Var[X] + Var[-Y] = \sigma_X^2 + \sigma_Y^2.
+    \]
+    This is because $Var[-Y] = Var[Y]$ for any random variable $Y$.
+
+    Combining these properties, we deduce that $Z$ follows a normal distribution with mean $\mu_Z$ and variance $\sigma_Z^2$:
+    \[
+    Z \sim N(\mu_Z, \sigma_Z^2) = N(\mu_X - \mu_Y, \sigma_X^2 + \sigma_Y^2).
+    \]
+    Thus, the random variable $Z = X - Y$ is normally distributed with parameters derived from those of $X$ and $Y$, stating the fundamental property that linear combinations of independent normal random variables also follow a normal distribution.
 
 \newpage
 \item
-
+\textbf{Could not Solve}
 \newpage
 \item
     \textbf{(a): Probability density \( f(x, y) \) of the system of random variables \( (X, Y) \) is given:}
