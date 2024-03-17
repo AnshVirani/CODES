@@ -312,12 +312,203 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
         f(Y) = \cfrac{dX}{dY}
     \]
     \[
-        f(Y) = \cfrac{1}{2}\times \cfrac{1}{\sqrt{2\pi}} \times e^{-\cfrac{\left(\frac{Y - \theta}{\sigma_y}\right)^2}{2}} \times \cfrac{1}{\sigma_y}
+        f(Y) = \cfrac{1}{2}\times \cfrac{1}{\sqrt{2\pi}} \times e^{-\cfrac{\left(\cfrac{Y - \theta}{\sigma_y}\right)^2}{2}} \times \cfrac{1}{\sigma_y}
     \]
     \[
-        f(Y) = \cfrac{1}{\sigma_y\sqrt{2\pi}} \times e^{-\cfrac{\left(\frac{Y - \theta}{\sigma_y}\right)^2}{2}}
+        f(Y) = \cfrac{1}{\sigma_y\sqrt{2\pi}} \times e^{-\cfrac{\left(\cfrac{Y - \theta}{\sigma_y}\right)^2}{2}}
     \]\\
     This is the Probability Density Function (PDF) of the random variable \(Y\).
-    
+
+\newpage
+\item
+
+\newpage
+\item
+
+\newpage
+\item
+    \textbf{(a): Probability density \( f(x, y) \) of the system of random variables \( (X, Y) \) is given:}
+
+    Given the joint probability density function \( f(x, y) \) for \( (X, Y) \), we need to find the probability density function (PDF) of \( Z = \cfrac{X}{Y} \).
+    The PDF of \( Z \) is given by:
+    \[ 
+        f_Z(z) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |J| \cdot f(x, y) \,dx \,dy 
+    \]
+    where \( J \) is the Jacobian determinant.
+
+    Since the joint probability density function \( f(x, y) \) is given, let's denote it as \( f_{X,Y}(x, y) \). Then, we have:
+    \[ 
+        f_{X,Y}(x, y) = f(x, y) 
+    \]
+    The Jacobian determinant \( J \) is calculated as:
+    \[ 
+        J = \left| \cfrac{\partial(x, y)}{\partial(z)} \right| 
+    \]
+    For the transformation \( Z = \cfrac{X}{Y} \), we have:
+    \[ Z = \cfrac{X}{Y} \]
+    \[ X = ZY \]
+    Taking partial derivatives with respect to \( X \) and \( Y \), we get:
+    \[ 
+        \cfrac{\partial X}{\partial Z} = Y 
+    \]
+    \[ 
+        \cfrac{\partial X}{\partial Y} = Z 
+    \]
+    Therefore, the Jacobian determinant \( J \) is:
+    \[ 
+        J = \left| \cfrac{\partial(x, y)}{\partial(z)} \right| = \left| \cfrac{\partial(X, Y)}{\partial(Z)} \right| = |YZ| = |ZY| = |Z| 
+    \]
+    The PDF of \( Z \) is given by:
+    \[
+        f_Z(z) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |Z| \cdot f_{X,Y}(x, y) \,dx \,dy
+    \]
+    \[
+         = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |z| \cdot f(x, y) \,dx \,dy
+    \]
+    \[ 
+        = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} |z| \cdot f(x, y) \,dx \,dy 
+    \]
+    \newpage
+    \textbf{(b): X and Y are independent random variables obeying Rayleigh’s distribution law:}
+
+    Given that \( X \) and \( Y \) are independent random variables obeying Rayleigh's distribution, we have the probability density functions:
+    \[ 
+        f_X(x) = \begin{cases} \cfrac{x}{a^2} \exp\left(-\cfrac{x^2}{2a^2}\right) & \text{for } x \geq 0 \\ 0 & \text{for } x \leq 0 \end{cases} \]
+
+    \[ 
+        f_Y(y) = \begin{cases} \cfrac{y}{a^2} \exp\left(-\cfrac{y^2}{2a^2}\right) & \text{for } y \geq 0 \\ 0 & \text{for } y \leq 0 \end{cases} \]
+
+    Since \( X \) and \( Y \) are independent, their joint PDF is the product of their individual PDFs:
+    \[ 
+        f_{X,Y}(x, y) = f_X(x) \cdot f_Y(y) 
+    \]
+    \[ 
+        = \begin{cases} \cfrac{x}{a^2} \exp\left(-\cfrac{x^2}{2a^2}\right) \cdot \cfrac{y}{a^2} \exp\left(-\cfrac{y^2}{2a^2}\right) & \text{for } x \geq 0, y \geq 0 \\ 0 & \text{otherwise} \end{cases}
+    \]
+    \[ 
+        = \begin{cases} \cfrac{xy}{a^4} \exp\left(-\cfrac{x^2 + y^2}{2a^2}\right) & \text{for } x \geq 0, y \geq 0 \\ 0 & \text{otherwise} \end{cases} 
+    \]\\
+    \[ 
+        f_{X,Y}(x, y) = \cfrac{xy}{a^4} \exp\left(-\cfrac{x^2 + y^2}{2a^2}\right)
+    \]
+    \[ 
+        f_Z(z) = \int_{0}^{\infty} \int_{0}^{\infty} |z| \cdot \cfrac{xy}{a^4} \exp\left(-\cfrac{x^2 + y^2}{2a^2}\right) \,dx \,dy
+    \]
+    First, let's integrate with respect to \( x \):
+    \[ 
+        \int_{0}^{\infty} \cfrac{xy}{a^4} \exp\left(-\cfrac{x^2 + y^2}{2a^2}\right) \,dx
+    \]
+    Let's substitute \( u = x^2 + y^2 \), then \( du = 2x \,dx \).
+    \[ 
+        \cfrac{1}{2} \int_{0}^{\infty} \cfrac{1}{a^4} e^{-u/(2a^2)} \,du 
+    \]
+    \[ 
+        = -\cfrac{1}{2} \left[ e^{-u/(2a^2)} \right]_{0}^{\infty} = -\cfrac{1}{2} \left(0 - 1\right) = \cfrac{1}{2} 
+    \]
+    Now, let's integrate with respect to \( y \) from 0 to \( \infty \):
+    \[ 
+        f_Z(z) = |z| \cdot \cfrac{1}{2} \cdot \int_{0}^{\infty} \,dy
+    \]
+    \[ 
+        = \cfrac{|z|}{2} \cdot \left[y\right]_{0}^{\infty} = \cfrac{|z|}{2} \cdot \left(\infty - 0\right) = \infty
+    \]\\
+    Therefore, we can state that the resulting PDF \( f_Z(z) \) is not properly normalized. It appears that the integral diverges, indicating that the PDF \( f_Z(z) \) does not exist.
+
+\newpage
+\item
+    \textbf{(a) Probability density $f(x, y)$ for the system of random variables $(X, Y)$ is given:}
+
+    If the joint probability density function $f(x, y)$ is given, we can directly compute the PDF of $R$ using the transformation method.
+
+    Given $R = \sqrt{X^2 + Y^2}$, the Jacobian determinant of the transformation is $\cfrac{\partial(x, y)}{\partial(r)} = \cfrac{r}{\sqrt{x^2 + y^2}}$.
+
+    So, the PDF of $R$ is:
+    \[ 
+        f_R(r) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \cfrac{1}{r} f(x, y) \,dx \,dy
+    \]
+    \textbf{(b) Random variables $X$ and $Y$ are independent and obey the same normal distribution $N(0, \sigma)$:}
+
+    Given independent normal distributions for $X$ and $Y$, we can exploit the fact that the sum of squares of independent standard normal variables follows a chi-squared distribution.
+
+    Since $X$ and $Y$ are independent, $X^2$ and $Y^2$ are also independent. Therefore, $R^2 = X^2 + Y^2$ follows a chi-squared distribution with 2 degrees of freedom, which is equivalent to an exponential distribution with parameter $\cfrac{1}{2\sigma^2}$.
+    \[ 
+        f_R(r) = \cfrac{r}{\sigma^2}\cdot e^{-\left(\cfrac{r^2}{2\sigma^2}\right)} 
+    \]
+    \textbf{(c) Random variables $X$ and $Y$ are independent normal random variables with probability density $f(x, y)$:}
+
+    Given that the joint probability density function \( f(x, y) \) for the system of random variables \( (X, Y) \) is:
+
+    \[ 
+        f(x, y) = \cfrac{1}{2\pi\sigma^2} e^{-\cfrac{(x - h)^2 + y^2}{2\sigma^2}} 
+    \]
+    We want to find the probability density function (PDF) for the modulus of the radius vector \( R = \sqrt{X^2 + Y^2} \).
+
+    We'll use the transformation method. The transformation is \( R = \sqrt{X^2 + Y^2} \). To find the PDF of \( R \), we need to calculate:
+    \[ 
+        f_R(r) = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \cfrac{1}{r} f(x, y) \,dx \,dy 
+    \]
+    Substituting the given expression for \( f(x, y) \), we have:
+    \[ 
+        f_R(r) = \cfrac{1}{2\pi\sigma^2r} \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} e^{-\cfrac{(x - h)^2 + y^2}{2\sigma^2}} \,dx \,dy 
+    \]
+    \[ 
+        = \cfrac{1}{2\pi\sigma^2r} \int_{-\infty}^{\infty} e^{-\cfrac{(x - h)^2}{2\sigma^2}} \left( \int_{-\infty}^{\infty} e^{-\cfrac{y^2}{2\sigma^2}} \,dy \right) \,dx 
+    \]
+    The inner integral \( \int_{-\infty}^{\infty} e^{-\cfrac{y^2}{2\sigma^2}} \,dy \) is simply the integral of a standard normal distribution, and it equals \( \sqrt{2\pi\sigma^2} \).
+    \[ 
+        = \cfrac{1}{2\pi\sigma^2r} \int_{-\infty}^{\infty} e^{-\cfrac{(x - h)^2}{2\sigma^2}} \cdot \sqrt{2\pi\sigma^2} \,dx
+    \]
+    \[ 
+        = \cfrac{1}{r} \int_{-\infty}^{\infty} e^{-\cfrac{(x - h)^2}{2\sigma^2}} \,dx
+    \]
+    Now, we have an integral of a Gaussian function, which integrates to \( \sqrt{2\pi\sigma^2} \).
+    \[ 
+        f_R(r) = \cfrac{1}{r} \cdot \sqrt{2\pi\sigma^2} 
+    \]
+    \[ 
+        f_R(r) = \cfrac{\sqrt{2\pi\sigma^2}}{r}
+    \]
+    \textbf{(d) Random variables $X$ and $Y$ are independent normal random variables with mean $\mu_x = \mu_y = 0$ and variances $\sigma_x^2$ and $\sigma_y^2$, respectively:}
+
+    Since $X$ and $Y$ are independent, their squares $X^2$ and $Y^2$ are also independent. Therefore, $R^2 = X^2 + Y^2$ follows a chi-squared distribution with 2 degrees of freedom.
+
+    The PDF of $R$ will be similar to case (b):
+    \[ 
+        f_R(r) = \cfrac{r}{\sigma_x \sigma_y}\cdot e^{-\left(\cfrac{r^2}{2(\sigma_x^2 + \sigma_y^2)}\right)}
+    \]
+
+\newpage
+\item
+    \textbf{We have the quadratic equation:
+        \[
+            x^2 + \alpha x + \beta = 0,
+        \]
+        whose both roots take all values from -1 to +1 with equal probabilities.}\\
+        Now, let's denote the roots of the quadratic equation as $r_1$ and $r_2$.\\
+        From the quadratic formula, we have:
+        \begin{align}
+            r_1 =\cfrac{-\alpha + \sqrt{\alpha^2 - 4\beta}}{2}\\
+            r_2 =\cfrac{-\alpha - \sqrt{\alpha^2 - 4\beta}}{2}
+        \end{align}
+        We know that both roots can take all values from -1 to +1 with equal probabilities. Since the roots are symmetric to the coefficient $\alpha$, we can assume that $r_1$ takes values from -1 to +1 with equal probabilities, and so does $r_2$. This means that the distribution of the sum and the product of the roots are uniform.
+        \begin{align}
+            r_1 + r_2 = -\alpha\\
+            r_1^\cdot r_2 = \beta
+        \end{align}
+        Therefore, the probability density function of \(\alpha\) is given by the distribution of the sum of two independent uniform random variables between - 1 and +1, which is a triangular distribution with the density.
+        \[
+            f(\alpha) = \begin{cases}
+            1 - |\alpha|, & \text{if } -1\le \alpha \le1\\
+            0, & \text{otherwise}
+            \end{cases}
+        \]
+        Similarly, the probability density function of $\beta$ is given by the distribution of the product of two Independent uniform random variables between -1 and +1 which is a distribution that peaks at zero and has a maximum density of 3/4 at $\beta = 0$.
+        \[
+            g(\beta) = \begin{cases}
+            \cfrac{3}{4} (1 - \beta^2), & \text{if } -1\le \beta \le1\\
+            0, & \text{otherwise}
+            \end{cases}
+        \]
+        
 \end{enumerate}
 \end{document}
