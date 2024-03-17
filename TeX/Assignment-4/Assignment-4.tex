@@ -1,0 +1,91 @@
+\documentclass{article}
+\newcounter{rownumbers}
+\newcommand\rownumber{\stepcounter{rownumbers}\arabic{rownumbers}}
+%\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{amsmath,amsfonts,mathtools}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\graphicspath{ {E:\College\Sem-6\PSP\CODES\TeX\Assignment-3} }
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=-2mm,
+ bottom=2mm,
+ }
+ 
+%\usepackage[margin=0.5in]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{ifpdf}
+%\usepackage{cite}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{pdfpages}
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+\usepackage{parskip}
+%\onecolumn
+%\input{psfig}
+\usepackage{color}
+\usepackage{graphicx}
+\setlength{\textheight}{23.5cm} \setlength{\topmargin}{-1.05cm}
+\setlength{\textwidth}{6.5in} \setlength{\oddsidemargin}{-0.5cm}
+\renewcommand{\baselinestretch}{1}
+\pagenumbering{arabic}
+\linespread{1.15}
+\begin{document}
+\textbf{
+\begin{center}
+{
+\large{School of Engineering and Applied Science (SEAS), Ahmedabad University}\vspace{5mm}
+}
+\end{center}
+%
+\begin{center}
+\large{Probability and Stochastic Processes (MAT277)\\ \vspace{4mm}
+Homework Assignment-4\\\vspace{2mm}
+Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
+\end{center}}
+\vspace{2mm}
+
+
+\vspace{10mm}
+
+\begin{enumerate}
+\item 
+
+\newpage
+\item 
+    A random variable \(X\) is uniformly distributed over the interval (0, 1) and related to \(Y\) by,
+    \[
+        \tan\left(\cfrac{\pi Y}{2}\right) = e^X \implies Y = \cfrac{2}{\pi}\arctan(e^X)
+    \]
+    \[
+        \therefore\ \ \cfrac{dY}{dX} = \cfrac{2}{\pi}\cdot\cfrac{1}{1+e^{2X}}
+    \]
+    Applying the the transformation rule, we get:
+    \[
+        f_Y(y) = f_X(x)\left|\cfrac{dY}{dX}\right| = 1 \times \cfrac{2}{\pi}\cdot\cfrac{1}{1+e^{2X}}
+    \]
+    Since X is expressed in terms of Y through the initial transformation, $e^X = \tan\left(\cfrac{\pi Y}{2}\right)$, the \(PDF\) can be expressed in terms of Y as follows:
+    \[
+        f_Y(y) = \left(\cfrac{2}{\pi}\right)\left(\cfrac{1}{1+\tan^2\left(\cfrac{\pi y}{2}\right)}\right)
+    \]
+    Using the identity $1 + \tan^2(z) = \sec^2(z)$, we get:
+    \[
+        f_Y(y) = \left(\cfrac{2}{\pi}\right)\left(\cfrac{1}{sec^2\left(\cfrac{\pi y}{2}\right)}\right) = \cfrac{2}{\pi}\cos^2\left(\cfrac{\pi y}{2}\right)
+    \]\\
+    By solving for \(Y\), computing the derivative with respect to \(X\), and applying the transformation rule, the resulting \(PDF\) for \(Y\) is $f_Y(y) = \cfrac{2}{\pi}\cos^2\left(\cfrac{\pi y}{2}\right)$, valid for \(y\) in the interval $(0, 1)$.
+    
+    
+
+\end{enumerate}
+\end{document}
