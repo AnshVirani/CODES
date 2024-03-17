@@ -300,7 +300,24 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
 
 \newpage
 \item 
-        
-
+    To evaluate the probability density function (pdf) of the random variable X given by the expression:
+    \[
+        x = \cfrac{1}{2}\left[1 + \cfrac{2}{\sqrt{2\pi}}\int_{0}^{Y -\  \theta} \exp\left(-\cfrac{t^2}{2}\right) dt\right]
+    \]
+    \[
+        g(t) = e^{-\cfrac{t^2}{2}}
+    \]
+    To find the \(PDF\) $f(x)$, we differentiate the given expression with respect to Y (as X is dependent on Y) using the chain rule:
+    \[
+        f(Y) = \cfrac{dX}{dY}
+    \]
+    \[
+        f(Y) = \cfrac{1}{2}\times \cfrac{1}{\sqrt{2\pi}} \times e^{-\cfrac{\left(\frac{Y - \theta}{\sigma_y}\right)^2}{2}} \times \cfrac{1}{\sigma_y}
+    \]
+    \[
+        f(Y) = \cfrac{1}{\sigma_y\sqrt{2\pi}} \times e^{-\cfrac{\left(\frac{Y - \theta}{\sigma_y}\right)^2}{2}}
+    \]\\
+    This is the Probability Density Function (PDF) of the random variable \(Y\).
+    
 \end{enumerate}
 \end{document}
