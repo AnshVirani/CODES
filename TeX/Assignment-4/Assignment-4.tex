@@ -61,6 +61,59 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
 
 \begin{enumerate}
 \item 
+    To find the probability density function (PDF) of the random variable $Z = aX^2$, where $X$ is a normal random variable with mean 0 and variance $\sigma^2$, and $a > 0$, we'll use the method of transformation of variables.\\
+    Let's denote the PDF of $X$ as $f_X(x)$, and the PDF of $Z$ as $f_Z(z)$. We'll first find the cumulative distribution function (CDF) of $Z$ and then differentiate it to obtain the PDF.
+    \begin{enumerate}
+        \item 
+        The CDF of $Z$,
+        \[
+            F_Z(z) = P(Z \leq z) = P(aX^2 \leq z)
+        \]
+        Since $a > 0$, we can rewrite this as:
+        \[
+            F_Z(z) = P(X^2 \leq \cfrac{z}{a})
+        \]
+        CDF of $X^2$:
+        \[
+            F_{X^2}(t) = P(X^2 \leq t)
+        \]
+        Since $X$ is a standard normal random variable, $X^2$ follows a chi-square distribution with one degree of freedom ($\chi^2(1)$).
+        \[
+            F_{X^2}(t) = P(X^2 \leq t) = P(|X| \leq \sqrt{t})
+        \]
+        CDF of the standard normal distribution, is given by:
+        \[
+            \Phi(x) = \cfrac{1}{\sqrt{2\pi}} \int_{-\infty}^x e^{-\cfrac{u^2}{2}} du
+        \]
+        So,
+        \[
+            F_{X^2}(t) = 2 \cdot \Phi(\sqrt{t}) - 1
+        \]
+    \end{enumerate}
+    \begin{enumerate}
+        \setcounter{enumi}{1}
+        \item differentiating to find the PDF:
+        \[
+            f_Z(z) = \cfrac{d}{dz}F_Z(z)
+        \]
+        \[
+            = \cfrac{d}{dz}\left(2 \cdot \Phi\left(\sqrt{\cfrac{z}{a}}\right) - 1\right)
+        \]
+        \[
+            = \cfrac{1}{\sqrt{\pi}} \cdot \cfrac{1}{2\sqrt{a}} \cdot e^{-\cfrac{z}{2a}} \cdot \cfrac{1}{\sqrt{z}}
+        \]
+        \[
+            = \cfrac{1}{2\sqrt{\pi a}} \cdot \cfrac{1}{\sqrt{z}} \cdot e^{-\cfrac{z}{2a}}
+        \]
+    \end{enumerate}
+    So, the probability density function (PDF) of the random variable $Z = aX^2$ is:
+    \[
+        f_Z(z) = \cfrac{1}{2\sqrt{\pi a}} \cdot \cfrac{1}{\sqrt{z}} \cdot e^{-\cfrac{z}{2a}}
+    \]
+    The probability density function (PDF) of the random variable $Z = aX^2$, where $X$ is a normal random variable with mean 0 and variance $\sigma^2$, and $a > 0$, is given by:
+    \[
+        f_Z(z) = \cfrac{1}{2\sqrt{\pi a}} \cdot \cfrac{1}{\sqrt{z}} \cdot e^{-\cfrac{z}{2a}}
+    \]
 
 \newpage
 \item 
@@ -126,97 +179,128 @@ Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
     
 \newpage
 \item
-To find the probability density function (PDF) of the random variable Y given different transformations of the random variable X, we will use the method of transformations.
+    To find the probability density function (PDF) of the random variable Y given different transformations of the random variable X, we will use the method of transformations.
 
-Given the probability density function (PDF) of \( X \) as:
+    Given the probability density function (PDF) of \( X \) as:
 
-\[ 
-    f_X(x) = \cfrac{1}{\pi(1 + x^2)}
-\]
-\begin{enumerate}
-    \item 
-    \( \mathbf{Y = 1 - X^3}\)\\
-    We start by finding the cumulative distribution function (CDF) of Y and then differentiate it to get the PDF of Y.
-
-    i. Finding the CDF of Y:
     \[ 
-        F_Y(y) = P(Y \leq y) = P(1 - X^3 \leq y) 
+        f_X(x) = \cfrac{1}{\pi(1 + x^2)}
     \]
-    Solve for X:
-    \[ 
-        X \leq (1 - y)^{1/3} 
-    \]
-    \[ 
-        F_Y(y) = P(X \leq (1 - y)^{1/3}) 
-    \]
-    \[
-        F_Y(y) = \int_{-\infty}^{(1 - y)^{1/3}} \cfrac{1}{\pi(1 + x^2)} dx
-    \]
-    Let $ u = 1 + x^2 $, then $ du = 2x dx $, and $ dx = \cfrac{du}{2x} $.
-    The integral becomes:
-    \[
-        F_Y(y) = \cfrac{1}{2\pi} \int_{2}^{\cfrac{1}{(1 - y)^{2/3}}} \cfrac{1}{u} du
-    \]
-    \[
-        = \cfrac{1}{2\pi} \ln|u| \bigg|_{2}^{\cfrac{1}{(1 - y)^{2/3}}}
-    \]
-    \[
-        = \cfrac{1}{2\pi} \ln\left(\cfrac{1}{(1 - y)^{2/3}}\right) - \cfrac{1}{2\pi} \ln(2)
-    \]
-    \[
-        = -\cfrac{1}{2\pi} \ln(1 - y) - \cfrac{1}{3\pi} \ln(2)
-    \]
-    ii. Finding the PDF of $Y$:
+    \begin{enumerate}
+        \item 
+        \( \mathbf{Y = 1 - X^3}\)\\
+        We start by finding the cumulative distribution function (CDF) of Y and then differentiate it to get the PDF of Y.
 
-    differentiating the CDF $F_Y(y)$ with respect to $y$, we get the PDF $f_Y(y)$:
-    \[
-        f_Y(y) = \cfrac{d}{dy} F_Y(y)
-    \]
-    \[
-        = -\cfrac{1}{2\pi} \left( -\cfrac{1}{1 - y} \right)
-    \]
-    \[
-        = \cfrac{1}{2\pi(1 - y)}
-    \]
-    \item \( \mathbf{Y = arctan(X)} \)\\
-    Similar to the previous transformation, we find the CDF and then differentiate to get the PDF.
+        i. Finding the CDF of Y:
+        \[ 
+            F_Y(y) = P(Y \leq y) = P(1 - X^3 \leq y) 
+        \]
+        Solve for X:
+        \[ 
+            X \leq (1 - y)^{1/3} 
+        \]
+        \[ 
+            F_Y(y) = P(X \leq (1 - y)^{1/3}) 
+        \]
+        \[
+            F_Y(y) = \int_{-\infty}^{(1 - y)^{1/3}} \cfrac{1}{\pi(1 + x^2)} dx
+        \]
+        Let $ u = 1 + x^2 $, then $ du = 2x dx $, and $ dx = \cfrac{du}{2x} $.
+        The integral becomes:
+        \[
+            F_Y(y) = \cfrac{1}{2\pi} \int_{2}^{\cfrac{1}{(1 - y)^{2/3}}} \cfrac{1}{u} du
+        \]
+        \[
+            = \cfrac{1}{2\pi} \ln|u| \bigg|_{2}^{\cfrac{1}{(1 - y)^{2/3}}}
+        \]
+        \[
+            = \cfrac{1}{2\pi} \ln\left(\cfrac{1}{(1 - y)^{2/3}}\right) - \cfrac{1}{2\pi} \ln(2)
+        \]
+        \[
+            = -\cfrac{1}{2\pi} \ln(1 - y) - \cfrac{1}{3\pi} \ln(2)
+        \]
+        ii. Finding the PDF of $Y$:
 
-    i. Finding the CDF of Y:
-    \[ 
-        F_Y(y) = P(Y \leq y) = P(\arctan(X) \leq y) 
-    \]
-    \[ 
-        = P(X \leq \tan(y))
-    \]
-    \[
-        F_Y(y) = \int_{-\infty}^{\tan(y)} \cfrac{1}{\pi(1 + x^2)} dx
-    \]
-    This integral can be recognized as the inverse tangent function:
-    \[
-        F_Y(y) = \cfrac{1}{\pi} \left[ \arctan(\tan(y)) - \arctan(-\infty) \right]
-    \]
-    \[
-        F_Y(y) = \cfrac{1}{\pi} \left[ y - \left( -\cfrac{\pi}{2} \right) \right]
-    \]
-    \[
-        F_Y(y) = \cfrac{1}{\pi} \left( y + \cfrac{\pi}{2} \right)
-    \]
-    ii. Finding the PDF of $Y$:
+        differentiating the CDF $F_Y(y)$ with respect to $y$, we get the PDF $f_Y(y)$:
+        \[
+            f_Y(y) = \cfrac{d}{dy} F_Y(y)
+        \]
+        \[
+            = -\cfrac{1}{2\pi} \left( -\cfrac{1}{1 - y} \right)
+        \]
+        \[
+            = \cfrac{1}{2\pi(1 - y)}
+        \]
+        \item \( \mathbf{Y = arctan(X)} \)\\
+        Similar to the previous transformation, we find the CDF and then differentiate to get the PDF.
 
-    differentiating the CDF $F_Y(y)$ with respect to $y$ to get the PDF $f_Y(y)$:
+        i. Finding the CDF of Y:
+        \[ 
+            F_Y(y) = P(Y \leq y) = P(\arctan(X) \leq y) 
+        \]
+        \[ 
+            = P(X \leq \tan(y))
+        \]
+        \[
+            F_Y(y) = \int_{-\infty}^{\tan(y)} \cfrac{1}{\pi(1 + x^2)} dx
+        \]
+        This integral can be recognized as the inverse tangent function:
+        \[
+            F_Y(y) = \cfrac{1}{\pi} \left[ \arctan(\tan(y)) - \arctan(-\infty) \right]
+        \]
+        \[
+            F_Y(y) = \cfrac{1}{\pi} \left[ y - \left( -\cfrac{\pi}{2} \right) \right]
+        \]
+        \[
+            F_Y(y) = \cfrac{1}{\pi} \left( y + \cfrac{\pi}{2} \right)
+        \]
+        ii. Finding the PDF of $Y$:
 
-    \[
-        f_Y(y) = \cfrac{d}{dy} F_Y(y)
-    \]
-    \[
-        = \cfrac{1}{\pi}
-    \]
-    Hence, for $Y = \arctan(X)$, the PDF of Y is a constant function with value $\cfrac{1}{\pi}$ within the interval where $-\cfrac{\pi}{2} < y < \cfrac{\pi}{2}$. Outside of this interval, the PDF is zero.
-    \end{enumerate}
+        differentiating the CDF $F_Y(y)$ with respect to $y$ to get the PDF $f_Y(y)$:
+
+        \[
+            f_Y(y) = \cfrac{d}{dy} F_Y(y)
+        \]
+        \[
+            = \cfrac{1}{\pi}
+        \]
+        Hence, for $Y = \arctan(X)$, the PDF of Y is a constant function with value $\cfrac{1}{\pi}$ within the interval where $-\cfrac{\pi}{2} < y < \cfrac{\pi}{2}$. Outside of this interval, the PDF is zero.
+        \end{enumerate}
 
 \newpage
-\item
-    
+\item 
+    Given $X$ is a random variable on $(0, \infty)$ with pdf
+    \[
+        f(x) = e^{-x}, \quad x \in (0, \infty)
+    \]
+    Now given $Y$ is a random variable on $(0, \infty)$ such that
+    \[ 
+        Y = X^2
+    \]
+    \[
+        X = \sqrt{Y}
+    \]
+    \[
+        \cfrac{dx}{dy} = \cfrac{1}{2\sqrt{y}}
+    \]
+    and 
+    \[
+        f(y) = e^{-\sqrt{y}}, \quad y \in (0, \infty)
+    \]
+    So \(PDF\) for $Y$,
+    \[
+        f_Y(y) = f(y) \left|\cfrac{dx}{dy}\right|
+    \]
+    \[
+        f_Y(y) = e^{-\sqrt{y}} \cdot \cfrac{1}{2\sqrt{y}}
+    \]
+    \[
+        f_Y(y) = \cfrac{1}{2} \cdot \cfrac{e^{-\sqrt{y}}}{\sqrt{y}}, \quad y \in (0, \infty)
+    \]
+
+\newpage
+\item 
+        
 
 \end{enumerate}
 \end{document}
