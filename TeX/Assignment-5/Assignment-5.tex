@@ -1,0 +1,427 @@
+\documentclass{article}
+\newcounter{rownumbers}
+\newcommand\rownumber{\stepcounter{rownumbers}\arabic{rownumbers}}
+%\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{amsmath,amsfonts,mathtools}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\graphicspath{ {E:\College\Sem-6\PSP\CODES\TeX\Assignment-3} }
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=-2mm,
+ bottom=2mm,
+ }
+ 
+%\usepackage[margin=0.5in]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{ifpdf}
+%\usepackage{cite}
+\usepackage{algorithmic}
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{pdfpages}
+\usepackage{mdwtab}
+\usepackage{eqparbox}
+\usepackage{parskip}
+%\onecolumn
+%\input{psfig}
+\usepackage{color}
+\usepackage{graphicx}
+\setlength{\textheight}{23.5cm} \setlength{\topmargin}{-1.05cm}
+\setlength{\textwidth}{6.5in} \setlength{\oddsidemargin}{-0.5cm}
+\renewcommand{\baselinestretch}{1}
+\pagenumbering{arabic}
+\linespread{1.15}
+\begin{document}
+\textbf{
+\begin{center}
+{
+\large{School of Engineering and Applied Science (SEAS), Ahmedabad University}\vspace{5mm}
+}
+\end{center}
+%
+\begin{center}
+\large{Probability and Stochastic Processes (MAT277)\\ \vspace{4mm}
+Homework Assignment-4\\\vspace{2mm}
+Enrollment No: AU2140096 \hspace{4cm} Name: Ansh Virani }
+\end{center}}
+\vspace{2mm}
+
+
+\vspace{10mm}
+
+\begin{enumerate}
+\item
+    The mean function \(\mu_{X}(t)\) of a random process is defined as:
+
+    $\mu_{X}(t) = \ \ E\lbrack X(t)\rbrack$
+
+    \begin{quote}
+        Given the member functions, we'll calculate the mean function using
+        linearity of expectation:
+    \end{quote}
+
+    $\mu_{X}(t) = E\lbrack X(t)\rbrack = E\mathbf{\lbrack}\sum_{i = 1}^{}{R_{X}(t)\ }\ \text{Rxi}(t)\mathbf{\rbrack}$
+
+    $\mu_{X}(t) = R\sum_{i = 1}^{5}{E\lbrack x_{i}(t)\rbrack}$
+
+    \begin{quote}
+        We'll calculate each term individually:
+    \end{quote}
+
+    \begin{enumerate}
+    \def\labelenumi{\arabic{enumi}.}
+    \item
+        \(E\left\lbrack x_{1}(t) \right\rbrack = E\left\lbrack \int_{\frac{\pi}{2}}^{\pi}{\text{Rt}\sin(t)\text{dt}} \right\rbrack\mathbf{= \lbrack R\ }\left( \mathbf{\text{sint}}\left( \mathbf{t} \right)\mathbf{- tcos}\left( \mathbf{t} \right) \right\rbrack_{\frac{\mathbf{\pi}}{\mathbf{2}}}^{\mathbf{\pi}}\mathbf{=}\mathbf{E\lbrack}\left( \mathbf{\pi - 1} \right)\mathbf{R}\mathbf{\rbrack}\)
+    \item
+        \(E\left\lbrack x_{2}(t) \right\rbrack = E\left\lbrack \int_{0}^{\pi}{- Rt\cos(t)\text{dt}} \right\rbrack\mathbf{= e\lbrack 2}\mathbf{R\rbrack}\)
+    \item
+        \(E\lbrack x_{3}(t)\rbrack = E\mathbf{\lbrack}\pi\left( 1 + R\int_{0}^{\pi}{(cos(t) - sin(t))\text{dt}\mathbf{)}} \right\rbrack\mathbf{= E\lbrack\pi}\left( \mathbf{1 - 2}\mathbf{R} \right)\mathbf{\rbrack}\)
+    \item
+        \(E\left\lbrack x_{4}(t) \right\rbrack = E\left\lbrack 1 - R\int_{0}^{\pi}{\left( \cos(t) + \sin(t) \right)\text{dt}} \right\rbrack\mathbf{= E\lbrack 1 - 2}\mathbf{R\rbrack\ }\)
+    \item
+        \(E\lbrack x_{5}(t)\rbrack = E\mathbf{\lbrack}1 + R\int_{\frac{\pi}{2}}^{\pi}{(sin(t) + cos(t))\text{dt}\mathbf{\rbrack}} = \ E\lbrack 1\rbrack\)
+    \end{enumerate}
+
+    \begin{enumerate}
+    \item
+        \(R_{X,X}(t_{1},t_{2}) = E\lbrack X(t_{1})X(t_{2})\rbrack\)
+
+        \begin{enumerate}
+        \def\labelenumii{\roman{enumii}.}
+        \item
+            \(E\lbrack x_{1}\left( t_{1} \right)x_{1}(t_{2})\rbrack = E\mathbf{\lbrack}\int_{\frac{\pi}{2}}^{\pi}{\int_{\frac{\pi}{2}}^{\pi}{R^{2}t_{1} t_{2}\sin\left( t_{1} \right)\sin\left( t_{2} \right)dt_{1} dt_{2}}}\mathbf{\rbrack}\)
+        \item
+            \(E\lbrack x_{2}\left( t_{1} \right)x_{2}(t_{2})\rbrack = E\mathbf{\lbrack}\int_{0}^{\pi}{\int_{0}^{\pi}{- R^{2}t_{1} t_{2}\cos\left( t_{1} \right)\cos\left( t_{2} \right)dt_{1} dt_{2}}}\text{\!\!}\mathbf{\rbrack}\)
+        \item
+            \(E\lbrack x_{3}\left( t_{1} \right)x_{3}(t_{2})\rbrack = E\mathbf{\lbrack}\pi^{2}\mathbf{(}1 + R^{2}\int_{0}^{\pi}{\int_{0}^{\pi}{\left( \cos\left( t_{1} \right) - \sin\left( t_{1} \right) \right)\left( \cos\left( t_{2} \right) - \sin\left( t_{2} \right) \right)dt_{1} dt_{2}\mathbf{)}}}\)
+        \item
+            \(E\lbrack x_{4}\left( t_{1} \right)x_{4}(t_{2})\rbrack = E\mathbf{\lbrack}\left( 1 - Rt_{1} \right)\left( 1 - Rt_{2} \right)\int_{0}^{\pi}{\int_{0}^{\pi}{\left( \cos\left( t_{1} \right) + \sin\left( t_{1} \right) \right)\left( \cos\left( t_{2} \right) + \sin\left( t_{2} \right) \right)dt_{1} dt_{2}}}\)
+        \item
+            \(E\lbrack x_{5}\left( t_{1} \right)x_{5}(t_{2})\rbrack = E\mathbf{\lbrack}\left( 1 + Rt_{1} \right)\left( 1 + Rt_{2} \right)\int_{\frac{\pi}{2}}^{\pi}{\int_{\frac{\pi}{2}}^{\pi}{\left( \sin\left( t_{1} \right) + \cos\left( t_{1} \right) \right)\left( \sin\left( t_{2} \right) + \cos\left( t_{2} \right) \right)dt_{1} dt_{2}}}\mathbf{\rbrack}\)
+        \end{enumerate}
+    \end{enumerate}
+
+    \textbf{WSS or SSS?}
+
+    \begin{quote}
+        To determine if the process is Wide Sense Stationary (WSS) or Strict
+        Sense Stationary (SSS), we need to check if its mean function is
+        constant and if its autocorrelation function depends only on the time
+        difference. If both conditions are met, the process is WSS. If the
+        autocorrelation function is independent of both time variables, it is
+        SSS.
+
+    \textbf{Here, it is SSS.}
+    \end{quote}
+
+\newpage
+\item
+    For t = 0, Z (0) is equally likely to be 0 or 1, so:
+
+    ${\mu Z}(0) = \frac{1}{2}\mathbf{\cdot}0\mathbf{+}\frac{1}{2}\mathbf{\cdot}1 = \frac{1}{2}$
+
+    For any other time, t \textgreater{} 0, given that a transition from 0
+    to 1 or from 1 to 0 occurs randomly, the process doesn't have a drift
+    term, and thus the mean function remains the same:
+
+    ${\mu Z(t)} = \frac{1}{2}$
+
+    \begin{enumerate}
+    \item
+        The autocorrelation function
+        \(R_{Z,Z}\left( t_{1},t_{2} \right)R_{Z,Z}(t_{1},t_{2})\) represents
+        the correlation between the values of the process Z at times
+        t1t1\hspace{0pt} and t2t2\hspace{0pt}. In this case, we need to find
+        \(R_{Z,Z}(t + \tau,t)R_{Z,Z}(t + \tau,t)\).
+    \end{enumerate}
+
+    Since Z(t) only takes values 0 and 1, its autocorrelation function is:
+
+    $R_{Z,Z}(t_{1},t_{2}) = E\lbrack Z(t_{1})Z(t_{2})\rbrack\mathbf{-}E\lbrack Z(t_{1})\rbrack E\lbrack Z(t_{2})\rbrack$
+
+    Given the transition probabilities, we need to find the joint
+    probability distribution of Z at times \(t\) and \(t + \tau\).
+
+    The joint probability distribution
+    \(P(Z(t + \tau) = 1,Z(t) = 0)P(Z(t + \tau) = 1,Z(t) = 0)\) is the
+    probability that A occurs, and B doesn't occur, given by:
+
+    $P(A \cap B') = pA(1 - pB)P(A \cap B') = pA(1 - pB)$
+
+    Similarly,\(\ P(Z(t + \tau) = 0,Z(t) = 1)P(Z(t + \tau) = 0,Z(t) = 1)\)
+    is the probability that B occurs, and A doesn't occur:
+
+    $P(A' \cap B) = (1 - pA)pBP(A' \cap B) = (1 - pA)pB$
+
+    And \(P(Z(t + \tau) = Z(t))P(Z(t + \tau) = Z(t))\) is the probability
+    that neither A nor B occurs:
+
+    $P(A' \cap B') = (1 - pA)(1 - pB)P(A' \cap B') = (1 - pA)(1 - pB)$
+
+    Given the transition probability formula,
+    \(pA = \alpha\tau 1 + \alpha\tau pA = 1 + \alpha\tau\alpha\tau\)\hspace{0pt}
+    and
+    \(pB = \alpha\tau 1 + \alpha\tau pB = 1 + \alpha\tau\alpha\tau\)\hspace{0pt},
+    the autocorrelation function becomes:
+
+    $RZ,Z(t + \tau,t) = \frac{\alpha\tau}{1 + \alpha\tau} - \left( \frac{1}{2} \right)^{2}$
+
+    Stationarity:
+
+    To determine whether Z(t) is stationary, we need to check if its mean
+    function and autocorrelation function are time-invariant.
+
+    Since the mean function \(\mu Z(t)\) is constant and the autocorrelation
+    function \(RZ,Z(t + \tau,t)\)depends only on the time difference $\tau$,
+    Z(t) is stationary.
+
+\newpage
+\item
+
+    \begin{itemize}
+    \item
+    To determine which of the given functions can be the autocorrelation
+    function of a random process, we need to check if they satisfy the
+    properties of a valid autocorrelation function:
+
+    \begin{enumerate}
+    \def\labelenumi{\roman{enumi}.}
+    \item
+        Non-negativity: The autocorrelation function must be non-negative
+        for all values of $\tau$ .
+    \item
+        Even Function: The autocorrelation function must be an even
+        function, meaning it is symmetric about $\tau$ = 0.
+    \item
+        Bounded: The autocorrelation function must be bounded.
+
+        \begin{enumerate}
+        \def\labelenumii{\alph{enumii}.}
+        \item
+        \(f(\tau) = sin(2\pi f_{0}\tau)f(\tau) = \sin(2\pi f0\mathbf{}\tau)\):
+        This function is not necessarily non-negative for all values of $\tau$.
+        Also, it is not an even function. Therefore, it does not satisfy
+        the properties of a valid autocorrelation function.
+        \item
+        \(f(\tau) = \tau^{2}\): This function is non-negative for all real
+        values of $\tau$, but it is not necessarily an even function. Hence, it
+        doesn't satisfy the second property of a valid autocorrelation
+        function.
+        \item
+        \(f(\tau) = 1\mathbf{-}\tau\ \text{for~} \mid \tau \mid \leq 1\)
+        \end{enumerate}
+    \end{enumerate}
+    \end{itemize}
+
+    $1 + \tau\ \text{for~} \mid \tau \mid > 1\ $
+
+    \begin{quote}
+    This function satisfies the non-negativity property and is symmetric
+    about $\tau$ = 0, making it an even function. It is also bounded. Therefore,
+    this function can be the autocorrelation function of a random process.
+
+    So, the correct answer is c.
+    \end{quote}
+
+\newpage
+\item
+
+    Given that \(X(t) = A + Bt^{3}X(t) = A + Bt^{3}\), where A and B are
+    independent random variables uniformly distributed on
+    \(\lbrack 0,\ 2\rbrack.\)
+
+    \begin{enumerate}
+    \def\labelenumi{\alph{enumi})}
+    \item
+    \(\mu_{X}(t) = E\lbrack X(t)\rbrack\)
+    \end{enumerate}
+
+    \begin{quote}
+    Since A and B are uniformly distributed on {[}0, 2{]}, the mean of A is
+    \(E\lbrack A\rbrack = \frac{1}{2}(2 - 0) = 1\) and the mean of B is
+    \(E\lbrack B\rbrack = \frac{1}{2}\ (2 - 0) = 1\)
+    \end{quote}
+
+    $\mu X(t) = E\lbrack A + Bt^{3}\rbrack = E\lbrack A\rbrack + t^{3}E\lbrack B\rbrack = 1 + t^{3}$
+
+    \begin{quote}
+    So, the mean function \(\mu_{X}(t) = 1 + t^{3}\mu X(t) = 1 + t^{3}.\)
+    \end{quote}
+
+    \begin{enumerate}
+    \def\labelenumi{\alph{enumi})}
+    \setcounter{enumi}{1}
+    \item
+    The autocorrelation function \(R_{X,X}(t_{1},t_{2})\) represents the
+    correlation between the values of the process X at times \(t1\) and
+    \(t2\)\hspace{0pt}.
+    \end{enumerate}
+
+    $R_{\text{XX}}(t_{1},t_{2}) = E\lbrack X(t_{1})X(t_{2})\rbrack - E\lbrack X(t_{1})\rbrack E\lbrack X(t_{2})\rbrack$
+
+    $R_{\text{XX}}(t_{1},t_{2}) = E\lbrack(A + Bt_{1}^{3})(A + Bt_{2}^{3})\rbrack - \left( 1 + t_{1}^{3} \right)\left( 1 + t_{2}^{3} \right)R_{\text{XX}}(t_{1},t_{2}) = E\lbrack(A + Bt_{1}^{3})(A + Bt_{2}^{3})\rbrack - (1 + t_{1}^{3})(1 + t_{2}^{3})$
+
+    \begin{quote}
+    Since A and B are independent, we have:
+    \end{quote}
+
+    $E\lbrack A2\rbrack = Var\lbrack A\rbrack + \left( E\lbrack A\rbrack \right)^{2} = \frac{1}{3}(2 - 0)^{2} + 1 = \frac{4}{3}$
+
+    $E\lbrack B2\rbrack = Var\lbrack B\rbrack + (E\lbrack B\rbrack)2 = \frac{1}{3}(2 - 0)^{2} + 1 = \frac{4}{3}$
+
+    $E\lbrack AB\rbrack = E\lbrack A\rbrack E\lbrack B\rbrack = 1$
+
+    $R_{\text{XX}}(t_{1},t_{2}) = E\lbrack A_{2}\rbrack + t_{1}^{3} E\lbrack B_{2}\rbrack + t_{2}^{3} E\lbrack B_{2}\rbrack + t_{1}^{3} t_{2}^{3} E\lbrack AB\rbrack - (1 + t_{1}^{3})(1 + t_{2}^{3})$
+
+    $R_{\text{XX}}\left( t_{1},t_{2} \right) = \frac{1}{3} + \frac{1}{3}\left( t_{1}^{3} + t_{2}^{3} \right)$
+
+\newpage
+\item
+
+    \begin{enumerate}
+    \def\labelenumi{\alph{enumi}.}
+    \item
+    \(X_{t} = W_{3}\)
+    \end{enumerate}
+
+    \begin{quote}
+    \textbf{Stationarity:}
+
+    This process is stationary because it's a function of a single random
+    variable \(W_{3}\)\hspace{0pt}, which is independent and identically
+    distributed with mean 0 and variance 1. Since \(W_{3}\)\hspace{0pt} has
+    a constant mean and variance, \(X_{t}\)\hspace{0pt} does not depend on
+    time.
+
+    \textbf{Mean Function:}
+
+    The mean function \(\mu X_{t}\)\hspace{0pt}\hspace{0pt} is simply the
+    mean of \(W_{3}\)\hspace{0pt}, which is 0.
+
+    \textbf{Autocovariance Function:}
+
+    Since \(\text{Xt}\)\hspace{0pt} is a constant, its autocovariance
+    function \(Cov(Xt,Xt + \tau)\) is also constant.
+    \end{quote}
+
+    $Cov(Xt,Xt + \tau) = Cov(W3,W3 + \tau) = Var(W3) = 1$
+
+    \begin{quote}
+    So, the mean function is \(\mu X_{t} = 0\)and the autocovariance
+    function is \(Cov(Xt,Xt + \tau) = 1.\)
+    \end{quote}
+
+    \begin{enumerate}
+    \def\labelenumi{\alph{enumi}.}
+    \setcounter{enumi}{1}
+    \item
+    \(X_{t} = t + W^{3}\)
+    \end{enumerate}
+
+    \begin{quote}
+    \textbf{Stationarity:}
+
+    This process is not stationary because it has a linear trend t, which
+    introduces a dependency on time. The mean of \(X_{t}\) changes with time
+    due to the linear term.
+
+    \textbf{Mean Function:}
+
+    The mean function \(\mu X_{t}\)\hspace{0pt}\hspace{0pt} changes with
+    time due to the linear term tt.
+
+    \textbf{Autocovariance Function:}
+
+    The autocovariance function also changes with time due to the linear
+    term tt, making it non-stationary.
+    \end{quote}
+
+    \begin{enumerate}
+    \def\labelenumi{\alph{enumi}.}
+    \setcounter{enumi}{2}
+    \item
+    \(Xt = W_{2}\)
+    \end{enumerate}
+
+    \begin{quote}
+    \textbf{Stationarity:}
+
+    This process is stationary because it's a function of a single random
+    variable \(W2\) which is i.i.d with mean 0 and variance 1. Since
+    \(W_{2}\)\hspace{0pt} has a constant mean and variance,
+    \(\text{Xt}\)\hspace{0pt} does not depend on time.
+
+    \textbf{Mean Function:}
+
+    The mean function \(\mu X_{t}\)\hspace{0pt}\hspace{0pt} is simply the
+    mean of \(W_{2}\)\hspace{0pt}, which is 0.
+
+    \textbf{Autocovariance Function:}
+
+    Since \(\text{Xt}\)\hspace{0pt} is a constant, its autocovariance
+    function \(Cov(Xt,Xt + \tau)\) is also constant.
+    \end{quote}
+
+    $Cov(Xt,Xt + \tau) = Cov(W2,W2 + \tau) = Var(W2) = 1$
+
+    \begin{quote}
+    So, the mean function is \(\mu Xt = 0\) and the autocovariance function
+    is \(Cov(Xt,Xt + \tau) = 1\).
+    \end{quote}
+
+\newpage
+\item
+
+    \(X_{t} = W_{t}\left( 1 - W_{t\  - 1} \right)Z_{t}\)
+
+    \textbf{\underline{Solution 7:}}
+
+    Given the autocorrelation function definition:
+
+    $R_{f,f}(\tau) = \int_{- \infty}^{\infty}{f(t)f(t + \tau)\, dt}$
+
+    \begin{quote}
+    We can rewrite \(R_{f,f}(0)\) as:
+    \end{quote}
+
+    $R_{f,f}(0) = \int_{- \infty}^{\infty}{f(t)f(t)\, dt = \int - \infty\infty\lbrack f(t)\rbrack 2\, dt}$
+
+    \begin{quote}
+    Let \(g(\tau) = R_{f,f}(0)\mathbf{-}R_{f,f}(\tau)\)
+
+    We want to show that g($\tau)\geq$0 for all $\tau$. Let's calculate the derivative of g($\tau$) with respect to $\tau$:
+    \end{quote}
+
+    $\frac{\text{dg}}{\text{d$\tau$}} = \frac{d}{\text{d$\tau$}}(R_{f,f}(0) - R_{f,f}(\tau))$
+
+    $= \  - \frac{d}{d\tau}(\int_{- \infty}^{\infty}{f(t)f(t + \tau)\text{dt}})$
+
+    \begin{quote}
+    Now, let's evaluate this expression at $\tau$=0:
+    \end{quote}
+
+    $\frac{\text{Dg}}{\text{d$\tau$}}\ \left. \  \right|{\tau = 0}\  = - \int{- \infty}^{\infty}{f(t)f'(t)\,\text{dt}}$
+
+    $\frac{\text{dg}}{\text{d$\tau$}}\left. \  \right|{\text{\!$\tau$} = 0} = - \int{- \infty}^{\infty}{f(t)f'(t)dt}$
+
+    $= - \frac{1}{2}\left\lbrack f(t) \right\rbrack^{2} \mid_{- \infty}^{\infty} = 0$
+
+    \begin{quote}
+    This result implies that g($\tau$) is maximized at $\tau$=0, as its derivative
+    with respect to $\tau$ is zero at $\tau$=0. Therefore, \(Rf,f(0) \geq Rf,f(\tau)\)
+    for all $\tau$, which proves that the autocorrelation function of any real
+    function f(t)f(t) has a maximum value at $\tau$=0.
+    \end{quote}
+
+\end{enumerate}
+\end{document}
